@@ -8,22 +8,23 @@ def split_list(in_list, ratio=0.1):
     return big, small
 
 def split_by_speaker(in_json, ratio=0.1):
-    spks = set(in_json[wav_id]["spk_id"] for wav_id in in_json)
+    # spks = set(in_json[wav_id]["spk_id"] for wav_id in in_json)
     out_train = {}
     out_dev = {}
-    for spk in spks:
-        spk_wav_ids = [wav_id for wav_id in in_json if in_json[wav_id]["spk_id"] == spk]
-        train, dev = split_list(spk_wav_ids, ratio)
-        for i in train:
-            out_train.update({i: in_json[i]})
-        for i in dev:
-            out_dev.update({i: in_json[i]})
+    dev = random.sample(list(in_json.keys()), int(ratio * len(in_json)))
+    train = [i for i in in_json if i not in dev]
+            
+    
+    for i in train:
+        out_train.update({i: in_json[i]})
+    for i in dev:
+        out_dev.update({i: in_json[i]})
     return out_train, out_dev
 
 def main(args):
     with open(args.in_json, "r") as f:
         in_data = json.load(f)
-
+    import pdb; pdb.set_trace()
     out_train, out_dev = split_by_speaker(in_data, ratio=args.dev_ratio)
 
     with open(args.out_json_train, "w") as f:

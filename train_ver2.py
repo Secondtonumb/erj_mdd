@@ -174,12 +174,12 @@ class ASR(sb.Brain):
                 meta={"PER": per, "mpd_f1": mpd_f1}, min_keys=["PER"]
             )
             
-            # Save best model based on MPD-F1 (higher is better)
-            # We'll use a separate checkpoint name to avoid conflicts
-            self.checkpointer.save_checkpoint(
-                meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
-                name="best_mpd_f1_{}.ckpt".format(epoch),
-            )
+            # # Save best model based on MPD-F1 (higher is better)
+            # # We'll use a separate checkpoint name to avoid conflicts
+            # self.checkpointer.save_checkpoint(
+            #     meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
+            #     name="best_mpd_f1_{}.ckpt".format(epoch),
+            # )
 
         if stage == sb.Stage.TEST:
             self.hparams.train_logger.log_stats(
@@ -623,6 +623,7 @@ if __name__ == "__main__":
     # Dataset IO prep: creating Dataset objects and proper encodings for phones
     train_data, valid_data, test_data, label_encoder = dataio_prep(hparams)
     
+    
     # Trainer initialization
     asr_brain = ASR(
         modules=hparams["modules"],
@@ -633,7 +634,10 @@ if __name__ == "__main__":
     asr_brain.label_encoder = label_encoder
     # Initialize wandb, 
     # get run_id with time and hparams's name
-    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + hparams_file.split("/")[-1].split(".")[0]
+    from pathlib import Path
+    stem = Path(hparams_file).stem
+    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + stem
+    
     run_name = hparams.get("run_name", f"{run_id}")
     
     wandb.init(

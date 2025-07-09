@@ -16,6 +16,7 @@ import librosa
 import json
 import itertools
 import math
+import wandb
 
 logger = logging.getLogger(__name__)
 
@@ -145,9 +146,40 @@ class ASR(sb.Brain):
                     "mpd_f1": mpd_f1
                 },
             )
-            self.checkpointer.save_and_keep_only(
-                meta={"PER": per, "mpd_f1": mpd_f1}, min_keys=["PER"], max_keys=["mpd_f1"]
-            )
+            # wandb logging for validation
+            wandb.log({
+                "epoch": epoch,
+                "train_loss": self.train_loss,
+                "valid_loss": stage_loss,
+                "ctc_loss": self.ctc_metrics.summarize("average"),
+                "PER": per,
+                "mpd_f1": mpd_f1,
+                "lr_adam": self.adam_optimizer.param_groups[0]["lr"],
+                "lr_wav2vec": self.wav2vec_optimizer.param_groups[0]["lr"],
+            }, step=epoch)
+            
+            # Log best models to wandb
+            if wandb.run is not None:
+                if hasattr(self, 'best_per') and per < self.best_per:
+                    self.best_per = per
+                    wandb.run.summary["best_per"] = per
+                    wandb.run.summary["best_per_epoch"] = epoch
+                elif not hasattr(self, 'best_per'):
+                    self.best_per = per
+                    wandb.run.summary["best_per"] = per
+                    wandb.run.summary["best_per_epoch"] = epoch
+                    
+                if hasattr(self, 'best_mpd_f1') and mpd_f1 > self.best_mpd_f1:
+                    self.best_mpd_f1 = mpd_f1
+                    wandb.run.summary["best_mpd_f1"] = mpd_f1
+                    wandb.run.summary["best_mpd_f1_epoch"] = epoch
+                elif not hasattr(self, 'best_mpd_f1'):
+                    self.best_mpd_f1 = mpd_f1
+                    wandb.run.summary["best_mpd_f1"] = mpd_f1
+                    wandb.run.summary["best_mpd_f1_epoch"] = epoch
+            # Save best model based on PER (lower is better), but preserve the original teacher model
+            # Use custom checkpoint naming to avoid deleting the mother model
+            self.save_best_model_without_deleting_original(per, mpd_f1, epoch)
 
         if stage == sb.Stage.TEST:
             self.hparams.train_logger.log_stats(
@@ -338,15 +370,47 @@ class ASR(sb.Brain):
 
 
         ## initialize teacher model - load from the same base model ckpt
+        # First, try to find the best checkpoint, but preserve original if it exists
         chosen_ckpt = self.checkpointer.find_checkpoint(min_key="PER")
-        model_layers = self.hparams.model_teacher
-        wav2vec2_layers = self.hparams.wav2vec2_teacher
-        model_layers.load_state_dict(
-            torch.load(chosen_ckpt.paramfiles["model"], map_location=torch.device(self.device))
-        )
-        wav2vec2_layers.load_state_dict(
-            torch.load(chosen_ckpt.paramfiles["wav2vec2"], map_location=torch.device(self.device))
-        )
+        
+        # Check if we have a preserved original teacher model
+        original_teacher_path = os.path.join(self.hparams.output_folder, "original_teacher_model")
+        if os.path.exists(original_teacher_path):
+            logger.info("Loading preserved original teacher model")
+            model_layers = self.hparams.model_teacher
+            wav2vec2_layers = self.hparams.wav2vec2_teacher
+            model_layers.load_state_dict(
+                torch.load(os.path.join(original_teacher_path, "model.ckpt"), 
+                          map_location=torch.device(self.device))
+            )
+            wav2vec2_layers.load_state_dict(
+                torch.load(os.path.join(original_teacher_path, "wav2vec2.ckpt"), 
+                          map_location=torch.device(self.device))
+            )
+        else:
+            # Load from checkpoint and preserve as original
+            logger.info("Loading teacher model from checkpoint and preserving as original")
+            model_layers = self.hparams.model_teacher
+            wav2vec2_layers = self.hparams.wav2vec2_teacher
+            model_layers.load_state_dict(
+                torch.load(chosen_ckpt.paramfiles["model"], map_location=torch.device(self.device))
+            )
+            wav2vec2_layers.load_state_dict(
+                torch.load(chosen_ckpt.paramfiles["wav2vec2"], map_location=torch.device(self.device))
+            )
+            
+            # Save the original teacher model for preservation
+            os.makedirs(original_teacher_path, exist_ok=True)
+            torch.save(
+                model_layers.state_dict(),
+                os.path.join(original_teacher_path, "model.ckpt")
+            )
+            torch.save(
+                wav2vec2_layers.state_dict(),
+                os.path.join(original_teacher_path, "wav2vec2.ckpt")
+            )
+            logger.info(f"Preserved original teacher model at: {original_teacher_path}")
+        
         self.modules_teacher.eval()
 
         self.set_momentum_factor(
@@ -358,6 +422,127 @@ class ASR(sb.Brain):
         total_steps = float(n_train_batch * n_epochs // self.hparams.gradient_accumulation)
         self.momentum_factor = math.exp( (1/total_steps) * math.log(self.hparams.base_model_factor))
         logger.info("Momentum Factor: {}".format(self.momentum_factor))
+
+    def save_best_model_without_deleting_original(self, per, mpd_f1, epoch):
+        """Save best model without deleting the original teacher model.
+        Uses custom checkpoint naming to preserve the mother model."""
+        
+        # Initialize best metrics tracking if not exists
+        if not hasattr(self, 'best_per'):
+            self.best_per = float('inf')
+        if not hasattr(self, 'best_mpd_f1'):
+            self.best_mpd_f1 = 0.0
+            
+        # Check if this is a new best model
+        is_best_per = per < self.best_per
+        is_best_mpd_f1 = mpd_f1 > self.best_mpd_f1
+        
+        if is_best_per or is_best_mpd_f1:
+            # Create custom checkpoint name with epoch and metrics
+            checkpoint_name = f"best_epoch_{epoch}_per_{per:.4f}_mpd_{mpd_f1:.4f}"
+            
+            # Save the current model state
+            checkpoint_path = os.path.join(self.hparams.output_folder, checkpoint_name)
+            os.makedirs(checkpoint_path, exist_ok=True)
+            
+            # Save model components
+            torch.save(
+                self.modules.state_dict(),
+                os.path.join(checkpoint_path, "model.ckpt")
+            )
+            torch.save(
+                self.modules.wav2vec2.state_dict(),
+                os.path.join(checkpoint_path, "wav2vec2.ckpt")
+            )
+            
+            # Save optimizers
+            torch.save(
+                self.wav2vec_optimizer.state_dict(),
+                os.path.join(checkpoint_path, "wav2vec_opt.ckpt")
+            )
+            torch.save(
+                self.adam_optimizer.state_dict(),
+                os.path.join(checkpoint_path, "adam_opt.ckpt")
+            )
+            
+            # Save metadata
+            metadata = {
+                "epoch": epoch,
+                "PER": per,
+                "mpd_f1": mpd_f1,
+                "checkpoint_name": checkpoint_name,
+                "is_best_per": is_best_per,
+                "is_best_mpd_f1": is_best_mpd_f1
+            }
+            torch.save(metadata, os.path.join(checkpoint_path, "metadata.ckpt"))
+            
+            # Update best metrics
+            if is_best_per:
+                self.best_per = per
+                logger.info(f"New best PER: {per:.4f} at epoch {epoch}")
+                
+            if is_best_mpd_f1:
+                self.best_mpd_f1 = mpd_f1
+                logger.info(f"New best MPD F1: {mpd_f1:.4f} at epoch {epoch}")
+            
+            # Save a symlink to the best model for easy access
+            best_per_link = os.path.join(self.hparams.output_folder, "best_per_model")
+            best_mpd_link = os.path.join(self.hparams.output_folder, "best_mpd_model")
+            
+            if is_best_per:
+                if os.path.exists(best_per_link):
+                    os.remove(best_per_link)
+                os.symlink(checkpoint_name, best_per_link)
+                
+            if is_best_mpd_f1:
+                if os.path.exists(best_mpd_link):
+                    os.remove(best_mpd_link)
+                os.symlink(checkpoint_name, best_mpd_link)
+            
+            logger.info(f"Saved checkpoint: {checkpoint_name}")
+            
+            # Optional: Keep only the last N best checkpoints to save disk space
+            self.cleanup_old_checkpoints(max_keep=5)
+    
+    def cleanup_old_checkpoints(self, max_keep=5):
+        """Keep only the last N best checkpoints to save disk space."""
+        checkpoint_dir = self.hparams.output_folder
+        checkpoints = []
+        
+        # Find all checkpoint directories
+        for item in os.listdir(checkpoint_dir):
+            if item.startswith("best_epoch_") and os.path.isdir(os.path.join(checkpoint_dir, item)):
+                checkpoints.append(item)
+        
+        # Sort by creation time (newest first)
+        checkpoints.sort(key=lambda x: os.path.getctime(os.path.join(checkpoint_dir, x)), reverse=True)
+        
+        # Remove old checkpoints beyond max_keep
+        for old_checkpoint in checkpoints[max_keep:]:
+            old_path = os.path.join(checkpoint_dir, old_checkpoint)
+            import shutil
+            shutil.rmtree(old_path)
+            logger.info(f"Removed old checkpoint: {old_checkpoint}")
+    
+    def restore_original_teacher_model(self):
+        """Restore the original teacher model from the preserved checkpoint."""
+        original_teacher_path = os.path.join(self.hparams.output_folder, "original_teacher_model")
+        if os.path.exists(original_teacher_path):
+            logger.info("Restoring original teacher model")
+            model_layers = self.hparams.model_teacher
+            wav2vec2_layers = self.hparams.wav2vec2_teacher
+            model_layers.load_state_dict(
+                torch.load(os.path.join(original_teacher_path, "model.ckpt"), 
+                          map_location=torch.device(self.device))
+            )
+            wav2vec2_layers.load_state_dict(
+                torch.load(os.path.join(original_teacher_path, "wav2vec2.ckpt"), 
+                          map_location=torch.device(self.device))
+            )
+            self.modules_teacher.eval()
+            logger.info("Original teacher model restored successfully")
+        else:
+            logger.warning("Original teacher model not found. Cannot restore.")
 
     def fit(
         self,
@@ -725,14 +910,23 @@ if __name__ == "__main__":
     )
     asr_brain.label_encoder = label_encoder
     asr_brain.modules_teacher = torch.nn.ModuleDict(hparams["modules_teacher"]).to(asr_brain.device)
-
-
+    # asr_brain.modules = torch.nn.ModuleDict(hparams["modules"]).to(asr_brain.device)
+    
+    # Initialize wandb, 
+    # get run_id with time and hparams's name
     from pathlib import Path
     stem = Path(hparams_file).stem
     run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + stem
+    
     run_name = hparams.get("run_name", f"{run_id}")
     
-    
+    wandb.init(
+        project=hparams.get("wandb_project", "mpl-mdd"), 
+        name=run_name,
+        id=run_id,
+        resume="allow"
+    )
+
     # Training/validation loop
     asr_brain.fit(
         asr_brain.hparams.epoch_counter,

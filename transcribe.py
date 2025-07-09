@@ -94,7 +94,6 @@ def dataio_prep(hparams):
     It also defines the data processing pipeline through user-defined functions."""
     data_folder = hparams["data_folder_save"]
     # 1. Declarations:
-
     inference_data = sb.dataio.dataset.DynamicItemDataset.from_json(
         json_path=hparams["inference_annotation"],
         replacements={"data_root": data_folder},

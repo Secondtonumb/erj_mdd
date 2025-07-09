@@ -38,7 +38,7 @@ class MpdStats(MetricStats):
         ind2lab=None,
     ):
         self.ids.extend(ids)
-
+        
         if predict_len is not None:
             predict = undo_padding(predict, predict_len)
 
@@ -59,7 +59,7 @@ class MpdStats(MetricStats):
         if self.split_tokens:
             predict = split_word(predict, space=self.space_token)
             target = split_word(target, space=self.space_token)
-
+        
         ## remove parallel sil in cano and perc
         canonical, perceived = rm_parallel_sil_batch(canonical, perceived)
         assert len(canonical) == len(perceived)  # make sure cano and perc are aligned
@@ -80,7 +80,6 @@ class MpdStats(MetricStats):
             det["hypothesis"] = det.pop("hyp_tokens")
             det.update({"alignment_cano2perc": a})
             det.update({"perceived": [s for s in p if s != "sil"]})
-
 
         self.scores.extend(wer_details)
 
@@ -118,6 +117,7 @@ def mpd_eval_on_dataset(in_json, mpd_file=sys.stdout, per_file=None):
     for wav_id, wav_data in in_json.items():
         cano_phns = wav_data["canonical_phn"].split()
         perc_phns = wav_data["phn"].split()
+        import pdb; pdb.set_trace()
         cano_phns, perc_phns = rm_parallel_sil(cano_phns, perc_phns)
         assert len(cano_phns) == len(perc_phns)
 
@@ -148,7 +148,9 @@ def mpd_eval_on_dataset(in_json, mpd_file=sys.stdout, per_file=None):
 
     if per_file:
         error_rate_stats.write_stats(per_file)
+
     mpd_stats = mpd_summary(total_wer_details)
+    
     print_mpd_details(total_wer_details, mpd_stats, mpd_file)
 
 
@@ -187,8 +189,14 @@ def mpd_summary(total_wer_details):
         total_err_diag += err_diag
 
     precision = 1.0*total_tr / (total_fr + total_tr)
-    recall = 1.0*total_tr / (total_fa + total_tr)
-    f1 = 2.0 * precision * recall / (precision + recall)
+    try:
+        recall = 1.0*total_tr / (total_fa + total_tr)
+    except:
+        recall = 0.0
+    try:
+        f1 = 2.0 * precision * recall / (precision + recall)
+    except:
+        f1 = 0.0
     return {
         "total_eq": total_eq,
         "total_sub": total_sub,
@@ -206,14 +214,39 @@ def mpd_summary(total_wer_details):
     }
 
 def print_mpd_details(wer_details, mpd_stats, mpd_file):
-
+    
+    # print the 
 
     print("In original annotation: \nTotal Eq: {}, Total Sub: {}, Total Del: {}, Total Ins: {}".format(\
             mpd_stats["total_eq"], mpd_stats["total_sub"], mpd_stats["total_del"], mpd_stats["total_ins"]), file=mpd_file)
-    print("Overall MPD results: \nTrue Accept: {}, False Rejection: {}, False Accept: {}, True Rejection: {}, Corr Diag: {}, Err Diag: {}".format(\
-            mpd_stats["ta"], mpd_stats["fr"], mpd_stats["fa"], mpd_stats["tr"], mpd_stats["cor_diag"], mpd_stats["err_diag"]), file=mpd_file)
+
+    # Calculate percentages
+    ta_fr_sum = mpd_stats["ta"] + mpd_stats["fr"]
+    fa_tr_sum = mpd_stats["fa"] + mpd_stats["tr"]
+    cd_ed_sum = mpd_stats["cor_diag"] + mpd_stats["err_diag"]
+
+    ta_pct = mpd_stats["ta"] / ta_fr_sum if ta_fr_sum > 0 else 0.0
+    fr_pct = mpd_stats["fr"] / ta_fr_sum if ta_fr_sum > 0 else 0.0
+    fa_pct = mpd_stats["fa"] / fa_tr_sum if fa_tr_sum > 0 else 0.0
+    tr_pct = mpd_stats["tr"] / fa_tr_sum if fa_tr_sum > 0 else 0.0
+    cor_diag_pct = mpd_stats["cor_diag"] / cd_ed_sum if cd_ed_sum > 0 else 0.0
+    err_diag_pct = mpd_stats["err_diag"] / cd_ed_sum if cd_ed_sum > 0 else 0.0
+
+    print("Overall MPD results: \nTrue Accept: {}, False Rejection: {}, False Accept: {}, True Rejection: {}, Corr Diag: {}, Err Diag: {}".format(
+        mpd_stats["ta"], mpd_stats["fr"], mpd_stats["fa"], mpd_stats["tr"], mpd_stats["cor_diag"], mpd_stats["err_diag"]), file=mpd_file)
+    print("Percentages/Counts: TA%/TA: {:.2f}/{}  FR%/FR: {:.2f}/{}  FA%/FA: {:.2f}/{}  TR%/TR: {:.2f}/{}  Cor_diag%/Cor_diag: {:.2f}/{}  Err_diag%/Err_diag: {:.2f}/{}".format(
+        ta_pct * 100, mpd_stats["ta"],
+        fr_pct * 100, mpd_stats["fr"],
+        fa_pct * 100, mpd_stats["fa"],
+        tr_pct * 100, mpd_stats["tr"],
+        cor_diag_pct * 100, mpd_stats["cor_diag"],
+        err_diag_pct * 100, mpd_stats["err_diag"]), file=mpd_file)
     print("Precision: {}, Recall: {}, F1: {}".format(mpd_stats["precision"], mpd_stats["recall"], mpd_stats["f1"]), file=mpd_file)
 
+    
+    # sort
+    # sort wer_details by key
+    wer_details = sorted(wer_details, key=lambda x: x["key"])
     for det in wer_details:
         print("="*80, file=mpd_file)
         print(det["key"], file=mpd_file)
@@ -336,12 +369,20 @@ def rm_parallel_sil_batch(canos, percs):
 
 def rm_parallel_sil(canos, percs):
     canos_out, percs_out = [], []
-    assert len(canos) == len(percs)  ## aligned
-    for cano, perc in zip(canos, percs):
-        if (cano==perc and cano=="sil"):
-            continue
-        canos_out.append(cano)
-        percs_out.append(perc)
+    if len(canos) == len(percs):
+        for i in range(len(canos)):
+            if canos[i] == "sil" and percs[i] == "sil":
+                continue
+            canos_out.append(canos[i])
+            percs_out.append(percs[i])
+    else:
+        ## aligned
+        for cano, perc in zip(canos, percs):
+            if (cano==perc and cano=="sil"):
+                continue
+            canos_out.append(cano)
+            percs_out.append(perc)
+    assert len(canos_out) == len(percs_out)  # make sure cano and perc are aligned
     return canos_out, percs_out
 
 
