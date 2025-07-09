@@ -1,0 +1,4 @@
+Difficult Errors for Model Detection
+========================================
+
+S → = (S): Human=13, Model=6 (46.2%)

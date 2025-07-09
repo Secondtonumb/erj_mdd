@@ -1,0 +1,791 @@
+%WER 60.97 [ 2853 / 4679, 1093 ins, 66 del, 1694 sub ]
+%SER 100.00 [ 156 / 156 ]
+Scored 156 sentences, 0 not present in hyp.
+================================================================================
+ALIGNMENTS
+
+Format:
+<utterance-id>, WER DETAILS
+<eps> ; reference  ; on ; the ; first ;  line
+  I   ;     S      ; =  ;  =  ;   S   ;   D  
+ and  ; hypothesis ; on ; the ; third ; <eps>
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAR_M06_S4_053.wav, %WER 47.37 [ 9 / 19, 3 ins, 2 del, 4 sub ]
+aa ;   ey  ;   ah  ; l ; uw ; k ; <eps> ; iy ; ng ; f ; ow ; eh ; m ; p ; <eps> ; l ; ao ; m ; eh ; n ; t ; <eps>
+S  ;   D   ;   D   ; = ; S  ; = ;   I   ; =  ; =  ; = ; S  ; =  ; = ; = ;   I   ; = ; S  ; = ; =  ; = ; = ;   I  
+ay ; <eps> ; <eps> ; l ; uh ; k ;   k   ; iy ; ng ; f ; aa ; eh ; m ; p ;   p   ; l ; oy ; m ; eh ; n ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAS_F01_S5_019.wav, %WER 35.29 [ 6 / 17, 3 ins, 0 del, 3 sub ]
+d ; uw ; z  ; ey ; ae ; l ; ow ; ey ; s ; ih ; s ; t ; <eps> ; iy ; n ; <eps> ; ch ; er ; <eps> ; ch
+= ; S  ; S  ; =  ; S  ; = ; =  ; =  ; = ; =  ; = ; = ;   I   ; =  ; = ;   I   ; =  ; =  ;   I   ; = 
+d ; ux ; dh ; ey ; aw ; l ; ow ; ey ; s ; ih ; s ; t ;   t   ; iy ; n ;   t   ; ch ; er ;   t   ; ch
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TEI_M07_S7_038.wav, %WER 88.24 [ 15 / 17, 6 ins, 1 del, 8 sub ]
+z  ; ey ; ao ;   r   ; l ; ah ; k ; <eps> ; l ; ao ; ng ; <eps> ; <eps> ; <eps> ; hh ; ao ; t ; <eps> ; <eps> ; sh ; ah ; ah ; s
+S  ; =  ; S  ;   D   ; = ; S  ; = ;   I   ; = ; S  ; =  ;   I   ;   I   ;   I   ; =  ; S  ; = ;   I   ;   I   ; =  ; S  ; S  ; S
+dh ; ey ; aa ; <eps> ; l ; ay ; k ;   k   ; l ; aa ; ng ;   g   ;   g   ;   ax  ; hh ; aa ; t ;   dh  ;   ax  ; sh ; aa ; aa ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAR_M06_S4_034.wav, %WER 78.95 [ 15 / 19, 7 ins, 0 del, 8 sub ]
+jh ; ey ; v ; s ; t ; ow ; g  ; <eps> ; <eps> ; <eps> ; ow ; k ; ah ; <eps> ; t ; <eps> ; n ; ey ; v ; ah ; w ; ah ; k ; <eps> ; t ; <eps>
+=  ; S  ; S ; = ; = ; S  ; S  ;   I   ;   I   ;   I   ; =  ; = ; S  ;   I   ; = ;   I   ; = ; S  ; = ; S  ; = ; S  ; = ;   I   ; = ;   I  
+jh ; eh ; f ; s ; t ; t  ; aa ;   iy  ;   k   ;   k   ; ow ; k ; k  ;   aa  ; t ;   t   ; n ; eh ; v ; er ; w ; aa ; k ;   k   ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TUT_M07_S7_032.wav, %WER 71.43 [ 15 / 21, 6 ins, 0 del, 9 sub ]
+f  ; ih ; <eps> ; t ; ch ; ah ; ch ; <eps> ; d ; uw ; <eps> ; z ; ah ; s ; <eps> ; m ; ih ; s ; w ; ah ; <eps> ; sh ; ih ; p ; <eps> ; iy ; n
+S  ; S  ;   I   ; = ; =  ; S  ; S  ;   I   ; = ; =  ;   I   ; = ; S  ; = ;   I   ; = ; S  ; S ; = ; S  ;   I   ; =  ; S  ; = ;   I   ; =  ; =
+hh ; w  ;   iy  ; t ; ch ; aa ; d  ;   jh  ; d ; uw ;   ix  ; z ; ix ; s ;   ih  ; m ; iy ; z ; w ; aa ;   r   ; sh ; ix ; p ;   p   ; iy ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TKT_M06_S6_012.wav, %WER 68.75 [ 11 / 16, 6 ins, 0 del, 5 sub ]
+z  ; ah ; m ; iy ; t ; <eps> ; iy ; ng ; <eps> ; <eps> ; <eps> ; iy ; z ; n ; ah ; ah ; zh ; th ; <eps> ; n ; <eps> ; z
+S  ; S  ; = ; =  ; = ;   I   ; =  ; =  ;   I   ;   I   ;   I   ; =  ; = ; = ; S  ; =  ; S  ; S  ;   I   ; = ;   I   ; =
+dh ; ax ; m ; iy ; t ;   t   ; iy ; ng ;   g   ;   g   ;   ix  ; iy ; z ; n ; aw ; ah ; d  ; jh ;   aa  ; n ;   d   ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/YAM_F01_S1_042.wav, %WER 66.67 [ 16 / 24, 6 ins, 1 del, 9 sub ]
+b ; iy ; b ; r  ; ih ; <eps> ; k ; <eps> ; ah ;   l   ; s ; k ; ao ; <eps> ; l ; ah ; z ; aa ; g ; <eps> ; y ; uw ; k  ; <eps> ; ih ; s ; ch ; er ; <eps> ; iy
+= ; S  ; = ; S  ; S  ;   I   ; = ;   I   ; =  ;   D   ; = ; = ; S  ;   I   ; = ; S  ; = ; =  ; = ;   I   ; = ; S  ; S  ;   I   ; =  ; = ; S  ; S  ;   I   ; = 
+b ; ih ; b ; uh ; dx ;   iy  ; k ;   k   ; ah ; <eps> ; s ; k ; k  ;   aa  ; l ; er ; z ; aa ; g ;   g   ; y ; ux ; sh ;   hh  ; ih ; s ; t  ; t  ;  axr  ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/KYO_M07_S7_025.wav, %WER 88.46 [ 23 / 26, 8 ins, 1 del, 14 sub ]
+  f   ; aa ; m ; g ; <eps> ; iy ; v ; <eps> ; <eps> ; z ; d ; <eps> ; <eps> ; r ; aa ; w ; ih ; ng ; r ; eh ; s ; ih ; ih ; s  ; th ; ih ; <eps> ; <eps> ; s ; ah ; z  ; z ; ih ; <eps>
+  D   ; =  ; = ; S ;   I   ; =  ; S ;   I   ;   I   ; = ; = ;   I   ;   I   ; = ; S  ; S ; S  ; =  ; S ; =  ; = ; S  ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ; =  ; S  ; S ; S  ;   I  
+<eps> ; aa ; m ; k ;   k   ; iy ; p ;   p   ;   ix  ; z ; d ;   d   ;  axr  ; r ; ay ; v ; iy ; ng ; v ; eh ; s ; t  ; t  ; ix ; n  ; z  ;   aa  ;   n   ; s ; ah ; zh ; d ; d  ;   ey 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/YAM_F01_S1_021.wav, %WER 42.11 [ 8 / 19, 0 ins, 1 del, 7 sub ]
+ah ; l ; f ; ah ; l ; f ; ah ; iy ; z ; hh ; ey ; l ; th ; iy ; f ; ow ;   iy  ; y ; uw
+S  ; = ; = ; S  ; S ; = ; S  ; =  ; = ; =  ; S  ; = ; =  ; =  ; = ; S  ;   D   ; = ; S 
+aa ; l ; f ; aa ; n ; f ; aa ; iy ; z ; hh ; eh ; l ; th ; iy ; f ; aa ; <eps> ; y ; ux
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKK_F01_S2_012.wav, %WER 95.24 [ 20 / 21, 11 ins, 0 del, 9 sub ]
+s ; f ; <eps> ; r ; iy ; ng ; <eps> ; <eps> ; <eps> ; s ; ch ; <eps> ; r ; iy ; t ; ih ; <eps> ; <eps> ; <eps> ; z ; s ; t ; <eps> ; l ; ey ; t ; ah ; <eps> ; hh ; ey ; t ; <eps>
+= ; S ;   I   ; = ; S  ; =  ;   I   ;   I   ;   I   ; = ; S  ;   I   ; = ; =  ; = ; S  ;   I   ;   I   ;   I   ; = ; S ; S ;   I   ; = ; =  ; = ; S  ;   I   ; =  ; S  ; S ;   I  
+s ; p ;   p   ; r ; ih ; ng ;   g   ;   g   ;   uh  ; s ; t  ;   t   ; r ; iy ; t ; s  ;   ux  ;   dx  ;   ix  ; z ; d ; d ;   ax  ; l ; ey ; t ; t  ;   aa  ; hh ; eh ; d ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAG_M06_S8_040.wav, %WER 50.00 [ 9 / 18, 4 ins, 0 del, 5 sub ]
+w ; iy ; <eps> ; ch ; sh ; ih ; ah ; t ; <eps> ; ah ; sh ; th ; z ; m ; ah ; <eps> ; dh ; ah ; g ; <eps> ; uw ; s
+= ; =  ;   I   ; =  ; S  ; =  ; S  ; = ;   I   ; =  ; =  ; S  ; = ; = ; S  ;   I   ; =  ; S  ; = ;   I   ; =  ; =
+w ; iy ;   t   ; ch ; s  ; ih ; eh ; t ;   dh  ; ah ; sh ; ow ; z ; m ; aa ;   d   ; dh ; aw ; g ;   g   ; uw ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKK_F01_S2_015.wav, %WER 64.29 [ 18 / 28, 4 ins, 2 del, 12 sub ]
+b ; uw ;   l   ; dh ; ae ; th ; <eps> ; k ; ah ; <eps> ; n ; d  ; iy ;   uw  ; w ; ih ; z ; f ; <eps> ; l ; ey ; sh ; sh ; p ; r ; iy ; ng ; w ; ow ; d ; ah ; <eps>
+S ; S  ;   D   ; =  ; =  ; S  ;   I   ; = ; S  ;   I   ; = ; S  ; =  ;   D   ; = ; =  ; S ; S ;   I   ; = ; S  ; =  ; S  ; = ; = ; S  ; =  ; = ; S  ; = ; S  ;   I  
+w ; ih ; <eps> ; dh ; ae ; t  ;   t   ; k ; k  ;   aw  ; n ; dh ; iy ; <eps> ; w ; ih ; d ; d ;   hh  ; l ; eh ; sh ; p  ; p ; r ; ih ; ng ; w ; aa ; d ; d  ;   ax 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOH_F01_S1_027.wav, %WER 55.00 [ 11 / 20, 5 ins, 0 del, 6 sub ]
+d ; iy ; d ; d ; ae ; d ; d ; ih ; aa ; k ; ih ; <eps> ; d ; ey ; <eps> ; m ; iy ; k ; <eps> ; b ; <eps> ; iy ; dh ; iy ; <eps>
+= ; S  ; = ; = ; S  ; = ; = ; S  ; =  ; = ; S  ;   I   ; = ; S  ;   I   ; = ; =  ; = ;   I   ; = ;   I   ; =  ; S  ; =  ;   I  
+d ; ih ; d ; d ; aa ; d ; d ; ux ; aa ; k ; k  ;  ax-h ; d ; d  ;   eh  ; m ; iy ; k ;   k   ; b ;   b   ; iy ; dx ; iy ;   ng 
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/SIZ_M06_S6_008.wav, %WER 73.91 [ 17 / 23, 7 ins, 0 del, 10 sub ]
+d  ; ah ; b ; r ; <eps> ; <eps> ; uw ; zh ; <eps> ; ey ; f ; l ; <eps> ; uw ; th ; v ; ah ; d  ; ah ; hh ; ah ; b ; <eps> ; ih ; r  ; <eps> ; d ; <eps> ; iy ; n 
+S  ; =  ; = ; S ;   I   ;   I   ; =  ; S  ;   I   ; =  ; = ; S ;   I   ; =  ; S  ; = ; =  ; S  ; S  ; =  ; S  ; = ;   I   ; =  ; S  ;   I   ; = ;   I   ; =  ; S 
+dh ; ah ; b ; b ;   ax  ;   l   ; uw ; d  ;   jh  ; ey ; f ; r ;   r   ; uw ; ow ; v ; ah ; dh ; ax ; hh ; ay ; b ;   b   ; ih ; dx ;   ih  ; d ;   d   ; iy ; ng
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAR_F01_S7_034.wav, %WER 53.85 [ 7 / 13, 3 ins, 0 del, 4 sub ]
+ih ; z ; sh ; iy ; g ; ao ; <eps> ; ih ; ng ; <eps> ; <eps> ; w ; ih ; z  ; y ; uw
+=  ; S ; S  ; =  ; = ; S  ;   I   ; =  ; =  ;   I   ;   I   ; = ; =  ; S  ; = ; = 
+ih ; s ; hh ; iy ; g ; g  ;   ow  ; ih ; ng ;   g   ;   g   ; w ; ih ; th ; y ; uw
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/HIR_F01_S5_034.wav, %WER 57.89 [ 11 / 19, 7 ins, 0 del, 4 sub ]
+d ; uw ; ey ; t ; <eps> ; ih ; f ; <eps> ; <eps> ; k ; ah ; l ; f ; ah ; <eps> ; m ; er ; z ; g ; <eps> ; r ; ow ; ow ; t ; <eps> ; <eps>
+= ; =  ; =  ; = ;   I   ; =  ; S ;   I   ;   I   ; = ; S  ; = ; = ; S  ;   I   ; = ; =  ; = ; = ;   I   ; = ; =  ; =  ; S ;   I   ;   I  
+d ; uw ; ey ; t ;   t   ; ih ; p ;   p   ;  ax-h ; k ; k  ; l ; f ; aa ;   r   ; m ; er ; z ; g ;   g   ; r ; ow ; ow ; l ;   d   ;   jh 
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TUT_M07_S7_027.wav, %WER 66.67 [ 18 / 27, 7 ins, 2 del, 9 sub ]
+w ; iy ; w ; eh ; l ; <eps> ; k ; <eps> ; ah ; m ;   m   ; eh ; n ; iy ; n ; y  ;   uh  ; s ; ch ; uw ; <eps> ; d ; ey ; <eps> ; n ; t ; <eps> ; <eps> ; iy ; t ; iy ; <eps> ; ih ;  er
+= ; =  ; S ; S  ; S ;   I   ; = ;   I   ; =  ; = ;   D   ; =  ; = ; =  ; = ; S  ;   D   ; = ; S  ; S  ;   I   ; = ; S  ;   I   ; = ; = ;   I   ;   I   ; =  ; = ; S  ;   I   ; =  ;  S 
+w ; iy ; r ; ih ; r ;   ix  ; k ;   k   ; ah ; m ; <eps> ; eh ; n ; iy ; n ; ux ; <eps> ; s ; t  ; t  ;   ux  ; d ; d  ;   eh  ; n ; t ;   t   ;   s   ; iy ; t ; ch ;   y   ; ih ; axr
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RIT_M06_S8_003.wav, %WER 85.71 [ 18 / 21, 5 ins, 0 del, 13 sub ]
+ah ; k  ; y ; uw ; zh ; <eps> ; p ; ah ; ah ; ah ; <eps> ; t ; ey ; sh ; <eps> ; <eps> ; r ; ey ; ah ; r ; iy ; ao ; k ; ah ; <eps> ; s
+=  ; S  ; = ; S  ; S  ;   I   ; = ; S  ; S  ; S  ;   I   ; = ; S  ; S  ;   I   ;   I   ; = ; S  ; S  ; S ; =  ; S  ; = ; S  ;   I   ; =
+ah ; hh ; y ; ux ; d  ;   jh  ; p ; p  ; aw ; aa ;   aw  ; t ; d  ; ih ;   d   ;   jh  ; r ; iy ; aa ; l ; iy ; ow ; k ; k  ;   aa  ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/NAG_F07_S2_030.wav, %WER 50.00 [ 11 / 22, 4 ins, 0 del, 7 sub ]
+d  ; ah ; th ; iy ; ng ; k ; ah ; iy ; <eps> ; z ; ah ; f ; ey ; m ; ah ; s ; s ; k ; ah ; l ; f  ; sh ; <eps> ; <eps> ; <eps> ; er
+S  ; =  ; =  ; =  ; =  ; = ; S  ; S  ;   I   ; = ; =  ; = ; =  ; = ; =  ; = ; S ; = ; S  ; = ; S  ; S  ;   I   ;   I   ;   I   ; = 
+dh ; ah ; th ; iy ; ng ; k ; k  ; er ;   ih  ; z ; ah ; f ; ey ; m ; ah ; s ; k ; k ; aa ; l ; ax ; p  ;   p   ;   t   ;   ch  ; er
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/KYO_F07_S6_031.wav, %WER 50.00 [ 12 / 24, 3 ins, 1 del, 8 sub ]
+s ; t ; <eps> ; iy ; v ; k ; th ; <eps> ; r ; ey ; hh ; t ; <eps> ; r ; ey ; r ; eh ; n ; n  ;   ao  ; v ; eh ; l ; k ; oy ; n ; t
+= ; = ;   I   ; =  ; = ; = ; S  ;   I   ; = ; S  ; S  ; = ;   I   ; = ; S  ; = ; =  ; = ; S  ;   D   ; = ; S  ; S ; = ; =  ; = ; S
+s ; t ;   t   ; iy ; v ; k ; k  ;  axr  ; r ; eh ; k  ; t ;   s   ; r ; eh ; r ; eh ; n ; ow ; <eps> ; v ; er ; k ; k ; oy ; n ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TUT_M06_S6_027.wav, %WER 53.57 [ 15 / 28, 7 ins, 0 del, 8 sub ]
+ah ; l ; ey ; z ; ah ; hh ; aa ; n ; d ; b ; ah ; k ; uw ; dh ; <eps> ; <eps> ; <eps> ; b ; <eps> ; iy ; ah ; s ; uw ; t ; <eps> ; ah ; b ; ah ; l ; g ; iy ; <eps> ; f ; t ; <eps>
+=  ; = ; S  ; = ; =  ; =  ; S  ; = ; = ; = ; S  ; = ; S  ; S  ;   I   ;   I   ;   I   ; = ;   I   ; =  ; =  ; = ; S  ; = ;   I   ; =  ; = ; S  ; = ; = ; S  ;   I   ; = ; = ;   I  
+ah ; l ; eh ; z ; ah ; hh ; ay ; n ; d ; b ; aa ; k ; k  ; w  ;   uh  ;   dx  ;   ax  ; b ;   b   ; iy ; ah ; s ; ux ; t ;   t   ; ah ; b ; b  ; l ; g ; g  ;   ih  ; f ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAG_F01_S5_035.wav, %WER 37.50 [ 9 / 24, 3 ins, 0 del, 6 sub ]
+ah ; hh ; aa ; l ; <eps> ; d ; <eps> ; ey ; ey ; p ; l ; ow ; n ; t ; ah ; v ; ey ; l ; ah ; b ; ow ; l ; ch ; ow ; <eps> ; ah ; s
+S  ; =  ; =  ; = ;   I   ; = ;   I   ; =  ; =  ; = ; S ; =  ; = ; S ; =  ; = ; =  ; = ; =  ; = ; S  ; = ; S  ; S  ;   I   ; =  ; =
+aa ; hh ; aa ; l ;   ax  ; d ;   d   ; ey ; ey ; p ; p ; ow ; n ; z ; ah ; v ; ey ; l ; ah ; b ; b  ; l ; t  ; t  ;   uw  ; ah ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/NAG_F07_S2_046.wav, %WER 77.27 [ 17 / 22, 9 ins, 0 del, 8 sub ]
+p ; y ; uw ; <eps> ; p ; <eps> ; iy ; <eps> ; p ; <eps> ; l ; l ; ah ; f ; <eps> ; t ; ih ; <eps> ; b ; <eps> ; iy ; aa ; hh ; ah ; n ; d ; w ; <eps> ; eh ; t ; <eps>
+S ; = ; S  ;   I   ; = ;   I   ; =  ;   I   ; = ;   I   ; = ; = ; S  ; S ;   I   ; = ; S  ;   I   ; = ;   I   ; =  ; S  ; =  ; =  ; = ; = ; S ;   I   ; =  ; S ;   I  
+f ; y ; ux ;   l   ; p ;   p   ; iy ;   ix  ; p ;   p   ; l ; l ; iy ; v ;   d   ; t ; t  ;   ux  ; b ;   b   ; iy ; ah ; hh ; ah ; n ; d ; d ;   r   ; eh ; d ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAG_F01_S5_038.wav, %WER 40.74 [ 11 / 27, 4 ins, 1 del, 6 sub ]
+d  ; iy ; ae ; ng ; g ; <eps> ; r ; ih ; b ; <eps> ; oy ; ae ; ih ; s ; er ; d ; b ; ah ; t ; d ; ih ; d  ; <eps> ; n ;   t   ; l ; uh ; k ; <eps> ; ah ; p
+S  ; =  ; =  ; =  ; = ;   I   ; = ; S  ; = ;   I   ; =  ; S  ; S  ; = ; =  ; = ; = ; =  ; = ; = ; =  ; S  ;   I   ; = ;   D   ; = ; S  ; = ;   I   ; =  ; =
+dh ; iy ; ae ; ng ; g ;   g   ; r ; iy ; b ;   b   ; oy ; aa ; n  ; s ; er ; d ; b ; ah ; t ; d ; ih ; dx ;   ih  ; n ; <eps> ; l ; ih ; k ;   k   ; ah ; p
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/KYO_M06_S6_021.wav, %WER 59.09 [ 13 / 22, 4 ins, 0 del, 9 sub ]
+z ; ah ; th ; <eps> ; z ; th ; k ; sh ; <eps> ; ey ; s ; ih ; z ; k ; <eps> ; ah ; t ; <eps> ; m ; ah ; sh ; l ; ey ; s ; l ; iy
+= ; S  ; S  ;   I   ; = ; S  ; = ; S  ;   I   ; =  ; = ; S  ; = ; = ;   I   ; =  ; = ;   I   ; = ; S  ; =  ; S ; S  ; = ; S ; = 
+z ; aa ; t  ;   t   ; z ; uh ; k ; k  ;   s   ; ey ; s ; iy ; z ; k ;   k   ; ah ; t ;   s   ; m ; aa ; sh ; n ; ih ; s ; v ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/DOS_F01_S6_007.wav, %WER 61.54 [ 16 / 26, 6 ins, 1 del, 9 sub ]
+t  ; ow ; f  ;   uw  ; iy ; <eps> ; z ; <eps> ; m ; ey ; d ; <eps> ; <eps> ; f ; r ; ow ; m ; p ; <eps> ; r ; ah ; s ; iy ; dh ;  uw  ; s ; th ; b ; <eps> ; iy ; ih ; s
+S  ; =  ; S  ;   D   ; =  ;   I   ; = ;   I   ; = ; S  ; = ;   I   ;   I   ; = ; = ; =  ; = ; = ;   I   ; = ; S  ; = ; =  ; S  ;  S   ; = ; S  ; = ;   I   ; =  ; S  ; S
+dh ; ow ; hh ; <eps> ; iy ;   ix  ; z ;   ix  ; m ; ae ; d ;   d   ;   ax  ; f ; r ; ow ; m ; p ;   p   ; r ; ow ; s ; iy ; z  ; ax-h ; s ; oy ; b ;   b   ; iy ; n  ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TUT_F07_S6_030.wav, %WER 52.17 [ 12 / 23, 4 ins, 0 del, 8 sub ]
+z ; ah ; f ; uw ; l ; m ; uw ; ih ; sh ; th ; m ; b ; <eps> ; r ; ah ; t ; <eps> ; <eps> ; r ; iy ; z ; ah ; t ; n ; ah ; t ; <eps>
+= ; =  ; = ; S  ; = ; = ; =  ; S  ; =  ; S  ; S ; = ;   I   ; = ; S  ; = ;   I   ;   I   ; = ; =  ; S ; S  ; = ; = ; S  ; = ;   I  
+z ; ah ; f ; uh ; l ; m ; uw ; n  ; sh ; ow ; n ; b ;   b   ; r ; ay ; t ;   t   ;  axr  ; r ; iy ; d ; eh ; t ; n ; ay ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAR_M06_S4_022.wav, %WER 32.00 [ 8 / 25, 1 ins, 1 del, 6 sub ]
+n ; ow ; w ; ey ; zh ;   ah  ; ih ; <eps> ; s ; w ; eh ; l  ; ah ; z ; ah ; m ; ey ; d ; ao ; v ; l ; ah ; m ; z ; uw ; l
+= ; =  ; = ; S  ; =  ;   D   ; =  ;   I   ; = ; = ; =  ; S  ; S  ; = ; S  ; = ; =  ; = ; S  ; = ; = ; S  ; = ; = ; =  ; =
+n ; ow ; w ; iy ; zh ; <eps> ; ih ;   n   ; s ; w ; eh ; dx ; er ; z ; aa ; m ; ey ; d ; ah ; v ; l ; aa ; m ; z ; uw ; l
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/KYO_F01_S8_014.wav, %WER 59.09 [ 13 / 22, 6 ins, 0 del, 7 sub ]
+eh ; v ; r ; ih ; k ; aa ; <eps> ; f ; n ; iy ; s ; <eps> ; r ; uw ; p ; <eps> ; ey ; n ; t ; <eps> ; iy ; ng ; ao ; <eps> ; <eps> ; f ; ih ; m
+=  ; = ; = ; S  ; = ; S  ;   I   ; = ; = ; =  ; S ;   I   ; = ; S  ; = ;   I   ; =  ; = ; = ;   I   ; =  ; =  ; S  ;   I   ;   I   ; = ; S  ; S
+eh ; v ; r ; iy ; k ; k  ;   ae  ; f ; n ; iy ; d ;   z   ; r ; ix ; p ;   p   ; ey ; n ; t ;   t   ; iy ; ng ; g  ;   g   ;   ow  ; f ; ax ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKK_F01_S2_022.wav, %WER 65.52 [ 19 / 29, 5 ins, 1 del, 13 sub ]
+g ; ih ; z ; s ; ah ; v ; iy ;   s   ; sh ; uw ; d ; b ; iy ; l ; iy ; b ; ah ; dh ; ih ; <eps> ; d ; <eps> ; b ; ah ; <eps> ; b ; <eps> ; iy ; hh ; t  ; iy ; p ; s ; <eps>
+= ; S  ; S ; = ; S  ; = ; S  ;   D   ; =  ; S  ; = ; = ; =  ; = ; =  ; S ; S  ; S  ; S  ;   I   ; = ;   I   ; = ; S  ;   I   ; = ;   I   ; =  ; S  ; S  ; =  ; = ; S ;   I  
+g ; uh ; d ; s ; aa ; v ; ix ; <eps> ; sh ; uh ; d ; b ; iy ; l ; iy ; v ; aa ; r  ; dx ;   ix  ; d ;   d   ; b ; b  ;   ay  ; b ;   b   ; iy ; k  ; th ; iy ; p ; p ;   z  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/DOS_F01_S6_008.wav, %WER 62.50 [ 15 / 24, 3 ins, 1 del, 11 sub ]
+  ow  ; z ; ah ; <eps> ; b ; l ; uw ; zh ; th ; hh ; l ; uw ; ow ; v ; ah ; dh ; ah ; hh ; ah ; b ; <eps> ; iy ; l ; d ; <eps> ; iy ; ng
+  D   ; = ; =  ;   I   ; = ; = ; S  ; S  ; S  ; =  ; S ; S  ; S  ; S ; S  ; S  ; S  ; =  ; S  ; = ;   I   ; =  ; = ; = ;   I   ; =  ; = 
+<eps> ; z ; ah ;   p   ; b ; l ; ux ; jh ; oy ; hh ; r ; ux ; aa ; w ; aa ; z  ; ax ; hh ; ay ; b ;   b   ; iy ; l ; d ;   d   ; iy ; ng
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RYU_F01_S1_009.wav, %WER 70.59 [ 12 / 17, 2 ins, 1 del, 9 sub ]
+hh ; eh ; ah ; ao ;   ah  ; y ; uw ; f ; ah ; r  ; <eps> ; <eps> ; w ; iy ; w ; ah ; ah ; w ; eh
+S  ; =  ; S  ; S  ;   D   ; = ; =  ; S ; S  ; S  ;   I   ;   I   ; = ; =  ; S ; =  ; =  ; S ; S 
+w  ; eh ; w  ; aa ; <eps> ; y ; uw ; s ; w  ; ay ;   dx  ;   ax  ; w ; iy ; v ; ah ; ah ; v ; ey
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/HIR_F01_S5_037.wav, %WER 47.62 [ 10 / 21, 2 ins, 0 del, 8 sub ]
+ah ; l ; ah ; iy ; t ; ch ; aa ; l ; t ; t ; uw ; hh ; ah ; v ; ah ; n ; ay ; s ; p ; ah ; <eps> ; p ; <eps>
+S  ; = ; S  ; =  ; = ; =  ; S  ; = ; S ; = ; S  ; =  ; S  ; = ; S  ; = ; =  ; = ; = ; S  ;   I   ; = ;   I  
+ax ; l ; aw ; iy ; t ; ch ; ay ; l ; d ; t ; ux ; hh ; ae ; v ; eh ; n ; ay ; s ; p ; p  ;   aa  ; p ;   p  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/SIZ_F01_S1_004.wav, %WER 65.22 [ 15 / 23, 3 ins, 1 del, 11 sub ]
+jh ; ey ; m ; m ; ey ; ah ; m ; m  ;   ah  ; m ; ah ; n ; ey ; <eps> ; b ; ah ; w ; ah ; k ; <eps> ; iy ; ah ; hh ; ah ; t ; <eps>
+S  ; S  ; S ; = ; =  ; S  ; = ; S  ;   D   ; = ; S  ; = ; S  ;   I   ; = ; S  ; = ; S  ; = ;   I   ; =  ; S  ; =  ; S  ; = ;   I  
+d  ; ae ; b ; m ; ey ; aa ; m ; aa ; <eps> ; m ; aa ; n ; ih ;   t   ; b ; ay ; w ; aa ; k ;   k   ; iy ; ng ; hh ; aa ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/NAG_F07_S2_026.wav, %WER 61.54 [ 16 / 26, 6 ins, 0 del, 10 sub ]
+hh ; ih ; s ; p ; ah ; <eps> ; <eps> ; n ; iy ; k ; k ; ao ; s ; ch ; ih ; <eps> ; m ; z ; aa ; <eps> ; k ; w ; ah ; t ; <eps> ; k ; <eps> ; ah ; l ; ah ; f ; ow
+=  ; =  ; S ; S ; S  ;   I   ;   I   ; = ; =  ; = ; S ; S  ; = ; S  ; S  ;   I   ; = ; = ; =  ;   I   ; = ; = ; S  ; = ;   I   ; = ;   I   ; =  ; = ; S  ; = ; S 
+hh ; ih ; z ; b ; b  ;   ae  ;   l   ; n ; iy ; k ; g ; ow ; s ; d  ; jh ;   er  ; m ; z ; aa ;   g   ; k ; w ; ay ; t ;   t   ; k ;   k   ; ah ; l ; ax ; f ; l 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/HIR_F01_S5_050.wav, %WER 96.15 [ 25 / 26, 7 ins, 2 del, 16 sub ]
+f ; ih ; sh ; <eps> ; p ; <eps> ; er ; <eps> ; ch ; ah ; th ; th ; ey ; v ;   r   ;   ah  ; l ; th ; ah ; <eps> ; n ; l  ; ih ; dh ; th ; <eps> ; <eps> ; g ; <eps> ; r ; aa ; f ; th
+S ; S  ; S  ;   I   ; = ;   I   ; =  ;   I   ; =  ; S  ; S  ; S  ; S  ; S ;   D   ;   D   ; = ; S  ; S  ;   I   ; = ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ;   I   ; = ; S  ; = ; S 
+r ; iy ; t  ;   ch  ; p ;   p   ; er ;   t   ; ch ; ih ; s  ; eh ; p  ; p ; <eps> ; <eps> ; l ; ow ; s  ;   ay  ; n ; ax ; v  ; r  ; iy ;   z   ;   ax  ; g ;   g   ; r ; ae ; f ; s 
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TEI_M06_S6_005.wav, %WER 73.91 [ 17 / 23, 6 ins, 0 del, 11 sub ]
+ah ; m ; ow ; b  ; er ; s  ; <eps> ; <eps> ; ch ; ey ; ih ; zh ; sh ; ey ; f ; <eps> ; k ; ow ; ih ; <eps> ; s ; t ; ah ; <eps> ; n ; t ; er ; <eps> ; iy
+=  ; = ; S  ; S  ; S  ; S  ;   I   ;   I   ; =  ; =  ; S  ; S  ; =  ; =  ; S ;   I   ; = ; S  ; S  ;   I   ; = ; = ; S  ;   I   ; = ; = ; S  ;   I   ; = 
+ah ; m ; oy ; ix ; v  ; ah ;   z   ;   t   ; ch ; ey ; n  ; jh ; sh ; ey ; p ;   p   ; k ; k  ; aa ;   n   ; s ; t ; t  ;   aa  ; n ; t ; t  ;   r   ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/KYO_M06_S6_009.wav, %WER 50.00 [ 14 / 28, 3 ins, 0 del, 11 sub ]
+ch ; iy ; f ; <eps> ; s ; t ; th ; <eps> ; k ; <eps> ; iy ; ng ; s ; r ; ah ; ih ; z ; ah ; f ; ah ; s ; t ; t ; ah ; m ; z ; ey ;  er ; b ; th ; th
+=  ; =  ; S ;   I   ; = ; = ; S  ;   I   ; = ;   I   ; =  ; =  ; S ; = ; =  ; S  ; = ; S  ; = ; =  ; = ; = ; = ; S  ; = ; = ; S  ;  S  ; S ; S  ; S 
+ch ; iy ; p ;   p   ; s ; t ; t  ;   ow  ; k ;   k   ; iy ; ng ; z ; r ; ah ; n  ; z ; ax ; f ; ah ; s ; t ; t ; ay ; m ; z ; ih ; axr ; v ; ow ; l 
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TEI_M07_S7_003.wav, %WER 44.00 [ 11 / 25, 2 ins, 0 del, 9 sub ]
+jh ; ao ; z  ; s ; eh ; l ; <eps> ; dh ; ah ; m ; uw ; w  ; ao ; ch ; iy ; z ; d ; ey ; t ; ah ; <eps> ; m ; m ; uw ; v ; iy ; s
+=  ; S  ; S  ; = ; =  ; S ;   I   ; =  ; S  ; = ; =  ; S  ; S  ; =  ; =  ; = ; = ; =  ; = ; S  ;   I   ; = ; = ; S  ; = ; =  ; S
+jh ; aa ; jh ; s ; eh ; r ;   ix  ; dh ; aa ; m ; uw ; ow ; t  ; ch ; iy ; z ; d ; ey ; t ; t  ;   ay  ; m ; m ; ux ; v ; iy ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RIT_M06_S8_011.wav, %WER 62.96 [ 17 / 27, 7 ins, 1 del, 9 sub ]
+t ; ao ; p ; <eps> ; <eps> ; jh ; iy ; n ; ih ; ah ; th ; r ; eh ; ah ;   r   ; iy ; hh ; ah ; v ; <eps> ; k ; <eps> ; r ; th ; k ; <eps> ; t ; <eps> ; s ; t ; ey ; <eps> ; m ; p
+= ; S  ; = ;   I   ;   I   ; =  ; =  ; = ; S  ; =  ; S  ; S ; S  ; S  ;   D   ; =  ; =  ; =  ; = ;   I   ; = ;   I   ; = ; S  ; = ;   I   ; = ;   I   ; = ; = ; S  ;   I   ; = ; S
+t ; aa ; p ;   p   ;   d   ; jh ; iy ; n ; y  ; ah ; s  ; l ; iy ; aa ; <eps> ; iy ; hh ; ah ; v ;   ah  ; k ;   k   ; r ; ow ; k ;   k   ; t ;   t   ; s ; t ; t  ;   eh  ; m ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/SIZ_M06_S6_007.wav, %WER 44.00 [ 11 / 25, 4 ins, 0 del, 7 sub ]
+t ; ow ; f ; iy ; s ; m ; ey ; d ; <eps> ; <eps> ; f ; r ; th ; m ; p ; <eps> ; r ; th ; s ; eh ; s ; t ; s ; th ; b ; <eps> ; iy ; n ; t
+= ; =  ; = ; S  ; S ; = ; S  ; = ;   I   ;   I   ; = ; = ; S  ; = ; = ;   I   ; = ; S  ; = ; =  ; = ; = ; = ; S  ; = ;   I   ; =  ; = ; S
+t ; ow ; f ; ih ; z ; m ; eh ; d ;   d   ;   ax  ; f ; r ; ah ; m ; p ;   p   ; r ; ow ; s ; eh ; s ; t ; s ; oy ; b ;   b   ; iy ; n ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAS_F01_S5_018.wav, %WER 65.22 [ 15 / 23, 10 ins, 0 del, 5 sub ]
+b ; ah ; iy ; t ; <eps> ; iy ; ng ; <eps> ; <eps> ; y ; ao ; g ; uw ; <eps> ; <eps> ; <eps> ; t ; <eps> ; y ; uw ; m ; ey ; l ; iy ; v ; <eps> ; <eps> ; l ; ao ; ng ; g ; <eps> ; ah
+= ; S  ; =  ; = ;   I   ; =  ; =  ;   I   ;   I   ; = ; S  ; = ; S  ;   I   ;   I   ;   I   ; = ;   I   ; = ; =  ; = ; =  ; = ; =  ; S ;   I   ;   I   ; = ; S  ; =  ; = ;   I   ; = 
+b ; ay ; iy ; t ;   t   ; iy ; ng ;   dh  ;   ix  ; y ; ow ; g ; g  ;   aa  ;   r   ;   ix  ; t ;   t   ; y ; uw ; m ; ey ; l ; iy ; b ;   b   ;   ix  ; l ; aa ; ng ; g ;   g   ; ah
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/KYO_F07_S6_023.wav, %WER 60.00 [ 18 / 30, 7 ins, 0 del, 11 sub ]
+p ; r ; iy ; z ; d ; ih ; hh ; <eps> ; <eps> ; m ; ah ; p ; ao ; <eps> ; t ; ih ; <eps> ; t ; er ; <eps> ; z ; ah ; f ; b ; iy ; f ; ao ; r ; d ; ah ; <eps> ; f ; r ; th ; s ; t ; <eps>
+= ; = ; =  ; = ; S ; S  ; S  ;   I   ;   I   ; = ; S  ; = ; S  ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; = ; S  ; = ; = ; =  ; = ; S  ; = ; = ; S  ;   I   ; = ; = ; S  ; = ; = ;   I  
+p ; r ; iy ; z ; t ; t  ; ey ;   k   ;   k   ; m ; ay ; p ; p  ;   ax  ; t ; t  ;   ey  ; t ; t  ;   ow  ; z ; aw ; f ; b ; iy ; f ; aa ; r ; d ; d  ;   ix  ; f ; r ; aa ; s ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAG_F01_S5_039.wav, %WER 66.67 [ 18 / 27, 7 ins, 2 del, 9 sub ]
+k ; l ; iy ; f ; w  ;   ah  ;   z   ; s ; uw ; z ; jh ; <eps> ; b ; ah ; <eps> ; <eps> ; z ; r ; ah ; k ; <eps> ; <eps> ; jh ; uw ; <eps> ; iy ; ah ; s ; m ; aa ; s ;  er ; sh ; <eps>
+= ; = ; =  ; = ; S  ;   D   ;   D   ; = ; S  ; = ; S  ;   I   ; = ; S  ;   I   ;   I   ; = ; S ; =  ; = ;   I   ;   I   ; =  ; S  ;   I   ; =  ; S  ; = ; = ; =  ; = ;  S  ; S  ;   I  
+k ; l ; iy ; f ; ih ; <eps> ; <eps> ; s ; ux ; z ; d  ;   d   ; b ; p  ;   r   ;   ey  ; z ; l ; ah ; k ;   k   ;   d   ; jh ; uh ;   r   ; iy ; ix ; s ; m ; aa ; s ; axr ; d  ;   jh 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKT_F01_S7_032.wav, %WER 50.00 [ 11 / 22, 5 ins, 0 del, 6 sub ]
+w ; ih ; <eps> ; ch ; <eps> ; ch ; er ; sh ; <eps> ; d ; uw ; z  ; ah ; s ; m ; iy ; th ; s ; w ; er ; <eps> ; sh ; ih ; p ; <eps> ; iy ; n
+= ; =  ;   I   ; =  ;   I   ; =  ; =  ; S  ;   I   ; = ; S  ; S  ; S  ; = ; = ; S  ; =  ; = ; = ; =  ;   I   ; =  ; S  ; = ;   I   ; =  ; =
+w ; ih ;   t   ; ch ;   t   ; ch ; er ; t  ;   ch  ; d ; ux ; dh ; ix ; s ; m ; ih ; th ; s ; w ; er ;   r   ; sh ; ix ; p ;   p   ; iy ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAK_F01_S3_008.wav, %WER 50.00 [ 12 / 24, 3 ins, 0 del, 9 sub ]
+ah ; t ; iy ; <eps> ; f ; iy ; sh ; ah ; l ; iy ; n ; t ; ey ; r  ; <eps> ; ih ; zh ; ey ; s ; ih ; z ; f ; ao ; <eps> ; l ; iy ; r
+S  ; = ; S  ;   I   ; = ; =  ; =  ; S  ; = ; =  ; = ; = ; S  ; S  ;   I   ; =  ; =  ; S  ; = ; =  ; = ; = ; S  ;   I   ; = ; S  ; S
+aa ; t ; t  ;   ix  ; f ; iy ; sh ; ow ; l ; iy ; n ; t ; d  ; eh ;   v   ; ih ; zh ; eh ; s ; ih ; z ; f ; aa ;   r   ; l ; ey ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TOH_F07_S7_038.wav, %WER 70.59 [ 12 / 17, 5 ins, 0 del, 7 sub ]
+z ; ey ; ao ; l ; l  ; ah ; k ; l ; ao ; ng ; <eps> ; <eps> ; hh ; ao ; t ; <eps> ; sh ; <eps> ; <eps> ; aa ; ah ; s
+= ; =  ; S  ; = ; S  ; S  ; = ; = ; S  ; =  ;   I   ;   I   ; =  ; S  ; = ;   I   ; =  ;   I   ;   I   ; =  ; S  ; S
+z ; ey ; ow ; l ; ay ; k  ; k ; l ; aa ; ng ;   g   ;   g   ; hh ; aa ; t ;   t   ; sh ;   er  ;   r   ; aa ; d  ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/HIR_F07_S3_015.wav, %WER 62.07 [ 18 / 29, 8 ins, 1 del, 9 sub ]
+p ; iy ; t ; <eps> ; <eps> ; r ; iy ; ah ; t ; ah ; <eps> ; k ; ao ; <eps> ; m ; b ; <eps> ; iy ; n ; iy ; ey ; n ;   ih  ; f ; ow ; ah ; k ; hh ; iy ; <eps> ; k ; <eps> ; l ; ah ; n ; <eps> ; ch
+= ; =  ; = ;   I   ;   I   ; = ; =  ; =  ; S ; S  ;   I   ; = ; S  ;   I   ; = ; = ;   I   ; =  ; = ; =  ; S  ; = ;   D   ; = ; S  ; S  ; = ; S  ; S  ;   I   ; = ;   I   ; = ; S  ; = ;   I   ; = 
+p ; iy ; t ;   t   ;   eh  ; r ; iy ; ah ; d ; z  ;   aa  ; k ; k  ;   aa  ; m ; b ;   b   ; iy ; n ; iy ; eh ; n ; <eps> ; f ; aa ; ax ; k ; k  ; w  ;   ih  ; k ;   k   ; l ; aa ; n ;   t   ; ch
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TUT_M07_S7_046.wav, %WER 65.38 [ 17 / 26, 4 ins, 0 del, 13 sub ]
+z  ; ey ; aa ; sh ; ih ; m ; n ; ow ; b ; ah ; <eps> ; g ; <eps> ; r ; er ; <eps> ; w ; ih ; l  ; ey ; v ; <eps> ; ah ; ey ; n ; t ; ih ; k  ; ih ; er
+S  ; =  ; S  ; =  ; S  ; = ; = ; =  ; = ; S  ;   I   ; = ;   I   ; = ; S  ;   I   ; = ; S  ; S  ; =  ; S ;   I   ; =  ; S  ; = ; = ; S  ; S  ; S  ; S 
+dh ; ey ; ah ; sh ; ux ; m ; n ; ow ; b ; b  ;   ay  ; g ;   g   ; r ; ae ;   ax  ; w ; iy ; ix ; ey ; b ;   b   ; ah ; ih ; n ; t ; t  ; ix ; hh ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKT_F01_S7_027.wav, %WER 53.85 [ 14 / 26, 6 ins, 2 del, 6 sub ]
+w ; iy ; w ; ey ; l ; k ; <eps> ; ah ; m ; m  ;   ey  ; n ; iy ; n ; y  ;   ih  ; s ; ch ; uw ; <eps> ; d ; ey ; <eps> ; n ; <eps> ; s ; iy ; <eps> ; ch ; <eps> ; iy ; er
+= ; =  ; = ; S  ; = ; = ;   I   ; =  ; = ; S  ;   D   ; = ; =  ; = ; S  ;   D   ; = ; S  ; S  ;   I   ; = ; S  ;   I   ; = ;   I   ; = ; =  ;   I   ; =  ;   I   ; =  ; = 
+w ; iy ; w ; ih ; l ; k ;   k   ; ah ; m ; eh ; <eps> ; n ; iy ; n ; ux ; <eps> ; s ; t  ; t  ;   ux  ; d ; d  ;   eh  ; n ;   t   ; s ; iy ;   t   ; ch ;   y   ; iy ; er
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAR_M06_S4_049.wav, %WER 54.17 [ 13 / 24, 3 ins, 0 del, 10 sub ]
+k ; iy ; f ; dh ; ah ; s ; ah ; m ; ah ; m ; iy ; t ; ah ; ah ; <eps> ; n ; d ; ah ; <eps> ; y ; th ; ah ; t ; ah ; ng ; g ; <eps>
+= ; =  ; S ; S  ; =  ; = ; =  ; = ; S  ; = ; =  ; = ; S  ; =  ;   I   ; = ; = ; S  ;   I   ; = ; S  ; S  ; = ; S  ; S  ; S ;   I  
+k ; iy ; p ; z  ; ah ; s ; ah ; m ; aa ; m ; iy ; t ; t  ; ah ;   aa  ; n ; d ; d  ;   ey  ; y ; uh ; t  ; t ; aa ; n  ; d ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/YAM_F01_S1_016.wav, %WER 52.63 [ 10 / 19, 2 ins, 0 del, 8 sub ]
+ah ; r ; ow ; l ; ow ; f ; w ; aa ; <eps> ; er ; l ; ey ; n ; iy ;  er ; d  ; uw ; w ; ao ; <eps> ; l
+=  ; = ; =  ; = ; S  ; S ; = ; S  ;   I   ; =  ; = ; =  ; = ; =  ;  S  ; S  ; S  ; S ; S  ;   I   ; =
+ah ; r ; ow ; l ; ah ; v ; w ; ay ;   y   ; er ; l ; ey ; n ; iy ; axr ; dh ; ax ; b ; b  ;   ow  ; l
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RIT_F01_S3_028.wav, %WER 55.17 [ 16 / 29, 6 ins, 1 del, 9 sub ]
+s ; ah ; k ; l ; <eps> ; iy ; k ; <eps> ; ah ; p ; <eps> ; r ; ow ; g ;   uw  ; r ; ah ; m ; s  ; <eps> ; w ; iy ; l ; n ; ey ; v ; ah ; k ; th ; <eps> ; m ; p ; ah ; l  ; <eps>
+= ; S  ; = ; S ;   I   ; =  ; = ;   I   ; =  ; = ;   I   ; = ; =  ; = ;   D   ; = ; S  ; = ; S  ;   I   ; = ; =  ; = ; = ; S  ; = ; S  ; = ; S  ;   I   ; = ; = ; S  ; S  ;   I  
+s ; ay ; k ; k ;   uh  ; iy ; k ;   k   ; ah ; p ;   p   ; r ; ow ; g ; <eps> ; r ; aa ; m ; ax ;   z   ; w ; iy ; l ; n ; eh ; v ; aa ; k ; k  ;   l   ; m ; p ; p  ; ay ;   ax 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/DOS_F01_S6_018.wav, %WER 60.00 [ 18 / 30, 5 ins, 1 del, 12 sub ]
+d  ; r  ; ow ; p ; f ; ah ; v ; f  ; ow ; m ; s ; iy ; n ; <eps> ; dh ; ah ; b ; ow ; <eps> ; k ; <eps> ; s ; b ; iy ; f ; ao ;   ah  ; y ; uw ; g ; ao ; ah ; <eps> ; t ; <eps>
+S  ; S  ; S  ; = ; = ; S  ; = ; S  ; =  ; = ; S ; =  ; = ;   I   ; =  ; S  ; = ; S  ;   I   ; = ;   I   ; = ; = ; =  ; = ; S  ;   D   ; = ; S  ; = ; S  ; S  ;   I   ; = ;   I  
+dh ; ax ; ah ; p ; f ; ay ; v ; hh ; ow ; m ; z ; iy ; n ;   d   ; dh ; ax ; b ; b  ;   uh  ; k ;   k   ; s ; b ; iy ; f ; aa ; <eps> ; y ; ux ; g ; g  ; ow ;   aw  ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAG_M06_S8_033.wav, %WER 48.48 [ 16 / 33, 7 ins, 0 del, 9 sub ]
+t ; ao ; m ; ah ; s ; s  ; iy ; ng ; k ; <eps> ; s ; ah ; l ; ah ; zh ; <eps> ; ah ; k ; <eps> ; r ; ah ; m ; <eps> ; f ; s ; ao ; r  ; <eps> ; v ; dh ; ah ; p ; <eps> ; r ; ao ; b ; r ; eh ; <eps> ; m
+= ; S  ; = ; =  ; = ; S  ; =  ; =  ; = ;   I   ; = ; =  ; = ; =  ; S  ;   I   ; =  ; = ;   I   ; = ; =  ; = ;   I   ; = ; = ; S  ; S  ;   I   ; = ; S  ; =  ; = ;   I   ; = ; S  ; S ; = ; S  ;   I   ; =
+t ; ow ; m ; ah ; s ; th ; iy ; ng ; k ;   k   ; s ; ah ; l ; ah ; d  ;   jh  ; ah ; k ;   k   ; r ; ah ; m ;   p   ; f ; s ; aa ; dx ;   ax  ; v ; z  ; ah ; p ;   p   ; r ; ow ; v ; r ; iy ;   ix  ; m
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TKT_M06_S6_001.wav, %WER 54.17 [ 13 / 24, 6 ins, 0 del, 7 sub ]
+z  ; ah ; t ; <eps> ; uw ; ah ; t ; <eps> ; iy ; s ; iy ; k ; <eps> ; s ; <eps> ; ch ; ey ; n ; sh ; s ; ow ; t ; uw ; <eps> ; g ; <eps> ; r ; ah ; f ; s
+S  ; =  ; = ;   I   ; =  ; S  ; = ;   I   ; =  ; = ; S  ; = ;   I   ; = ;   I   ; =  ; =  ; = ; S  ; S ; =  ; = ; S  ;   I   ; = ;   I   ; = ; S  ; = ; =
+dh ; ah ; t ;   t   ; uw ; aa ; t ;   t   ; iy ; s ; ix ; k ;   k   ; s ;   t   ; ch ; ey ; n ; jh ; d ; ow ; t ; t  ;   ix  ; g ;   g   ; r ; ae ; f ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RYU_F01_S1_007.wav, %WER 36.00 [ 9 / 25, 3 ins, 0 del, 6 sub ]
+n ; ow ; s ; iy ; ng ; <eps> ; <eps> ; <eps> ; ih ; z ; ah ; z ; ao ; f ; eh ; ah ; s ; ih ; v ; ah ; z ; iy ; n ; ah ; s ; ey ; ih ; s
+= ; =  ; = ; S  ; =  ;   I   ;   I   ;   I   ; =  ; = ; =  ; = ; S  ; = ; =  ; S  ; = ; =  ; = ; =  ; = ; =  ; = ; S  ; = ; S  ; S  ; =
+n ; ow ; s ; ih ; ng ;   g   ;   g   ;   ix  ; ih ; z ; ah ; z ; aa ; f ; eh ; n  ; s ; ih ; v ; ah ; z ; iy ; n ; ow ; s ; eh ; n  ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RYU_F01_S1_059.wav, %WER 43.48 [ 10 / 23, 8 ins, 0 del, 2 sub ]
+z ; ah ; s ; iy ; <eps> ; g ; <eps> ; ah ; z ; f ; iy ; ng ; g ; <eps> ; ah ; hh ; ah ; dh ; <eps> ; ah ; s ; <eps> ; p ; <eps> ; l ; iy ; n ; t ; ah ; <eps> ; <eps>
+= ; =  ; = ; =  ;   I   ; = ;   I   ; =  ; = ; = ; =  ; =  ; = ;   I   ; =  ; =  ; =  ; S  ;   I   ; =  ; = ;   I   ; = ;   I   ; = ; =  ; = ; = ; S  ;   I   ;   I  
+z ; ah ; s ; iy ;   ng  ; g ;   g   ; ah ; z ; f ; iy ; ng ; g ;   g   ; ah ; hh ; ah ; d  ;   d   ; ah ; s ;  ax-h ; p ;   p   ; l ; iy ; n ; t ; t  ;   ow  ;   v  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RYU_M06_S6_011.wav, %WER 69.57 [ 16 / 23, 5 ins, 0 del, 11 sub ]
+ah ; <eps> ; ch ; th ; z ; uw ; v ; f  ; y ; uw ; w ; ah ; r ; v ; <eps> ; iy ; k ; <eps> ; ah ; m ; <eps> ; jh ; ey ; n ; l  ; ah ; th ; <eps>
+=  ;   I   ; =  ; S  ; = ; S  ; S ; S  ; = ; =  ; = ; S  ; S ; S ;   I   ; =  ; = ;   I   ; =  ; = ;   I   ; =  ; S  ; = ; S  ; S  ; S  ;   I  
+ah ;   t   ; ch ; ow ; z ; ax ; m ; hh ; y ; uw ; w ; ih ; l ; b ;   b   ; iy ; k ;   k   ; ah ; m ;   d   ; jh ; ih ; n ; ih ; ix ; s  ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/KYO_M07_S7_005.wav, %WER 62.96 [ 17 / 27, 2 ins, 1 del, 14 sub ]
+ay ; ah ; s ; uw ; m ; m  ;   ao  ; sh ; ih ; w ; iy ; r  ; d ; ah ; <eps> ; m ; ih ; th ; d ; ih ; s ; s  ; iy ; p ; s ; hh ; ah ; l ; <eps>
+=  ; S  ; = ; S  ; = ; S  ;   D   ; =  ; S  ; = ; S  ; S  ; = ; S  ;   I   ; = ; S  ; S  ; = ; S  ; = ; S  ; S  ; = ; = ; =  ; S  ; S ;   I  
+ay ; ax ; s ; ux ; m ; oy ; <eps> ; sh ; uh ; w ; ih ; dx ; d ; d  ;   ae  ; m ; ix ; z  ; d ; iy ; s ; ih ; p  ; p ; s ; hh ; aa ; r ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/KYO_M06_S6_050.wav, %WER 61.29 [ 19 / 31, 2 ins, 1 del, 16 sub ]
+t  ; r ; iy ; s  ; s  ; ao ; ah ;   ah  ; z ; ih ; n ; <eps> ; d ; ah ; ah ; <eps> ; z ; th ; v ; m ; uw ; v ; iy ; z ; d ; ih ; s ; s  ; ah ; t ; ah ; dh ; ey
+S  ; = ; =  ; S  ; S  ; S  ; S  ;   D   ; = ; S  ; = ;   I   ; = ; S  ; S  ;   I   ; = ; S  ; = ; = ; S  ; = ; =  ; = ; = ; S  ; = ; S  ; S  ; = ; S  ; S  ; S 
+th ; r ; iy ; sh ; aa ; aa ; aa ; <eps> ; z ; ix ; n ;   dh  ; d ; ax ; v  ;   ay  ; z ; ax ; v ; m ; ux ; v ; iy ; z ; d ; iy ; s ; aa ; t  ; t ; ax ; l  ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/WAS_M06_S2_001.wav, %WER 62.86 [ 22 / 35, 10 ins, 0 del, 12 sub ]
+ch ; th ; k ; <eps> ; <eps> ; l ; eh ; t ; ah ; <eps> ; <eps> ; n ; d  ; <eps> ; r ; ow ; <eps> ; z ; ih ; t ; <eps> ; n ; ey ; v ; ah ; f ; eh ; r  ; <eps> ; ah ; z ; ah ; l ; ow ; m ; ah ; n ; t ; <eps> ; iy ; k ; g ; iy ; f ; <eps>
+=  ; S  ; = ;   I   ;   I   ; = ; S  ; = ; S  ;   I   ;   I   ; = ; S  ;   I   ; = ; =  ;   I   ; = ; S  ; = ;   I   ; = ; S  ; = ; =  ; = ; S  ; S  ;   I   ; =  ; = ; =  ; = ; S  ; = ; S  ; = ; = ;   I   ; =  ; S ; = ; S  ; = ;   I  
+ch ; uh ; k ;   k   ;   uh  ; l ; ey ; t ; t  ;   ax  ;   aa  ; n ; dh ;   ax  ; r ; ow ;   d   ; z ; ey ; t ;   s   ; n ; eh ; v ; ah ; f ; ey ; dx ;   ax  ; ah ; z ; ah ; l ; ax ; m ; aa ; n ; t ;   t   ; iy ; g ; g ; ih ; f ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/SIZ_M06_S6_018.wav, %WER 60.00 [ 18 / 30, 6 ins, 1 del, 11 sub ]
+d  ; <eps> ; r ; ah ; p ; f ; ah ; v ; f ; ow ; m ; z ; iy ; n ; d ; ih ; <eps> ; b ; ow ; hh ; <eps> ; s ; b ; <eps> ; iy ; f ; ow ;   ah  ; y ; uw ; g ; <eps> ; ow ; ah ; t ; <eps>
+S  ;   I   ; = ; =  ; = ; = ; S  ; S ; = ; S  ; = ; = ; S  ; = ; = ; S  ;   I   ; = ; S  ; S  ;   I   ; = ; = ;   I   ; =  ; = ; S  ;   D   ; = ; S  ; = ;   I   ; =  ; S  ; = ;   I  
+dh ;  axr  ; r ; ah ; p ; f ; ay ; n ; f ; aa ; m ; z ; ih ; n ; d ; dh ;   ax  ; b ; b  ; ah ;   k   ; s ; b ;   b   ; iy ; f ; aa ; <eps> ; y ; ux ; g ;   g   ; ow ; aw ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/ISH_F01_S5_027.wav, %WER 40.74 [ 11 / 27, 2 ins, 0 del, 9 sub ]
+k ; ae ; n ; dh ; ih ; ey ; <eps> ; jh ; ey ; ih ; s ; ih ; ow ; v ; ah ; <eps> ; th ; r ; ao ; ey ; l ; iy ; ah ; m ; f ; ow ; s ; ih ; s
+= ; S  ; = ; =  ; =  ; =  ;   I   ; =  ; S  ; S  ; = ; S  ; =  ; S ; S  ;   I   ; =  ; = ; S  ; =  ; = ; =  ; =  ; = ; = ; S  ; = ; S  ; =
+k ; aa ; n ; dh ; ih ; ey ;   d   ; jh ; eh ; n  ; s ; iy ; ow ; b ; b  ;   aa  ; th ; r ; ow ; ey ; l ; iy ; ah ; m ; f ; aa ; s ; eh ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/ISH_F01_S5_031.wav, %WER 46.15 [ 12 / 26, 7 ins, 0 del, 5 sub ]
+w ; iy ; dh ; <eps> ; d ; <eps> ; r ; ow ; ow ; n ; l ; iy ; ey ; z ; m ; ah ; <eps> ; ch ; m ; ey ; n ; iy ; ey ; z ; <eps> ; y ; uw ; n ; iy ; <eps> ; d ; <eps> ; <eps>
+= ; =  ; =  ;   I   ; = ;   I   ; = ; S  ; =  ; = ; = ; =  ; S  ; = ; = ; =  ;   I   ; =  ; = ; S  ; = ; =  ; S  ; = ;   I   ; = ; S  ; = ; =  ;   I   ; = ;   I   ;   I  
+w ; iy ; dh ;   uh  ; d ;   d   ; r ; aa ; ow ; n ; l ; iy ; ae ; z ; m ; ah ;   t   ; ch ; m ; ah ; n ; iy ; ah ; z ;   iy  ; y ; ux ; n ; iy ;   ey  ; d ;   d   ;   ix 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOH_F01_S1_022.wav, %WER 72.22 [ 13 / 18, 3 ins, 0 del, 10 sub ]
+f ; ey ; ey ; ao ; <eps> ; l ; ey ; l  ; <eps> ; s ; f ; ey ; l ; <eps> ; z ; y ; ih ; s ; f ; ao ; s
+= ; S  ; S  ; S  ;   I   ; = ; S  ; S  ;   I   ; = ; = ; S  ; S ;   I   ; = ; = ; S  ; S ; = ; S  ; =
+f ; ae ; n  ; t  ;   aa  ; l ; ax ; eh ;   r   ; s ; f ; eh ; r ;   d   ; z ; y ; ux ; z ; f ; aa ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOH_F01_S1_018.wav, %WER 65.38 [ 17 / 26, 4 ins, 0 del, 13 sub ]
+hh ; r  ; iy ; m ; ih ; n ; iy ; hh ; ah ; b ; s ; hh ; d ; ih ; <eps> ; b ; th ; <eps> ; s ; t ; <eps> ; m ; ae ; n ; s ; w ; ey ; l  ; th ; <eps>
+S  ; S  ; S  ; = ; S  ; = ; =  ; =  ; S  ; S ; S ; S  ; = ; S  ;   I   ; = ; S  ;   I   ; = ; = ;   I   ; = ; =  ; = ; S ; = ; S  ; S  ; =  ;   I  
+aa ; dx ; ix ; m ; ow ; n ; iy ; hh ; aa ; m ; z ; aa ; d ; d  ;  ax-h ; b ; b  ;   ow  ; s ; t ;   t   ; m ; ae ; n ; z ; w ; eh ; ix ; th ;   s  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TUT_F07_S6_045.wav, %WER 61.54 [ 16 / 26, 9 ins, 0 del, 7 sub ]
+d ; ah ; k ; <eps> ; s ; hh ; ah ; v ; v ; ey ; b ; t ; k ; <eps> ; iy ; t ; <eps> ; ae ; n ; d ; <eps> ; k ; ah ; <eps> ; <eps> ; f ; <eps> ; ow ; <eps> ; f ; ey ; dh ; <eps> ; ah ; s
+= ; =  ; = ;   I   ; = ; =  ; =  ; = ; S ; S  ; S ; = ; S ;   I   ; =  ; = ;   I   ; =  ; = ; = ;   I   ; = ; S  ;   I   ;   I   ; = ;   I   ; =  ;   I   ; = ; S  ; S  ;   I   ; =  ; =
+d ; ah ; k ;   k   ; s ; hh ; ah ; v ; r ; ih ; v ; t ; t ;   hh  ; iy ; t ;   t   ; ae ; n ; d ;   d   ; k ; k  ;   aa  ;   r   ; f ;   hh  ; ow ;   l   ; f ; eh ; d  ;   d   ; ah ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAR_M06_S4_038.wav, %WER 54.29 [ 19 / 35, 3 ins, 0 del, 16 sub ]
+d  ; ah ; m ; ao ; n ; iy ; ng ; d ; ih ; uw ; ow ; n ; d  ; ah ; s ; p ; ah ; dh ; <eps> ; ah ; w ; eh ; f ; g ; l ; ih ; s ; <eps> ; n ; d ; iy ; <eps> ; n ; d  ; ah ; s ; ah ; n 
+S  ; S  ; = ; S  ; = ; =  ; =  ; = ; S  ; S  ; S  ; = ; S  ; S  ; = ; = ; S  ; S  ;   I   ; =  ; = ; =  ; S ; S ; = ; =  ; = ;   I   ; = ; = ; S  ;   I   ; = ; S  ; S  ; = ; =  ; S 
+dh ; ax ; m ; aa ; n ; iy ; ng ; d ; d  ; ux ; aa ; n ; dh ; ax ; s ; p ; p  ; ay ;   dx  ; ah ; w ; eh ; b ; b ; l ; ih ; s ;   ax  ; n ; d ; d  ;   ih  ; n ; dh ; ax ; s ; ah ; ng
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/KYO_M06_S6_058.wav, %WER 72.00 [ 18 / 25, 5 ins, 1 del, 12 sub ]
+ah ; hh ; er ; ih ; <eps> ; s ; ah ; b ; ih ; l  ; ih ; <eps> ; n ; <eps> ; jh ; th ; d ; ih ; <eps> ; s ; sh ; ey ;   l   ; f ; iy ; sh ; d ; <eps> ; iy ; sh
+=  ; S  ; S  ; S  ;   I   ; = ; S  ; = ; S  ; S  ; S  ;   I   ; = ;   I   ; =  ; S  ; = ; S  ;   I   ; = ; S  ; S  ;   D   ; = ; =  ; S  ; = ;   I   ; =  ; = 
+ah ; k  ; k  ; ay ;   n   ; s ; aa ; b ; r  ; ux ; t  ;   ix  ; n ;   d   ; jh ; oy ; d ; d  ;   iy  ; s ; s  ; eh ; <eps> ; f ; iy ; s  ; d ;   d   ; iy ; sh
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/SIZ_F01_S1_008.wav, %WER 68.18 [ 15 / 22, 4 ins, 2 del, 9 sub ]
+hh ; ah ; <eps> ; y ; ey ; l  ;   ao  ;   ah  ; w ; <eps> ; r ; <eps> ; iy ; ao ; v ; ah ; s  ; ah ; r ; iy ; ah ; t ; ey ; b  ; <eps> ; s
+=  ; S  ;   I   ; = ; S  ; S  ;   D   ;   D   ; = ;   I   ; = ;   I   ; =  ; S  ; = ; =  ; S  ; S  ; = ; =  ; S  ; = ; S  ; S  ;   I   ; =
+hh ; w  ;   ay  ; y ; eh ; aa ; <eps> ; <eps> ; w ;   aa  ; r ;   n   ; iy ; ow ; v ; ah ; th ; aa ; r ; iy ; ay ; t ; t  ; eh ;   m   ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/YAM_F01_S1_039.wav, %WER 55.56 [ 20 / 36, 10 ins, 0 del, 10 sub ]
+b ; aa ; er ; f ; <eps> ; s ; g ; <eps> ; ow ; l ; d ; <eps> ; b ; <eps> ; l ; eh ; s ;  r  ; ey ; t ; <eps> ; <eps> ; w ; ah ; z ; ah ; g ; <eps> ; l ; ah ; d ; uw ; <eps> ; ey ; sh ; th ; m ; p ; <eps> ; r ; eh ; z ; eh ; n ; t ; <eps>
+= ; =  ; S  ; S ;   I   ; = ; = ;   I   ; =  ; S ; = ;   I   ; = ;   I   ; = ; =  ; = ;  S  ; S  ; = ;   I   ;   I   ; = ; =  ; = ; S  ; = ;   I   ; = ; S  ; = ; S  ;   I   ; =  ; =  ; S  ; = ; = ;   I   ; = ; =  ; = ; S  ; = ; = ;   I  
+b ; aa ; r  ; b ;   b   ; s ; g ;   g   ; ow ; d ; d ;   ix  ; b ;   b   ; l ; eh ; s ; axr ; ih ; t ;   t   ;  axr  ; w ; ah ; z ; ax ; g ;   k   ; l ; eh ; d ; d  ;   ux  ; ey ; sh ; ix ; m ; p ;   p   ; r ; eh ; z ; ix ; n ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/WAS_M06_S2_003.wav, %WER 90.00 [ 27 / 30, 13 ins, 0 del, 14 sub ]
+k ; ow ; n ; <eps> ; ch ; n ; ey ; n ; t ; <eps> ; ah ; d ; r ; ih ; f  ; <eps> ; t ; <eps> ; <eps> ; iy ; z ; er ; jh ; ih ; ah ; r ; th ; <eps> ; jh ; <eps> ; k ; ah ; r  ; th ; ey ; th ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; iy
+= ; S  ; = ;   I   ; =  ; = ; S  ; = ; = ;   I   ; =  ; = ; S ; S  ; S  ;   I   ; = ;   I   ;   I   ; =  ; = ; S  ; =  ; =  ; S  ; S ; S  ;   I   ; =  ;   I   ; = ; S  ; S  ; S  ; S  ; S  ;   I   ;   I   ;   I   ;   I   ;   I   ;   I   ; = 
+k ; aa ; n ;   t   ; ch ; n ; eh ; n ; t ;   t   ; ah ; d ; d ; aa ; dx ;   ix  ; t ;   t   ;   w   ; iy ; z ; eh ; jh ; ih ; ax ; l ; ow ;   d   ; jh ;  ax-h ; k ; k  ; aa ; dx ; ix ; k  ;   k   ;   s   ;   ih  ;   l   ;   ax  ;   dx  ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RIT_F01_S3_014.wav, %WER 62.07 [ 18 / 29, 11 ins, 0 del, 7 sub ]
+p ; ah ; b ; <eps> ; r ; ih ; sh ; t ; <eps> ; iy ; ae ; n ; n ; ow ; t ; er ; <eps> ; <eps> ; iy ; <eps> ; r ; <eps> ; t ; <eps> ; iy ; g ; <eps> ; ow ; hh ; ae ; n ; d ; iy ; <eps> ; <eps> ; hh ; ae ; n ; t ; <eps>
+= ; =  ; = ;   I   ; = ; S  ; S  ; = ;   I   ; =  ; S  ; = ; = ; S  ; = ; S  ;   I   ;   I   ; =  ;   I   ; = ;   I   ; = ;   I   ; =  ; = ;   I   ; =  ; =  ; =  ; = ; = ; S  ;   I   ;   I   ; =  ; =  ; = ; S ;   I  
+p ; ah ; b ;   b   ; r ; iy ; s  ; t ;   t   ; iy ; eh ; n ; n ; aa ; t ; t  ;   uh  ;   r   ; iy ;   aa  ; r ;   iy  ; t ;   t   ; iy ; g ;   g   ; ow ; hh ; ae ; n ; d ; d  ;   ih  ;   n   ; hh ; ae ; n ; d ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RYU_F01_S1_028.wav, %WER 88.89 [ 24 / 27, 14 ins, 0 del, 10 sub ]
+b ; ey ; g ; <eps> ; <eps> ; d ; <eps> ; ah ; z ; <eps> ; g ; ih ; ah ; z  ; <eps> ; <eps> ; <eps> ; <eps> ; f ; ow ; w ; ah ; ng ; g ; ah ; <eps> ; l ; ow ; ow ; <eps> ; v ; p ; <eps> ; ey ; t ; ah ; <eps> ; ow ; l ; <eps> ; <eps>
+= ; =  ; S ;   I   ;   I   ; = ;   I   ; =  ; = ;   I   ; = ; S  ; S  ; S  ;   I   ;   I   ;   I   ;   I   ; = ; S  ; S ; S  ; =  ; = ; S  ;   I   ; = ; =  ; S  ;   I   ; = ; = ;   I   ; =  ; = ; S  ;   I   ; =  ; = ;   I   ;   I  
+b ; ey ; k ;   k   ;   ix  ; d ;   d   ; ah ; z ;   ix  ; g ; g  ; r  ; aa ;   n   ;   d   ;   d   ;  ax-h ; f ; aa ; v ; aa ; ng ; g ; g  ;   aa  ; l ; ow ; n  ;   l   ; v ; p ;   p   ; ey ; t ; t  ;   uh  ; ow ; l ;   d   ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOK_F01_S7_037.wav, %WER 66.67 [ 20 / 30, 10 ins, 0 del, 10 sub ]
+k  ; iy ; p ; <eps> ; iy ; k ; <eps> ; t ; aa ; p ; <eps> ; n ; ah ; m ; p ; ey ; <eps> ; ah ; z ; th ; v ; s ; th ; k ; <eps> ; s ; f ; ao ; <eps> ; iy ; <eps> ; ch ; b ; r ; ah ; <eps> ; <eps> ; d ; <eps> ; ah
+S  ; =  ; = ;   I   ; =  ; = ;   I   ; = ; S  ; = ;   I   ; = ; S  ; S ; = ; S  ;   I   ; =  ; = ; S  ; = ; = ; S  ; = ;   I   ; = ; = ; S  ;   I   ; =  ;   I   ; =  ; = ; S ; S  ;   I   ;   I   ; = ;   I   ; = 
+hh ; iy ; p ;   p   ; iy ; k ;   k   ; t ; ah ; p ;   p   ; n ; ay ; n ; p ; p  ;   eh  ; ah ; z ; ah ; v ; s ; uh ; k ;   k   ; s ; f ; aa ;   r   ; iy ;   t   ; ch ; b ; b ; l  ;   ih  ;   l   ; d ;   d   ; ah
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TOH_M06_S6_030.wav, %WER 43.48 [ 10 / 23, 3 ins, 0 del, 7 sub ]
+z ; ah ; f ; ah ; l ; m ; ah ; ih ; sh ; ow ; m ; b ; <eps> ; r ; ah ; t ; ih ; <eps> ; iy ; z ; ah ; t ; n ; ah ; t ; <eps>
+= ; =  ; = ; S  ; = ; = ; S  ; S  ; =  ; =  ; S ; = ;   I   ; = ; S  ; = ; S  ;   I   ; =  ; = ; =  ; = ; = ; S  ; = ;   I  
+z ; ah ; f ; uh ; l ; m ; uw ; n  ; sh ; ow ; n ; b ;   b   ; r ; ay ; t ; t  ;   l   ; iy ; z ; ah ; t ; n ; ay ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOH_F01_S1_029.wav, %WER 88.89 [ 24 / 27, 12 ins, 0 del, 12 sub ]
+hh ; ey ; l ; f ; g ; w ; ey ; <eps> ; k ; <eps> ; t ; ih ; <eps> ; p ; <eps> ; iy ; k ; ah ; <eps> ; p ; ey ; <eps> ; k ; <eps> ; hh ; ow ; b ; p ; th ; t ; eh ; <eps> ; t ; <eps> ; ow ; <eps> ; t ; <eps> ; <eps>
+=  ; S  ; S ; S ; = ; S ; S  ;   I   ; = ;   I   ; = ; S  ;   I   ; = ;   I   ; =  ; = ; S  ;   I   ; = ; S  ;   I   ; = ;   I   ; =  ; S  ; S ; = ; S  ; = ; S  ;   I   ; = ;   I   ; =  ;   I   ; = ;   I   ;   I  
+hh ; eh ; p ; p ; g ; g ; r  ;   eh  ; k ;   k   ; t ; t  ;   ux  ; p ;   p   ; iy ; k ; k  ;   aa  ; p ; p  ;   eh  ; k ;   k   ; hh ; aa ; p ; p ; ax ; t ; t  ;   ey  ; t ;   t   ; ow ;   n   ; t ;   t   ;   s  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/KYO_M07_S7_012.wav, %WER 64.52 [ 20 / 31, 7 ins, 1 del, 12 sub ]
+t  ; ih ; s ; ah ; f ; <eps> ; l ; ih ;   s   ; sh ; uw ; z ; w ; ah ; s ; th ; l ; th ; <eps> ; ah ; t ; ih ; <eps> ; d ; ih ; <eps> ; s ; k ; ah ; <eps> ; n ; t ; <eps> ; p ; <eps> ; r ; ah ; s
+S  ; S  ; = ; S  ; S ;   I   ; = ; S  ;   D   ; =  ; S  ; = ; = ; =  ; = ; S  ; = ; S  ;   I   ; =  ; = ; S  ;   I   ; = ; S  ;   I   ; = ; = ; S  ;   I   ; = ; = ;   I   ; = ;   I   ; = ; S  ; =
+dh ; ix ; s ; aa ; p ;   p   ; l ; ah ; <eps> ; sh ; ux ; z ; w ; ah ; s ; ow ; l ; d  ;   d   ; ah ; t ; t  ;   ix  ; d ; d  ;   ix  ; s ; k ; k  ;   aa  ; n ; t ;   t   ; p ;   p   ; r ; ay ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/SIZ_F01_S1_006.wav, %WER 52.17 [ 12 / 23, 0 ins, 2 del, 10 sub ]
+b ; r ; ah ; th ; th ; ah ;   ih  ; sh ; ah ; iy ; s ; iy ; m ; ah ; z ; ow ; ow ; z ; ih ; ow ; sh ; ah ;   ih 
+= ; = ; S  ; S  ; S  ; S  ;   D   ; =  ; S  ; =  ; = ; =  ; = ; S  ; S ; =  ; S  ; = ; S  ; S  ; =  ; =  ;   D  
+b ; r ; ay ; t  ; s  ; ay ; <eps> ; sh ; ay ; iy ; s ; iy ; m ; aa ; s ; ow ; n  ; z ; ix ; aa ; sh ; ah ; <eps>
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/KYO_F07_S6_025.wav, %WER 48.72 [ 19 / 39, 6 ins, 0 del, 13 sub ]
+d  ; ah ; n ; iy ; er ; ah ; s ; t ; <eps> ; s ; ih ; n ; ah ; g ; <eps> ; ow ; hh ; <eps> ; m ; ey ; n ; ow ; t ; b ; iy ; w ; ih ; z  ; ih ; m ; w ; ow ; k ; <eps> ; iy ; n  ; d ; <eps> ; ih ; s ; t ; <eps> ; ah ; ih ; s
+S  ; =  ; = ; S  ; S  ; S  ; = ; = ;   I   ; = ; S  ; = ; =  ; = ;   I   ; =  ; S  ;   I   ; = ; =  ; = ; S  ; = ; = ; =  ; = ; =  ; S  ; S  ; S ; = ; S  ; = ;   I   ; =  ; S  ; = ;   I   ; =  ; = ; = ;   I   ; =  ; S  ; =
+dh ; ah ; n ; ih ; r  ; ix ; s ; t ;   t   ; s ; ix ; n ; ah ; g ;   g   ; ow ; g  ;   g   ; m ; ey ; n ; aa ; t ; b ; iy ; w ; ih ; dh ; ix ; n ; w ; aa ; k ;   k   ; iy ; ng ; d ;   d   ; ih ; s ; t ;   t   ; ah ; n  ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RIT_M06_S8_006.wav, %WER 80.65 [ 25 / 31, 14 ins, 0 del, 11 sub ]
+z ; ah ; f  ; uw ; t ; <eps> ; <eps> ; b ; ao ; <eps> ; l ; ch ; <eps> ; <eps> ; iy ; m ; <eps> ; k ; ao ; <eps> ; <eps> ; ch ; <eps> ; hh ; ah ; z ; ah ; w ; ow ; t ; ah ; z  ; sh ; <eps> ; <eps> ; <eps> ; iy ; ah ; <eps> ; z ; ah ; d ; ah ; <eps> ; m
+= ; S  ; S  ; =  ; = ;   I   ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ;   I   ; =  ; = ;   I   ; = ; S  ;   I   ;   I   ; =  ;   I   ; =  ; =  ; = ; =  ; = ; S  ; = ; S  ; S  ; S  ;   I   ;   I   ;   I   ; =  ; S  ;   I   ; = ; =  ; = ; S  ;   I   ; =
+z ; eh ; hh ; uw ; t ;   t   ;   ax  ; b ; b  ;   ow  ; l ; ax ;   t   ;   jh  ; iy ; m ;   ix  ; k ; k  ;   aa  ;   t   ; ch ;   ix  ; hh ; ah ; z ; ah ; w ; aa ; t ; ch ; ix ; aa ;   dh  ;  ax-h ;   s   ; iy ; ng ;   ay  ; z ; ah ; d ; d  ;   ay  ; m
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TEI_M06_S6_006.wav, %WER 52.00 [ 13 / 25, 6 ins, 0 del, 7 sub ]
+w ; iy ; l ; ah ; k ; <eps> ; f ; l ; uw ; <eps> ; ch ; iy ; z ; b ; ah ; t ; b ; <eps> ; ih ; k ; <eps> ; t ; ah ; <eps> ; l ; ah ; k ; b ; <eps> ; r ; iy
+= ; =  ; = ; S  ; = ;   I   ; = ; S ; =  ;   I   ; =  ; =  ; S ; = ; =  ; = ; S ;   I   ; =  ; = ;   I   ; = ; S  ;   I   ; = ; S  ; = ; S ;   I   ; = ; = 
+w ; iy ; l ; ay ; k ;   k   ; f ; r ; uw ;   t   ; ch ; iy ; s ; b ; ah ; t ; t ;   v   ; ih ; k ;   k   ; t ; t  ;   eh  ; l ; ay ; k ; k ;   f   ; r ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/KYO_F01_S8_008.wav, %WER 78.57 [ 22 / 28, 10 ins, 0 del, 12 sub ]
+d  ; th ; z ; f ; uw ; t ; <eps> ; iy ; <eps> ; ch ; v ; ah ; l  ; ih ; s  ; <eps> ; <eps> ; f ; ah ; s ; t ; aa ; <eps> ; v ; ao ; r ; ih ; sh ; <eps> ; ch ; iy ; t ; iy ; <eps> ; ng ; <eps> ; <eps> ; <eps>
+S  ; S  ; = ; = ; =  ; = ;   I   ; =  ;   I   ; =  ; S ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ; S  ; = ; = ; S  ;   I   ; = ; S  ; = ; =  ; S  ;   I   ; =  ; =  ; = ; S  ;   I   ; =  ;   I   ;   I   ;   I  
+dh ; ow ; z ; f ; uw ; t ;   t   ; iy ;   t   ; ch ; b ; b  ; aa ; r  ; iy ;   ix  ;   z   ; f ; aa ; s ; t ; t  ;   ah  ; v ; aa ; r ; ih ; s  ;   t   ; ch ; iy ; t ; t  ;   ix  ; ng ;   g   ;   g   ;   k  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TOH_F07_S7_003.wav, %WER 58.33 [ 14 / 24, 8 ins, 0 del, 6 sub ]
+jh ; ao ; zh ; <eps> ; <eps> ; s ; <eps> ; eh ; l ; d ; <eps> ; ah ; m ; w ; ao ; <eps> ; <eps> ; ch ; ih ; z ; d ; ey ; t ; aa ; m  ; m ; uw ; v ; iy ; th ; <eps> ; <eps>
+=  ; S  ; S  ;   I   ;   I   ; = ;   I   ; =  ; = ; = ;   I   ; =  ; = ; = ; S  ;   I   ;   I   ; =  ; =  ; = ; = ; =  ; = ; S  ; S  ; = ; =  ; = ; =  ; S  ;   I   ;   I  
+jh ; aa ; d  ;   jh  ;   t   ; s ;   hh  ; eh ; l ; d ;   d   ; ah ; m ; w ; aa ;   r   ;   t   ; ch ; ih ; z ; d ; ey ; t ; t  ; ay ; m ; uw ; v ; iy ; ix ;   s   ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/IWA_M06_S8_018.wav, %WER 62.96 [ 17 / 27, 8 ins, 0 del, 9 sub ]
+d  ; ah ; f ; ih ; f ; s  ; <eps> ; jh ; ah ; k ; ah ; <eps> ; n ; t ; <eps> ; ey ; ih ; z ; <eps> ; b ; <eps> ; ih ; k ; zh ; uw ; <eps> ; s ; iy ; p ; <eps> ; iy ; <eps> ; ch ; ih ; s
+S  ; =  ; = ; =  ; = ; S  ;   I   ; =  ; S  ; = ; S  ;   I   ; = ; = ;   I   ; =  ; S  ; = ;   I   ; = ;   I   ; =  ; S ; S  ; S  ;   I   ; = ; =  ; = ;   I   ; =  ;   I   ; =  ; =  ; S
+dh ; ah ; f ; ih ; f ; th ;   d   ; jh ; aa ; k ; k  ;   aa  ; n ; t ;   t   ; ey ; n  ; z ;   ix  ; b ;   b   ; ih ; g ; g  ; jh ;   ux  ; s ; iy ; p ;   p   ; iy ;   t   ; ch ; ih ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOK_F01_S7_057.wav, %WER 68.75 [ 22 / 32, 6 ins, 1 del, 15 sub ]
+p ; iy ; p ; ao ; <eps> ; d ; <eps> ; r ; ih ; ng ; k ; <eps> ; m ; ah ; <eps> ; ch ; b ; th ; r  ; <eps> ; ah ; w ; ih ; z ; <eps> ; hh ; ow ; s ; r ; ah ; r  ; ih ; sh ; r  ; eh ; r  ; ih ;   sh 
+= ; =  ; = ; S  ;   I   ; = ;   I   ; = ; S  ; =  ; = ;   I   ; = ; =  ;   I   ; =  ; = ; S  ; S  ;   I   ; =  ; = ; =  ; S ;   I   ; =  ; S  ; = ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ;   D  
+p ; iy ; p ; p  ;   uh  ; d ;   d   ; r ; iy ; ng ; k ;   k   ; m ; ah ;   t   ; ch ; b ; b  ; aa ;   dx  ; ah ; w ; ih ; t ;   s   ; hh ; aa ; s ; w ; ay ; iy ; s  ; w  ; ay ; l  ; iy ; s  ; <eps>
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/ISH_F01_S5_029.wav, %WER 56.00 [ 14 / 25, 5 ins, 0 del, 9 sub ]
+w ; iy ; s ; ow ; ey ; t ; t ; ah ; <eps> ; <eps> ; n ; iy ; ah ; s ; ih ; k ; th ; <eps> ; z ; b ; ih ; <eps> ; l ; th ; b  ; <eps> ; ah ; l ; ih ; f
+= ; =  ; = ; S  ; =  ; = ; = ; S  ;   I   ;   I   ; = ; =  ; S  ; = ; S  ; = ; S  ;   I   ; = ; = ; S  ;   I   ; = ; S  ; S  ;   I   ; =  ; = ; S  ; =
+w ; iy ; s ; aa ; ey ; t ; t ; t  ;   t   ;   ay  ; n ; iy ; ay ; s ; ix ; k ; k  ;   l   ; z ; b ; b  ;   iy  ; l ; ow ; ah ;   v   ; ah ; l ; uw ; f
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TOH_M06_S6_045.wav, %WER 65.38 [ 17 / 26, 4 ins, 0 del, 13 sub ]
+d ; ae ; hh ; s ; hh ; ah ; v ; b ; ey ; f ; t ; <eps> ; f ; iy ; t ; ah ; <eps> ; n ; t ; <eps> ; k ; ah ; f  ; ah ; <eps> ; f ; eh ; z ; ah ; s
+= ; S  ; S  ; = ; =  ; =  ; = ; S ; S  ; S ; S ;   I   ; = ; =  ; = ; S  ;   I   ; = ; S ;   I   ; = ; S  ; S  ; S  ;   I   ; = ; S  ; = ; =  ; S
+d ; eh ; k  ; s ; hh ; ah ; v ; w ; eh ; v ; d ;   d   ; f ; iy ; t ; t  ;   aw  ; n ; d ;   d   ; k ; k  ; aw ; hh ;   uw  ; f ; ih ; z ; ah ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TUT_M06_S6_043.wav, %WER 62.96 [ 17 / 27, 8 ins, 0 del, 9 sub ]
+d  ; ah ; d ; ah ; <eps> ; k ; <eps> ; m ; ah ; k ; <eps> ; iy ; l ; ah ; g ; <eps> ; uw ; w ; ah ; n ; d ; l ; ah ; <eps> ; <eps> ; n ; d ; <eps> ; f ; ow ; m ; ah ; l ; <eps> ; s
+S  ; =  ; = ; S  ;   I   ; = ;   I   ; = ; S  ; = ;   I   ; =  ; = ; S  ; = ;   I   ; =  ; = ; S  ; = ; = ; S ; S  ;   I   ;   I   ; = ; = ;   I   ; = ; S  ; = ; S  ; = ;   I   ; =
+dh ; ah ; d ; d  ;   aa  ; k ;   k   ; m ; aa ; k ;   k   ; iy ; l ; aa ; g ;   g   ; uw ; w ; aw ; n ; d ; d ; ax ;   r   ;   aw  ; n ; d ;   d   ; f ; aa ; m ; ay ; l ;   ax  ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/NAG_M07_S8_027.wav, %WER 70.00 [ 28 / 40, 7 ins, 1 del, 20 sub ]
+z ; ih ; ah ; r  ; v ; ah ; t ; ah ; <eps> ; z ; ih ; m  ; v ; ah ; s ; p ; <eps> ; r ; ih ; m ; ah ; th ; v ;   l   ; ah ; ey ; <eps> ; t ; ih ; <eps> ; s ; t ; th ; ah ; <eps> ; n ; ey ; v ; ah ; <eps> ; ch ; ey ; n ; ch ; <eps> ; ih ; s
+= ; S  ; S  ; S  ; = ; S  ; = ; S  ;   I   ; = ; S  ; S  ; = ; S  ; S ; = ;   I   ; = ; S  ; = ; S  ; S  ; = ;   D   ; =  ; S  ;   I   ; = ; S  ;   I   ; = ; = ; S  ; S  ;   I   ; = ; S  ; = ; =  ;   I   ; =  ; S  ; = ; S  ;   I   ; =  ; S
+z ; ix ; aa ; dx ; v ; ax ; t ; t  ;   ay  ; z ; ix ; ng ; v ; er ; z ; p ;   p   ; r ; iy ; m ; ax ; s  ; v ; <eps> ; ah ; ay ;   ix  ; t ; t  ;   iy  ; s ; t ; t  ; aa ;   r   ; n ; eh ; v ; ah ;   t   ; ch ; ih ; n ; d  ;   jh  ; ih ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/HIR_F07_S3_044.wav, %WER 56.67 [ 17 / 30, 5 ins, 0 del, 12 sub ]
+hh ; er ; ow ; b ; er ;  m  ; <eps> ; hh ; ey ;  ah ; r ; ih ; m ; ah ; n ; d ; iy ; <eps> ; d ; <eps> ; <eps> ; hh ; iy ; m ; ow ; b ; ow ; t ; <eps> ; ah ; m ; r ; iy ; v ; s
+=  ; =  ; S  ; = ; S  ;  S  ;   I   ; =  ; S  ;  S  ; = ; S  ; = ; S  ; = ; = ; S  ;   I   ; = ;   I   ;   I   ; =  ; S  ; = ; S  ; S ; =  ; = ;   I   ; =  ; = ; S ; =  ; = ; =
+hh ; er ; aa ; b ; b  ; axr ;   n   ; hh ; eh ; axr ; r ; iy ; m ; ay ; n ; d ; d  ;   ih  ; d ;   d   ;   ix  ; hh ; ih ; m ; ah ; v ; ow ; t ;   t   ; ah ; m ; l ; iy ; v ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TOH_M07_S7_041.wav, %WER 26.92 [ 7 / 26, 2 ins, 1 del, 4 sub ]
+k ; ae ; l ; sh ;   ih  ; uw ; m ; m ; ey ; k ; <eps> ; s ; b ; ow ; n ; t ; ae ; n ; t ; t ; iy ; th ; s ; t ; <eps> ; r ; ao ; ng
+= ; =  ; S ; =  ;   D   ; =  ; = ; = ; =  ; = ;   I   ; = ; = ; =  ; = ; S ; =  ; = ; = ; = ; =  ; =  ; = ; = ;   I   ; = ; S  ; S 
+k ; ae ; r ; sh ; <eps> ; uw ; m ; m ; ey ; k ;   k   ; s ; b ; ow ; n ; z ; ae ; n ; t ; t ; iy ; th ; s ; t ;   t   ; r ; ow ; n 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/NAG_F07_S2_050.wav, %WER 62.50 [ 20 / 32, 11 ins, 0 del, 9 sub ]
+hh ; ih ; z ; <eps> ; s ; k ; ah ; <eps> ; <eps> ; p ; <eps> ; w ; ah ; z ; <eps> ; <eps> ; b ; l ; ih ; s ; t ; <eps> ; er ; dh ; <eps> ; f ; w ; th ; m ; t ; ih ; dh ; <eps> ; <eps> ; ey ; z ; hh ; ah ; t ; <eps> ; s ; ah ; n
+=  ; =  ; = ;   I   ; = ; = ; S  ;   I   ;   I   ; = ;   I   ; = ; =  ; = ;   I   ;   I   ; = ; S ; S  ; = ; = ;   I   ; =  ; S  ;   I   ; = ; S ; S  ; = ; = ; S  ; S  ;   I   ;   I   ; =  ; = ; =  ; S  ; = ;   I   ; = ; =  ; =
+hh ; ih ; z ;  ax-h ; s ; k ; k  ;   aa  ;   l   ; p ;   p   ; w ; ah ; z ;   ix  ;   p   ; b ; r ; iy ; s ; t ;   t   ; er ; d  ;   ix  ; f ; r ; ah ; m ; t ; t  ; ix ;   d   ;   d   ; ey ; z ; hh ; aa ; t ;   t   ; s ; ah ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/HIR_F07_S3_003.wav, %WER 44.44 [ 16 / 36, 7 ins, 0 del, 9 sub ]
+t ; r ; eh ; s ; p ; ah ; <eps> ; s ; ih ; ng ; ih ; s ; f ; ow ; b ; <eps> ; ih ; d ; <eps> ; ih ; n ; ae ; n ; s ; ah ; b ; zh ; eh ; <eps> ; <eps> ; k ; <eps> ; t ; t ; ih ; p ; <eps> ; eh ; n ; ah ; l ; t ; iy
+= ; = ; =  ; = ; = ; S  ;   I   ; = ; S  ; =  ; =  ; S ; = ; S  ; = ;   I   ; =  ; = ;   I   ; =  ; = ; =  ; = ; = ; =  ; = ; S  ; S  ;   I   ;   I   ; = ;   I   ; = ; = ; S  ; = ;   I   ; =  ; = ; S  ; S ; = ; = 
+t ; r ; eh ; s ; p ; p  ;   aa  ; s ; iy ; ng ; ih ; z ; f ; aa ; b ;   b   ; ih ; d ;   d   ; ih ; n ; ae ; n ; s ; ah ; b ; b  ; d  ;   jh  ;   ih  ; k ;   k   ; t ; t ; ux ; p ;   p   ; eh ; n ; aw ; t ; t ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOK_F01_S7_046.wav, %WER 30.77 [ 8 / 26, 1 ins, 0 del, 7 sub ]
+d  ; ey ; ah ; s ; ih ; m ; n ; ow ; b ; ah ; g ; l ; ah ; w ; ih ; l ; ey ; v ; ah ; ey ; n ; t ; ah ;  k  ; <eps> ; iy ;  ah
+S  ; =  ; =  ; = ; S  ; = ; = ; =  ; = ; =  ; = ; = ; =  ; = ; =  ; = ; S  ; = ; =  ; S  ; = ; = ; S  ;  S  ;   I   ; =  ;  S 
+dh ; ey ; ah ; s ; ux ; m ; n ; ow ; b ; ah ; g ; l ; ah ; w ; ih ; l ; eh ; v ; ah ; eh ; n ; t ; t  ; axr ;   hh  ; iy ; axr
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/WAS_M06_S2_009.wav, %WER 72.41 [ 21 / 29, 10 ins, 0 del, 11 sub ]
+iy ; t ; <eps> ; y ; ih ; ah ; l ; ey ; z ; ih ; ih ; s ; ah ; t ; dh ; ih ; <eps> ; <eps> ; er ; <eps> ; z ; <eps> ; ow ; n ; z ; <eps> ; ah ; f ; th ; <eps> ; t ; <eps> ; s ; t ; ey ; <eps> ; p ; <eps> ; s
+=  ; = ;   I   ; = ; S  ; =  ; = ; =  ; = ; S  ; S  ; S ; S  ; = ; S  ; S  ;   I   ;   I   ; =  ;   I   ; = ;   I   ; =  ; = ; S ;   I   ; =  ; S ; S  ;   I   ; = ;   I   ; = ; = ; S  ;   I   ; = ;   I   ; =
+iy ; t ;   t   ; y ; uw ; ah ; l ; ey ; z ; ix ; n  ; z ; aa ; t ; t  ; ax ;   d   ;   d   ; er ;   ah  ; z ;   ax  ; ow ; n ; d ;   d   ; ah ; p ; aa ;   r   ; t ;   ch  ; s ; t ; t  ;   eh  ; p ;   p   ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/HIR_F01_S5_058.wav, %WER 41.67 [ 15 / 36, 9 ins, 0 del, 6 sub ]
+p ; l ; iy ; z ; t ; <eps> ; ey ; k ; <eps> ; dh ; ih ; s ; d ; ah ; <eps> ; t ; <eps> ; iy ; t ; <eps> ; ey ; b ; uw ; <eps> ; k ; <eps> ; l ; ow ; s ; t ; uw ; <eps> ; dh ; ih ; k ; <eps> ; l ; iy ; n ; er ; z ; f ; ow ; m ; iy
+= ; = ; =  ; = ; = ;   I   ; =  ; = ;   I   ; =  ; =  ; = ; = ; S  ;   I   ; = ;   I   ; =  ; = ;   I   ; =  ; = ; S  ;   I   ; = ;   I   ; = ; =  ; = ; = ; S  ;   I   ; =  ; S  ; = ;   I   ; = ; =  ; = ; =  ; S ; = ; S  ; = ; = 
+p ; l ; iy ; z ; t ;   t   ; ey ; k ;   k   ; dh ; ih ; s ; d ; d  ;   er  ; t ;   t   ; iy ; t ;   t   ; ey ; b ; b  ;   l   ; k ;   k   ; l ; ow ; s ; t ; t  ;   ux  ; dh ; ax ; k ;   k   ; l ; iy ; n ; er ; s ; f ; aa ; m ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/KYO_F01_S8_016.wav, %WER 60.61 [ 20 / 33, 10 ins, 0 del, 10 sub ]
+ah ; t ; uw ; s  ; <eps> ; p ; <eps> ; ey ; s ; t ; <eps> ; <eps> ; <eps> ; ch ; uw ; f ; sh ; uw ; d ; b ; ih ; s ; k ; <eps> ; w ; iy ; z ; d ; <eps> ; <eps> ; f ; r ; ah ; m ; d  ; ah ; b ; ao ; <eps> ; t ; ah ; <eps> ; m
+=  ; = ; S  ; S  ;   I   ; = ;   I   ; =  ; = ; = ;   I   ;   I   ;   I   ; =  ; S  ; S ; =  ; S  ; = ; = ; S  ; = ; = ;   I   ; = ; =  ; = ; = ;   I   ;   I   ; = ; = ; =  ; = ; S  ; S  ; = ; S  ;   I   ; = ; S  ;   I   ; =
+ah ; t ; t  ; ux ;   th  ; p ;   p   ; ey ; s ; t ;   t   ;  ax-h ;   t   ; ch ; ux ; v ; sh ; uh ; d ; b ; iy ; s ; k ;   k   ; w ; iy ; z ; d ;   d   ;   ix  ; f ; r ; ah ; m ; dh ; ax ; b ; b  ;   uh  ; t ; t  ;   ax  ; m
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAG_F01_S5_052.wav, %WER 48.28 [ 14 / 29, 6 ins, 0 del, 8 sub ]
+iy ; n ; ah ; l ; ao ; ng ; r ; ah ; n ; iy ; t ; p ; ey ; <eps> ; t ; uw ; b ; ah ; <eps> ; k ; ah ; ao ; <eps> ; l ; <eps> ; t ; <eps> ; iy ; k ; <eps> ; l ; ao ; dh ; iy ; ng
+S  ; = ; =  ; = ; S  ; =  ; = ; =  ; = ; S  ; = ; = ; =  ;   I   ; = ; S  ; = ; S  ;   I   ; = ; S  ; S  ;   I   ; = ;   I   ; = ;   I   ; =  ; = ;   I   ; = ; S  ; =  ; =  ; = 
+ix ; n ; ah ; l ; aa ; ng ; r ; ah ; n ; ih ; t ; p ; ey ;   d   ; t ; ux ; b ; b  ;   ay  ; k ; k  ; w  ;   aa  ; l ;   ax  ; t ;   t   ; iy ; k ;   k   ; l ; ow ; dh ; iy ; ng
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKT_F01_S7_059.wav, %WER 55.88 [ 19 / 34, 5 ins, 0 del, 14 sub ]
+g ; w ; ey ; ng ; g ; <eps> ; r ; th ; z ; g ; uw ; r ; iy ; m ; b ; <eps> ; iy ; ih ; z ; iy ; iy ; hh ;  l  ; v ; ey ; z ; t ; ah ; b  ; <eps> ; l ; g ; ah ; er ; <eps> ; d ; ih ; <eps> ; n
+= ; = ; S  ; S  ; = ;   I   ; = ; S  ; = ; = ; S  ; = ; =  ; S ; = ;   I   ; =  ; S  ; = ; =  ; S  ; =  ;  S  ; = ; S  ; = ; = ; S  ; S  ;   I   ; = ; = ; S  ; S  ;   I   ; = ; S  ;   I   ; =
+g ; w ; eh ; n  ; g ;   g   ; r ; ow ; z ; g ; g  ; r ; iy ; n ; b ;   b   ; iy ; n  ; z ; iy ; n  ; hh ; axr ; v ; ih ; z ; t ; t  ; ax ;   v   ; l ; g ; g  ; aa ;   r   ; d ; d  ;   ix  ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/HIR_F07_S3_017.wav, %WER 52.63 [ 20 / 38, 11 ins, 1 del, 8 sub ]
+t ; ey ; k ; <eps> ; <eps> ; n ; iy ; k ; <eps> ; ah ;   l   ; r ; ah ; t ; ah ; s  ; <eps> ; k ; aa ; <eps> ; n ; ah ; v ; <eps> ; r ; iy ; v ; iy ; ey ; t ; <eps> ; iy ; m ; b ; <eps> ; iy ; b ; r ; <eps> ; <eps> ; iy ; ow ; g ; w ; <eps> ; er ; f ; iy ; s
+= ; S  ; = ;   I   ;   I   ; = ; =  ; = ;   I   ; =  ;   D   ; = ; S  ; = ; S  ; S  ;   I   ; = ; S  ;   I   ; = ; =  ; = ;   I   ; = ; =  ; = ; =  ; =  ; = ;   I   ; =  ; = ; = ;   I   ; =  ; = ; S ;   I   ;   I   ; =  ; =  ; = ; S ;   I   ; =  ; = ; =  ; S
+t ; eh ; k ;   k   ;   uw  ; n ; iy ; k ;   k   ; ah ; <eps> ; r ; ay ; t ; t  ; eh ;   z   ; k ; k  ;   eh  ; n ; ah ; v ;  axr  ; r ; iy ; v ; iy ; ey ; t ;   t   ; iy ; m ; b ;   b   ; iy ; b ; b ;   uw  ;   l   ; iy ; ow ; g ; g ;   r   ; er ; f ; iy ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/SIZ_M06_S6_048.wav, %WER 58.54 [ 24 / 41, 12 ins, 0 del, 12 sub ]
+d  ; ah ; f ; r ; ah ; t ; <eps> ; ih ; n ; d ; ch ; ah ; l ; d ; <eps> ; w ; ah ; d ; ch ; eh ; n ; t ; <eps> ; r ; iy ; s ; <eps> ; ah ; b ; <eps> ; d ; <eps> ; uw ; t  ; <eps> ; <eps> ; b ; ah ; k  ; <eps> ; iy ; z ; b ; iy ; k  ; <eps> ; <eps> ; b ; <eps> ; r ; ah ; d  ; ah
+S  ; =  ; = ; = ; S  ; = ;   I   ; =  ; = ; = ; =  ; S  ; S ; = ;   I   ; = ; =  ; = ; S  ; =  ; = ; = ;   I   ; = ; =  ; = ;   I   ; =  ; S ;   I   ; = ;   I   ; =  ; S  ;   I   ;   I   ; = ; S  ; S  ;   I   ; =  ; = ; = ; S  ; S  ;   I   ;   I   ; = ;   I   ; = ; =  ; S  ; = 
+dh ; ah ; f ; r ; ay ; t ;   t   ; ih ; n ; d ; ch ; ay ; d ; d ;   ax  ; w ; ah ; d ; jh ; eh ; n ; t ;   t   ; r ; iy ; s ;   hh  ; ah ; v ;   ix  ; d ;   d   ; uw ; ix ;   d   ;   d   ; b ; b  ; ay ;   hh  ; iy ; z ; b ; b  ; ih ;   g   ;   g   ; b ;   b   ; r ; ah ; dh ; ah
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TKT_M06_S6_014.wav, %WER 60.00 [ 21 / 35, 9 ins, 0 del, 12 sub ]
+z  ; ah ; p ; r ; uw ; f ; <eps> ; z ; ah ; t ; <eps> ; y ; uw ; ah ; s ; iy ; k ; <eps> ; iy ; ng ; <eps> ; <eps> ; iy ; z ; n ; ao ; t ; <eps> ; ah ; b ; ey ; ah ; w ; er ; r ; iy ; m  ; <eps> ; b ; ah ; <eps> ; k ; <eps> ; s
+S  ; =  ; = ; S ; =  ; = ;   I   ; = ; =  ; = ;   I   ; = ; S  ; =  ; = ; =  ; = ;   I   ; =  ; =  ;   I   ;   I   ; =  ; = ; = ; S  ; = ;   I   ; =  ; = ; S  ; S  ; S ; S  ; S ; S  ; S  ;   I   ; = ; S  ;   I   ; = ;   I   ; =
+dh ; ah ; p ; p ; uw ; f ;   d   ; z ; ah ; t ;   t   ; y ; ux ; ah ; s ; iy ; k ;   k   ; iy ; ng ;   k   ;   k   ; iy ; z ; n ; aa ; t ;   t   ; ah ; b ; b  ; eh ; v ; d  ; d ; ix ; ih ;   n   ; b ; b  ;   uw  ; k ;   k   ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/NAG_M07_S8_026.wav, %WER 63.16 [ 24 / 38, 7 ins, 0 del, 17 sub ]
+z  ; ah ; s ; s ; t ; iy ; <eps> ; g ; iy ; ng ; v ; <eps> ; <eps> ; ey ; f ; ah ; w ; ah ; s ; k ; ao ; <eps> ; z ; s ; b ; ah ; k ; <eps> ; l ; ao ; r ; ah ; dh ; <eps> ; b ; ih ; f ;  r  ; ih ; <eps> ; z ; eh ; sh ; uw ; ih
+S  ; =  ; = ; S ; = ; =  ;   I   ; = ; =  ; =  ; S ;   I   ;   I   ; =  ; = ; S  ; = ; =  ; S ; = ; S  ;   I   ; = ; S ; = ; S  ; = ;   I   ; = ; S  ; = ; S  ; S  ;   I   ; = ; S  ; = ;  S  ; S  ;   I   ; = ; S  ; =  ; S  ; S 
+dh ; ah ; s ; t ; t ; iy ;   ng  ; g ; iy ; ng ; g ;   g   ;   b   ; ey ; f ; er ; w ; ah ; z ; k ; k  ;   aa  ; z ; b ; b ; ay ; k ;   k   ; l ; aa ; r ; ay ; d  ;   z   ; b ; ey ; f ; axr ; dx ;   ix  ; z ; ey ; sh ; ax ; n 
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/KYO_M07_S7_035.wav, %WER 56.10 [ 23 / 41, 9 ins, 0 del, 14 sub ]
+hh ; ah ; l ; ah ; t ; <eps> ; hh ; ah ; n ; d ; <eps> ; <eps> ; ey ; k ; <eps> ; s ; hh ; ey ; n ; ey ; v ; ah ; z  ; ih ; b ; ah ; r  ; ah ; m ; ey ; t ; <eps> ; r ; ih ; k ; <eps> ; p ; <eps> ; r ; ey ; sh ; th ; <eps> ; ch ; ey ; n ; zh ; ih ; s  ; <eps>
+=  ; =  ; = ; S  ; = ;   I   ; =  ; =  ; = ; = ;   I   ;   I   ; =  ; = ;   I   ; = ; =  ; S  ; = ; S  ; = ; =  ; S  ; S  ; = ; S  ; S  ; S  ; = ; S  ; = ;   I   ; = ; =  ; = ;   I   ; = ;   I   ; = ; S  ; =  ; S  ;   I   ; =  ; =  ; = ; S  ; S  ; S  ;   I  
+hh ; ah ; l ; ay ; t ;   t   ; hh ; ah ; n ; d ;   d   ;   ix  ; ey ; k ;   k   ; s ; hh ; ix ; n ; eh ; v ; ah ; dh ; ax ; b ; b  ; ax ; aa ; m ; ih ; t ;   t   ; r ; ih ; k ;   k   ; p ;   p   ; r ; eh ; sh ; uh ;   t   ; ch ; ey ; n ; d  ; jh ; ix ;   z  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAG_M06_S8_030.wav, %WER 40.00 [ 10 / 25, 3 ins, 0 del, 7 sub ]
+ah ; l ; ao ; ih ; s ; t ; ah ; <eps> ; sh ; ao ; n ; ih ; n ; dh ; ih ; aa ; r  ; iy ; ih ; v ; <eps> ; n ; iy ; ng ; s ; k ; ah ; <eps>
+=  ; = ; S  ; S  ; = ; = ; S  ;   I   ; =  ; S  ; = ; =  ; = ; =  ; S  ; =  ; S  ; =  ; =  ; = ;   I   ; = ; =  ; =  ; = ; = ; S  ;   I  
+ah ; l ; ow ; n  ; s ; t ; t  ;   aa  ; sh ; ow ; n ; ih ; n ; dh ; ix ; aa ; dx ; iy ; ih ; v ;   ix  ; n ; iy ; ng ; s ; k ; k  ;   ay 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/HIR_F01_S5_033.wav, %WER 61.76 [ 21 / 34, 8 ins, 1 del, 12 sub ]
+dh ; ah ; <eps> ; jh ; ao ; ao ; f ; <eps> ; er ; ey ; t ; <eps> ; <eps> ; b ; ah ; <eps> ; y ; uw ; z ; iy ; ng ; ah ; <eps> ; <eps> ; n ; t ; ah ;   g   ; ow ; n ; ih ; s ; t ; iy ; <eps> ; k ; m ; ah ; s ; th ; l ; t
+=  ; S  ;   I   ; =  ; S  ; S  ; S ;   I   ; =  ; =  ; = ;   I   ;   I   ; = ; S  ;   I   ; = ; =  ; = ; =  ; =  ; S  ;   I   ;   I   ; = ; = ; S  ;   D   ; =  ; = ; =  ; = ; = ; S  ;   I   ; = ; = ; S  ; = ; S  ; S ; S
+dh ; ax ;   d   ; jh ; aw ; aa ; p ;   p   ; er ; ey ; t ;   t   ;   s   ; b ; b  ;   ay  ; y ; uw ; z ; iy ; ng ; g  ;   ax  ;   aa  ; n ; t ; t  ; <eps> ; ow ; n ; ih ; s ; t ; t  ;   ih  ; k ; m ; aa ; s ; uw ; d ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/KYO_M06_S6_019.wav, %WER 66.67 [ 24 / 36, 5 ins, 0 del, 19 sub ]
+ih ; f ; f ; <eps> ; iy ; f ; ow ; <eps> ; w ; ah ; m ; ao ; jh ; ey ; <eps> ; n ; r  ; ah ; s ; z ; ey ; ah ; ih ; dh ; b ; iy ; n ; ow ; n ; iy ; t ; <eps> ; f ; ow ; w ; eh ; l ; f ; <eps> ; eh ;  er
+S  ; = ; S ;   I   ; =  ; S ; S  ;   I   ; = ; S  ; = ; S  ; S  ; S  ;   I   ; = ; S  ; =  ; = ; = ; S  ; S  ; S  ; S  ; = ; =  ; = ; =  ; = ; =  ; S ;   I   ; = ; S  ; S ; =  ; S ; S ;   I   ; =  ;  S 
+ix ; f ; p ;   p   ; iy ; p ; p  ;   l   ; w ; aa ; m ; ah ; t  ; ch ;   ih  ; n ; eh ; ah ; s ; z ; eh ; d  ; d  ; b  ; b ; iy ; n ; ow ; n ; iy ; d ;   d   ; f ; aa ; r ; eh ; r ; v ;   hh  ; eh ; axr
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/SIZ_F01_S1_030.wav, %WER 67.86 [ 19 / 28, 7 ins, 1 del, 11 sub ]
+g ; ey ; t ; <eps> ; ah ; k ; ah ; l  ; ih ; k ; k ; aa ; <eps> ; <eps> ; <eps> ; t ; t ; ih ; <eps> ; k ; <eps> ; iy ; f ; s ; ah ; r ; ow ; dh ; ey ; <eps> ; s ; ah ; ah ;   b   ; ey
+= ; S  ; = ;   I   ; =  ; = ; S  ; S  ; S  ; = ; = ; S  ;   I   ;   I   ;   I   ; = ; = ; S  ;   I   ; = ;   I   ; =  ; S ; S ; =  ; = ; =  ; S  ; S  ;   I   ; = ; =  ; S  ;   D   ; = 
+g ; eh ; t ;   t   ; ah ; k ; aa ; dx ; iy ; k ; k ; k  ;   k   ;   y   ;   ah  ; t ; t ; t  ;   ux  ; k ;   k   ; iy ; p ; z ; ah ; r ; ow ; z  ; eh ;   n   ; s ; ah ; w  ; <eps> ; ey
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TOH_M06_S6_037.wav, %WER 72.22 [ 26 / 36, 9 ins, 0 del, 17 sub ]
+t ; ah ; t ; p ; r  ; ey ; s ; s ; t ; ow ; p ; <eps> ; p ; r ; ah ; <eps> ; r ; ih ; t ; <eps> ; iy ; ow ; ng ; g ; ey ; <eps> ; t ; <eps> ; ih ; ng ; k  ; ih ; z ; b ; ah ; hh ; <eps> ; <eps> ; f ; ih ; k ; <eps> ; s ; t ; <eps>
+= ; S  ; = ; S ; S  ; S  ; = ; S ; = ; S  ; S ;   I   ; = ; S ; S  ;   I   ; = ; S  ; = ;   I   ; =  ; S  ; =  ; = ; S  ;   I   ; = ;   I   ; =  ; =  ; S  ; S  ; = ; = ; S  ; S  ;   I   ;   I   ; = ; S  ; = ;   I   ; = ; = ;   I  
+t ; aa ; t ; f ; uh ; eh ; s ; t ; t ; ix ; t ;   aa  ; p ; f ; ih ;   aa  ; r ; d  ; t ;   t   ; iy ; aa ; ng ; g ; g  ;   eh  ; t ;   t   ; ih ; ng ; hh ; iy ; z ; b ; b  ; ae ;   k   ;   k   ; f ; iy ; k ;   k   ; s ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TUT_F07_S6_037.wav, %WER 67.57 [ 25 / 37, 13 ins, 0 del, 12 sub ]
+t ; ao ; d ; <eps> ; p ; <eps> ; r ; ey ; s ; <eps> ; t ; <eps> ; <eps> ; t ; ow ; <eps> ; p ; p ; r ; ah ; ao ; r ; ih ; t ; <eps> ; iy ; ao ; ng ; g ; ey ; <eps> ; t ; iy ; <eps> ; ng ; hh ; ih ; z ; b ; ah ; k  ; <eps> ; <eps> ; f ; iy ; k ; <eps> ; s ; t ; <eps>
+= ; S  ; = ;   I   ; = ;   I   ; = ; =  ; = ;   I   ; = ;   I   ;   I   ; = ; S  ;   I   ; = ; = ; = ; S  ; S  ; = ; S  ; = ;   I   ; =  ; S  ; =  ; = ; S  ;   I   ; = ; S  ;   I   ; =  ; =  ; S  ; = ; = ; S  ; S  ;   I   ;   I   ; = ; S  ; = ;   I   ; = ; = ;   I  
+t ; ow ; d ;   d   ; p ;   p   ; r ; ey ; s ;   s   ; t ;   d   ;   ix  ; t ; t  ;   aa  ; p ; p ; r ; ay ; aa ; r ; ix ; t ;   t   ; iy ; aa ; ng ; g ; g  ;   eh  ; t ; t  ;   ih  ; ng ; hh ; ix ; z ; b ; b  ; ay ;   g   ;   g   ; f ; ih ; k ;   k   ; s ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TOH_M07_S7_017.wav, %WER 42.86 [ 15 / 35, 4 ins, 2 del, 9 sub ]
+d  ; ah ; t ; d ; ah ; ah ; <eps> ; g ; r ; aa ; m ; m ; ey ; k ; s ; s ;   eh  ; ih ; <eps> ; s ; ow ; n ; l ; ih ; ae ; f ; t ;  er ; m ;   m   ; ah ; t ; <eps> ; s ; t ; <eps> ; ah ; dh ; iy
+S  ; S  ; = ; = ; S  ; S  ;   I   ; = ; = ; S  ; = ; = ; =  ; = ; S ; = ;   D   ; =  ;   I   ; = ; =  ; = ; = ; S  ; =  ; = ; = ;  S  ; = ;   D   ; =  ; = ;   I   ; = ; = ;   I   ; =  ; S  ; = 
+dh ; ae ; t ; d ; ay ; y  ;   eh  ; g ; r ; ae ; m ; m ; ey ; k ; k ; s ; <eps> ; ih ;   n   ; s ; ow ; n ; l ; iy ; ae ; f ; t ; axr ; m ; <eps> ; ah ; t ;   ch  ; s ; t ;   t   ; ah ; dx ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/KYO_F07_S6_053.wav, %WER 80.00 [ 32 / 40, 13 ins, 0 del, 19 sub ]
+ah ;  l  ; <eps> ; hh ; ah ; v ;  ih ; s ; k ; <eps> ; uw ; f ; ow ; v ; z ; ah ; t ; ey ; hh ; <eps> ; <eps> ; z ; ah ; <eps> ; t ; ih ; <eps> ; k ; <eps> ; <eps> ; p ; ah ; p ; ow ; l  ; ae ; <eps> ; n ; ch ; <eps> ; t ; ah ; <eps> ; k ; ao ; <eps> ; z ; sh ; ah ; b ; ey ; t ; <eps>
+S  ;  S  ;   I   ; =  ; =  ; = ;  S  ; = ; = ;   I   ; =  ; = ; S  ; = ; = ; S  ; = ; S  ; S  ;   I   ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; = ;   I   ;   I   ; = ; S  ; = ; S  ; S  ; S  ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; = ; =  ; S  ; S ; S  ; = ;   I  
+ay ; axr ;   n   ; hh ; ah ; v ; axr ; s ; k ;   k   ; uw ; f ; aa ; v ; z ; aa ; t ; ch ; eh ;   g   ;   g   ; z ; eh ;   l   ; t ; t  ;   ix  ; k ;   g   ;   k   ; p ; aa ; p ; p  ; aa ; r  ;   eh  ; n ; d  ;   d   ; t ; t  ;   aa  ; k ; k  ;   oy  ; z ; sh ; aa ; v ; ix ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/WAS_M06_S2_007.wav, %WER 74.29 [ 26 / 35, 14 ins, 1 del, 11 sub ]
+r ; ah ; s ; t ; <eps> ; iy ; ah ; t ; <eps> ; <eps> ; g ; ah ; <eps> ; s ;   sh  ; ow ; t ; <eps> ; ey ; zh ; k ; ao ; <eps> ; t ; z ; s ; <eps> ; <eps> ; <eps> ; t ; <eps> ; iy ; f ; p ; <eps> ; r ; ah ; s ; iy ; ng ; k ; r ; <eps> ; iy ; <eps> ; z ; ih ; s ; <eps>
+S ; S  ; = ; = ;   I   ; =  ; S  ; = ;   I   ;   I   ; = ; S  ;   I   ; = ;   D   ; =  ; = ;   I   ; =  ; =  ; = ; S  ;   I   ; = ; S ; = ;   I   ;   I   ;   I   ; = ;   I   ; =  ; S ; = ;   I   ; = ; S  ; = ; =  ; =  ; = ; S ;   I   ; =  ;   I   ; = ; S  ; S ;   I  
+l ; aa ; s ; t ;   t   ; iy ; aa ; t ;   t   ;   s   ; g ; g  ;   eh  ; s ; <eps> ; ow ; t ;   t   ; ey ; zh ; k ; k  ;   aa  ; t ; t ; s ;   dh  ;   ix  ;   s   ; t ;   t   ; iy ; p ; p ;   p   ; r ; ay ; s ; iy ; ng ; k ; k ;   l   ; iy ;   d   ; z ; iy ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TUT_F01_S8_026.wav, %WER 92.11 [ 35 / 38, 21 ins, 0 del, 14 sub ]
+z ; ah ; t ; <eps> ; s ; t ; iy ; <eps> ; <eps> ; g ; <eps> ; iy ; ng ; <eps> ; <eps> ; <eps> ; b ; <eps> ; <eps> ; ey ; p ; <eps> ; ah ; w ; ah ; z  ; <eps> ; k ; ow ; <eps> ; z ; d ; <eps> ; <eps> ; b ; ah ; <eps> ; <eps> ; k ; r  ; ow ; r ; ey ; d ; <eps> ; <eps> ; b ; <eps> ; ey ; p ; th ; ih ; <eps> ; <eps> ; z ; ih ; sh ; th ; n
+S ; S  ; = ;   I   ; = ; = ; S  ;   I   ;   I   ; = ;   I   ; =  ; =  ;   I   ;   I   ;   I   ; = ;   I   ;   I   ; =  ; = ;   I   ; =  ; = ; S  ; S  ;   I   ; = ; S  ;   I   ; = ; S ;   I   ;   I   ; = ; S  ;   I   ;   I   ; = ; S  ; =  ; S ; =  ; = ;   I   ;   I   ; = ;   I   ; =  ; = ; S  ; S  ;   I   ;   I   ; = ; S  ; =  ; S  ; =
+d ; aa ; t ;   t   ; s ; t ; t  ;   ih  ;   ng  ; g ;   g   ; iy ; ng ;   g   ;   g   ;   ax  ; b ;   b   ;   p   ; ey ; p ;   p   ; ah ; w ; ay ; aa ;   s   ; k ; k  ;   aa  ; z ; t ;   t   ;   ax  ; b ; b  ;   ay  ;   t   ; k ; ax ; ow ; l ; ey ; d ;   d   ;   ax  ; b ;   b   ; ey ; p ; p  ; l  ;   dx  ;   ix  ; z ; ey ; sh ; ax ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TOH_M07_S7_058.wav, %WER 56.25 [ 18 / 32, 7 ins, 0 del, 11 sub ]
+b ; ah ; t ; <eps> ; er ; s ; k ; ah ; <eps> ; <eps> ; ch ; f ; ah ; <eps> ; ch ; g ; ow ; dh ; w ; ey ; <eps> ; <eps> ; l ; w ; iy ; dh ; v ; aa ; n ; ih ; l ; ah ; ae ; s ; k ; <eps> ; r ; ih ; m
+= ; =  ; = ;   I   ; =  ; = ; = ; S  ;   I   ;   I   ; =  ; = ; S  ;   I   ; =  ; S ; =  ; S  ; S ; S  ;   I   ;   I   ; = ; = ; S  ; S  ; = ; S  ; = ; =  ; = ; =  ; S  ; = ; = ;   I   ; = ; S  ; =
+b ; ah ; t ;   t   ; er ; s ; k ; k  ;   aa  ;   t   ; ch ; f ; aa ;   t   ; ch ; k ; ow ; l  ; d ; z  ;   y   ;   ih  ; l ; w ; ih ; th ; v ; eh ; n ; ih ; l ; ah ; ay ; s ; k ;   k   ; r ; iy ; m
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/KYO_F01_S8_013.wav, %WER 59.38 [ 19 / 32, 5 ins, 0 del, 14 sub ]
+ah ; m ; aa ; s ; d ; ih ; dh ; z ; ah ; g ; t ; ah ; l ; ao ; ng ; z ; ah ; <eps> ; p ; ah ; <eps> ; th ; s  ; r ; uw ; ao ; t ; th ; <eps> ; z ; g ; <eps> ; aa ; d ; eh ; <eps> ; n
+=  ; = ; S  ; = ; = ; =  ; S  ; = ; S  ; S ; = ; =  ; S ; S  ; S  ; S ; S  ;   I   ; = ; S  ;   I   ; =  ; S  ; = ; =  ; S  ; = ; S  ;   I   ; = ; = ;   I   ; =  ; = ; S  ;   I   ; =
+ah ; m ; aw ; s ; d ; ih ; g  ; z ; aw ; t ; t ; ah ; v ; aw ; n  ; d ; dh ;   ax  ; p ; p  ;   ae  ; th ; th ; r ; uw ; ow ; t ; t  ;   ow  ; z ; g ;   g   ; aa ; d ; d  ;   ix  ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TOH_M07_S7_036.wav, %WER 58.62 [ 17 / 29, 6 ins, 0 del, 11 sub ]
+d  ; ey ; ow ; n ; ah ; b ; <eps> ; iy ; hh ; <eps> ; hh ; ah ; s ; iy ; n ; d ; ah ; <eps> ; r ; ih ; m ; ow ; t ; <eps> ; k ; ah ; n ; t ; <eps> ; r ; ih ; s ; ah ; d ; <eps>
+S  ; =  ; =  ; = ; S  ; = ;   I   ; =  ; S  ;   I   ; =  ; S  ; = ; S  ; = ; = ; S  ;   I   ; = ; S  ; = ; =  ; = ;   I   ; = ; S  ; = ; = ;   I   ; = ; S  ; = ; S  ; S ;   I  
+dh ; ey ; ow ; n ; ax ; b ;   b   ; iy ; g  ;   g   ; hh ; aw ; s ; ix ; n ; d ; dh ;   ae  ; r ; ix ; m ; ow ; t ;   t   ; k ; aa ; n ; t ;   t   ; r ; ix ; s ; ay ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RYU_M06_S6_022.wav, %WER 48.39 [ 15 / 31, 3 ins, 0 del, 12 sub ]
+z ; ah ; k ; <eps> ; r ; ah ; m ; b ; ey ; r  ; iy ; b ; ah ; g  ; <eps> ; g ; ey ; t ; <eps> ; b ; eh ; r ; iy ; p ; r ; ih ; t ; iy ; iy ; n ; ow ; t ; ah ; ah
+= ; =  ; = ;   I   ; = ; =  ; = ; = ; S  ; S  ; S  ; = ; S  ; S  ;   I   ; = ; S  ; = ;   I   ; = ; =  ; S ; =  ; S ; S ; =  ; = ; S  ; =  ; = ; S  ; = ; S  ; = 
+z ; ah ; k ;   k   ; r ; ah ; m ; b ; b  ; ih ; n  ; b ; b  ; aa ;   k   ; g ; eh ; t ;   t   ; b ; eh ; l ; iy ; b ; b ; ih ; t ; t  ; iy ; n ; aa ; t ; t  ; ah
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RIT_F01_S3_024.wav, %WER 78.95 [ 30 / 38, 13 ins, 1 del, 16 sub ]
+w ; iy ; <eps> ; ch ; r ; ow ; ng ; ah ; t ; iy ; <eps> ; <eps> ; <eps> ; k ; iy ; r  ; w ; ah ; s ; ow ; p ; ah ; k  ; <eps> ; <eps> ; <eps> ; <eps> ; ae ; n ;   n   ; iy ; dh ; <eps> ; iy ; t ; <eps> ; <eps> ; k ; r ; ae ; <eps> ; r ; ih ; f ;  iy  ; k ; <eps> ; ey ; sh ; ow ; n
+= ; =  ;   I   ; =  ; S ; S  ; =  ; S  ; S ; S  ;   I   ;   I   ;   I   ; = ; S  ; S  ; = ; =  ; S ; =  ; = ; S  ; S  ;   I   ;   I   ;   I   ;   I   ; =  ; = ;   D   ; =  ; S  ;   I   ; =  ; S ;   I   ;   I   ; = ; S ; S  ;   I   ; = ; S  ; = ;  S   ; = ;   I   ; =  ; =  ; =  ; =
+w ; iy ;   t   ; ch ; l ; aa ; ng ; g  ; g ; aa ;   d   ;   jh  ;  ax-h ; k ; k  ; ix ; w ; ah ; z ; ow ; p ; p  ; aa ;   g   ;   g   ;   y   ;   uh  ; ae ; n ; <eps> ; iy ; d  ;   d   ; iy ; d ;   d   ;  ax-h ; k ; k ; l  ;   aa  ; r ; ix ; f ; ax-h ; k ;   k   ; ey ; sh ; ow ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAS_F01_S5_049.wav, %WER 44.44 [ 16 / 36, 7 ins, 0 del, 9 sub ]
+jh ; ey ; f ; s ; ao ; t ; <eps> ; y ; uw ; ah ; g ; y ; uw ; iy ; m  ; f ; ey ; b ; <eps> ; ah ; ow ; v ; ah ; s ; ey ; n ; t ; <eps> ; <eps> ; r ; ih ; f ; y ; uw ; zh ; <eps> ; p ; <eps> ; er ; <eps> ; ch ; ah ; s
+=  ; S  ; = ; = ; S  ; = ;   I   ; = ; =  ; S  ; = ; = ; =  ; =  ; S  ; = ; =  ; = ;   I   ; =  ; =  ; = ; =  ; = ; S  ; = ; = ;   I   ;   I   ; = ; S  ; = ; = ; S  ; S  ;   I   ; = ;   I   ; =  ;   I   ; =  ; S  ; =
+jh ; eh ; f ; s ; ow ; t ;   t   ; y ; uw ; aa ; g ; y ; uw ; iy ; ng ; f ; ey ; b ;   b   ; ah ; ow ; v ; ah ; s ; eh ; n ; t ;   t   ;  axr  ; r ; iy ; f ; y ; ux ; d  ;   jh  ; p ;   p   ; er ;   t   ; ch ; eh ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TEI_M07_S7_004.wav, %WER 53.49 [ 23 / 43, 10 ins, 2 del, 11 sub ]
+z ; ah ; s ; ih ; s ; t ; <eps> ; eh ;   uw  ; m ; ey ; b ; <eps> ; r ; ey ; k ; <eps> ; <eps> ; d ; ah ; ah ; <eps> ; s ; ah ; ah ; s ; th ; s ; ey ; w ; y ; uh ;   ah  ; f ; ah ; l  ; ih ; d ; <eps> ; <eps> ; f ; r ; iy ; k ; <eps> ; w ; ey ; n ; t ; r ; <eps> ; <eps> ; iy
+= ; =  ; = ; =  ; = ; = ;   I   ; =  ;   D   ; = ; =  ; = ;   I   ; = ; =  ; = ;   I   ;   I   ; = ; S  ; S  ;   I   ; = ; S  ; S  ; = ; S  ; = ; =  ; S ; = ; =  ;   D   ; = ; S  ; S  ; S  ; = ;   I   ;   I   ; = ; = ; =  ; = ;   I   ; = ; S  ; = ; = ; S ;   I   ;   I   ; = 
+z ; ah ; s ; ih ; s ; t ;   t   ; eh ; <eps> ; m ; ey ; b ;   b   ; r ; ey ; k ;   k   ;   ix  ; d ; d  ; aw ;   n   ; s ; ux ; n  ; s ; ow ; s ; ey ; v ; y ; uh ; <eps> ; f ; ay ; dx ; ix ; d ;   z   ;   ix  ; f ; r ; iy ; k ;   k   ; w ; eh ; n ; t ; t ;   ix  ;   dx  ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAS_F01_S5_044.wav, %WER 60.98 [ 25 / 41, 10 ins, 0 del, 15 sub ]
+aa ; l ; ih ; s ; ih ; z ; ah ; b ; <eps> ; ih ; l ; ih ; t ; <eps> ; iy ; t ; ih ; b  ; ah ; <eps> ; k ; b ; <eps> ; iy ; z ; ah ; t ; <eps> ; <eps> ; s ; uw ; p ; ah ; v ; ih ; <eps> ; <eps> ; <eps> ; zh ; th ; n ; iy ; z ; n ; ow ; t ; w ; <eps> ; ow ; th ; iy
+S  ; = ; S  ; = ; =  ; = ; =  ; = ;   I   ; =  ; S ; =  ; = ;   I   ; =  ; = ; S  ; S  ; S  ;   I   ; = ; S ;   I   ; =  ; = ; S  ; = ;   I   ;   I   ; = ; S  ; = ; S  ; S ; S  ;   I   ;   I   ;   I   ; =  ; S  ; = ; S  ; = ; = ; =  ; = ; S ;   I   ; =  ; =  ; = 
+ah ; l ; iy ; s ; ih ; z ; ah ; b ;   b   ; ih ; r ; ih ; t ;   t   ; iy ; t ; t  ; uw ; w  ;   er  ; k ; k ;   w   ; iy ; z ; aw ; t ;   t   ;   ix  ; s ; ux ; p ; b  ; b ; aa ;   b   ;   b   ;   iy  ; zh ; ah ; n ; ih ; z ; n ; ow ; t ; t ;   ax  ; ow ; th ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RIT_F01_S3_057.wav, %WER 66.67 [ 30 / 45, 13 ins, 0 del, 17 sub ]
+z  ; aa ; hh ; ow ; n ; t ; <eps> ; iy ; t ; <eps> ; hh ; ah ; s ; w ; ah ; z ; ah ; k  ; iy ; t ; d ; uw ; t ; ih ; ah ; <eps> ; t ; <eps> ; <eps> ; s ; t ; ah ; <eps> ; n ; d ; <eps> ; iy ; ng ; ow ; <eps> ; <eps> ; d ; iy ; <eps> ; b ; <eps> ; iy ; zh ; ih ; ah ;  r  ; ey ; f ; ey ; k ; <eps> ; t ; <eps>
+S  ; S  ; =  ; S  ; = ; = ;   I   ; =  ; = ;   I   ; =  ; S  ; = ; = ; =  ; = ; S  ; S  ; =  ; = ; = ; S  ; = ; S  ; S  ;   I   ; = ;   I   ;   I   ; = ; = ; S  ;   I   ; = ; = ;   I   ; =  ; =  ; S  ;   I   ;   I   ; = ; S  ;   I   ; = ;   I   ; =  ; =  ; S  ; S  ;  S  ; S  ; = ; S  ; = ;   I   ; = ;   I  
+dh ; eh ; hh ; aa ; n ; t ;   t   ; iy ; t ;   t   ; hh ; aw ; s ; w ; ah ; z ; ix ; hh ; iy ; t ; d ; ux ; t ; t  ; uw ;   aw  ; t ;   t   ;  ax-h ; s ; t ; t  ;   aw  ; n ; d ;   d   ; iy ; ng ; g  ;   g   ;   aa  ; d ; d  ;   ix  ; b ;   b   ; iy ; zh ; iy ; er ; axr ; ih ; f ; ih ; k ;   k   ; t ;   s  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKT_F01_S7_011.wav, %WER 44.44 [ 20 / 45, 7 ins, 0 del, 13 sub ]
+w ; ih ; <eps> ; y ; uw ; p ; <eps> ; l ; iy ; z ; k ; ow ; ah ; <eps> ; f ; ah ; m ; g ; aa ; v ; aa ; m ; ey ; m ; <eps> ; p ; ao ; l ; ih ; s ; iy ; r ; ih ; g ; ah ; dh ; <eps> ; <eps> ; iy ; ng ; w ; ey ; s ; t ; <eps> ; r ; ih ; m ; uw ; v ; ah ; l
+= ; =  ;   I   ; = ; =  ; = ;   I   ; = ; =  ; = ; = ; S  ; S  ;   I   ; = ; S  ; = ; = ; S  ; = ; S  ; = ; S  ; S ;   I   ; = ; S  ; = ; S  ; = ; =  ; = ; S  ; = ; S  ; S  ;   I   ;   I   ; =  ; =  ; = ; =  ; = ; = ;   I   ; = ; S  ; = ; =  ; = ; =  ; =
+w ; ih ;   l   ; y ; uw ; p ;   p   ; l ; iy ; z ; k ; k  ; aa ;   n   ; f ; aa ; m ; g ; ah ; v ; ah ; m ; ih ; n ;   t   ; p ; ax ; l ; iy ; s ; iy ; r ; iy ; g ; g  ; aa ;   d   ;   d   ; iy ; ng ; w ; ey ; s ; t ;   t   ; r ; iy ; m ; uw ; v ; ah ; l
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TOH_M06_S6_036.wav, %WER 86.21 [ 25 / 29, 12 ins, 0 del, 13 sub ]
+z ; ah ; b ; <eps> ; <eps> ; iy ; hh ; <eps> ; d ; <eps> ; ah ; k ; <eps> ; l ; ah ; v ; d  ; t ; uw ; <eps> ; <eps> ; <eps> ; ch ; uw ; ao ; n ; z ; ih ; ao ; l ; <eps> ; t ; <eps> ; <eps> ; <eps> ; l ; ah ; g ; d ; th ; r
+= ; S  ; S ;   I   ;   I   ; =  ; S  ;   I   ; = ;   I   ; =  ; = ;   I   ; = ; S  ; = ; S  ; = ; S  ;   I   ;   I   ;   I   ; =  ; =  ; S  ; = ; = ; S  ; S  ; = ;   I   ; = ;   I   ;   I   ;   I   ; = ; S  ; S ; = ; S  ; S
+z ; aa ; p ;   t   ;   v   ; iy ; k  ;   k   ; d ;   d   ; ah ; k ;   k   ; l ; ae ; v ; ix ; t ; t  ;   ux  ;   d   ;   t   ; ch ; uw ; ow ; n ; z ; iy ; ow ; l ;   ix  ; t ;   t   ;   t   ;   t   ; l ; ay ; k ; d ; ow ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TEI_M06_S6_042.wav, %WER 65.62 [ 21 / 32, 9 ins, 1 del, 11 sub ]
+b ; ow ; b ; <eps> ; b ; ah ; n ; d ; <eps> ; ey ; zh ; ch ; <eps> ; b ; <eps> ; ow ; s  ; uw ; n ; t ; w ; ih ; z ;   z   ; ah ; s ; k ; uw ; <eps> ; <eps> ; ow ; v ; ah ; d ; th ; hh ; <eps> ; <eps> ; t ; <eps> ; ah
+= ; =  ; S ;   I   ; = ; S  ; = ; = ;   I   ; =  ; S  ; S  ;   I   ; = ;   I   ; =  ; S  ; =  ; = ; S ; = ; S  ; = ;   D   ; =  ; = ; = ; S  ;   I   ;   I   ; =  ; = ; S  ; = ; S  ; S  ;   I   ;   I   ; = ;   I   ; = 
+b ; ow ; p ;   p   ; b ; aa ; n ; d ;   d   ; ey ; z  ; d  ;   d   ; b ;   b   ; ow ; th ; uw ; n ; z ; w ; iy ; z ; <eps> ; ah ; s ; k ; k  ;   ih  ;  axr  ; ow ; v ; aa ; d ; d  ; ow ;   k   ;   k   ; t ;   t   ; ah
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TUT_F01_S8_027.wav, %WER 69.05 [ 29 / 42, 13 ins, 0 del, 16 sub ]
+jh ; iy ; aa ; d ; <eps> ; <eps> ; v ; ah ; t ; ah ; <eps> ; z ; ih ; ng ; v ; ah ; s ; ow ; v ; <eps> ; p ; l ; ih ; <eps> ; <eps> ; m ; ah ; s ; b ; r ; ah ; ih ; t  ; iy ; <eps> ; <eps> ; <eps> ; s ; t ; ao ; ah ; <eps> ; n ; ey ; b ; ah ; <eps> ; <eps> ; ch ; ey ; n ; <eps> ; jh ; ih ; z
+=  ; =  ; =  ; = ;   I   ;   I   ; = ; =  ; = ; S  ;   I   ; = ; S  ; =  ; S ; S  ; = ; S  ; = ;   I   ; = ; S ; S  ;   I   ;   I   ; = ; S  ; = ; = ; S ; S  ; S  ; S  ; =  ;   I   ;   I   ;   I   ; = ; = ; S  ; S  ;   I   ; = ; =  ; = ; S  ;   I   ;   I   ; =  ; =  ; = ;   I   ; =  ; S  ; =
+jh ; iy ; aa ; d ;   d   ;   ax  ; v ; ah ; t ; t  ;   ay  ; z ; ix ; ng ; b ; aa ; s ; aa ; v ;   ax  ; p ; p ; uh ;   dx  ;   iy  ; m ; aa ; s ; b ; b ; aa ; l  ; ay ; iy ;   d   ;   d   ;   iy  ; s ; t ; t  ; aa ;   aa  ; n ; ey ; b ; b  ;   aa  ;   d   ; ch ; ey ; n ;   d   ; jh ; iy ; z
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TUT_F07_S6_056.wav, %WER 50.00 [ 21 / 42, 6 ins, 0 del, 15 sub ]
+z ; ah ; n ; y ; uw ; s ; ah ; <eps> ; v ; ah ; v ; ah ; n ; ah ; t ; b ; ah ; <eps> ; k ; <eps> ; t ; <eps> ; hh ; ah ; ah ; t ; ao ; n ; r ; ih ; <eps> ; f ; ah ; v ; s ; iy ; ng ; d ; ey ; ah ; ao ; l ; d ; <eps> ; ah ; hh ; ao ; m
+= ; =  ; = ; = ; =  ; = ; =  ;   I   ; = ; S  ; = ; S  ; = ; S  ; = ; S ; S  ;   I   ; = ;   I   ; = ;   I   ; =  ; S  ; S  ; = ; S  ; = ; S ; S  ;   I   ; = ; S  ; = ; = ; =  ; =  ; = ; S  ; =  ; S  ; S ; = ;   I   ; =  ; =  ; S  ; =
+z ; ah ; n ; y ; uw ; s ; ah ;   b   ; v ; aa ; v ; ax ; n ; ay ; t ; s ; w  ;   aa  ; k ;   k   ; t ;   t   ; hh ; aw ; t  ; t ; aa ; n ; d ; d  ;   ix  ; f ; aa ; v ; s ; iy ; ng ; d ; eh ; ah ; aa ; r ; d ;   d   ; ah ; hh ; ow ; m
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/HIR_F07_S3_018.wav, %WER 48.98 [ 24 / 49, 12 ins, 1 del, 11 sub ]
+s ; ah ; ey ; <eps> ; n ; t ; <eps> ; iy ; f ; iy ; hh ; <eps> ; p ; <eps> ; r ; ow ; g ; r ; eh ; s ; k ; aa ; <eps> ; m ; s ; f ; r ; th ; m ; d ; <eps> ; ah ; d ; <eps> ; iy ; b ; <eps> ; eh ; l ; ah ; p ; m ; ey ; n ; ah ;   th  ; v ; <eps> ; n ; y  ; uw ; t ; ey ; k ; <eps> ; <eps> ; n ; iy ; k ; <eps> ; s
+= ; S  ; S  ;   I   ; = ; = ;   I   ; =  ; = ; S  ; S  ;   I   ; = ;   I   ; = ; =  ; = ; = ; =  ; = ; = ; S  ;   I   ; = ; S ; = ; = ; S  ; = ; = ;   I   ; =  ; = ;   I   ; =  ; = ;   I   ; =  ; = ; =  ; = ; = ; S  ; = ; =  ;   D   ; = ;   I   ; = ; S  ; S  ; = ; S  ; = ;   I   ;   I   ; = ; =  ; = ;   I   ; =
+s ; ay ; y  ;   eh  ; n ; t ;   t   ; iy ; f ; ih ; k  ;   k   ; p ;   p   ; r ; ow ; g ; r ; eh ; s ; k ; k  ;   ah  ; m ; z ; f ; r ; ah ; m ; d ;   d   ; ah ; d ;   d   ; iy ; b ;   b   ; eh ; l ; ah ; p ; m ; ae ; n ; ah ; <eps> ; v ;   ix  ; n ; ux ; t  ; t ; eh ; k ;   k   ;   ux  ; n ; iy ; k ;   k   ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/NAG_M06_S8_019.wav, %WER 52.38 [ 22 / 42, 6 ins, 0 del, 16 sub ]
+k ; ah ; f ; iy ; iy ; t ; g ; <eps> ; r ; ao ; ao ; ao ; ih ; s ; t ; <eps> ; iy ; f ; <eps> ; jh ; aa ; ng ; g ; uw ; l ; l ; ah ; k ; <eps> ; s ; r ; ao ; f ; s ; iy ; n ; t ; ey ; <eps> ; m ; p ; r ; <eps> ; ey ; t ; z ; ao ; n
+= ; S  ; = ; =  ; =  ; S ; = ;   I   ; = ; S  ; S  ; S  ; S  ; = ; = ;   I   ; =  ; S ;   I   ; =  ; S  ; =  ; = ; S  ; = ; S ; =  ; = ;   I   ; = ; S ; S  ; S ; = ; =  ; = ; = ; S  ;   I   ; = ; = ; S ;   I   ; =  ; = ; = ; S  ; =
+k ; aa ; f ; iy ; iy ; z ; g ;   g   ; r ; ow ; n  ; aa ; n  ; s ; t ;   t   ; iy ; p ;   p   ; jh ; ah ; ng ; g ; g  ; l ; r ; ah ; k ;   k   ; s ; l ; ow ; p ; s ; iy ; n ; t ; t  ;   ih  ; m ; p ; p ;  axr  ; ey ; t ; z ; ow ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/ISH_F01_S5_051.wav, %WER 58.97 [ 23 / 39, 15 ins, 0 del, 8 sub ]
+ih ; n ; ey ; v ; r ; uw ; m ; ey ; <eps> ; jh ; er ; k ; <eps> ; l ; ow ; v ; <eps> ; ah ; k ; <eps> ; <eps> ; iy ; f ; ch ; er ; <eps> ; f ; ih ; k ; <eps> ; s ; ah ; m ; <eps> ; t ; ah ; m ; z ; g ; <eps> ; eh ; t ; <eps> ; <eps> ; b ; ae ; <eps> ; k ; <eps> ; t ; ah ; <eps> ; p ; <eps>
+=  ; = ; S  ; = ; = ; S  ; = ; =  ;   I   ; =  ; =  ; = ;   I   ; = ; =  ; S ;   I   ; =  ; = ;   I   ;   I   ; =  ; = ; S  ; S  ;   I   ; = ; =  ; = ;   I   ; = ; =  ; = ;   I   ; = ; S  ; = ; = ; = ;   I   ; =  ; = ;   I   ;   I   ; = ; S  ;   I   ; = ;   I   ; = ; S  ;   I   ; = ;   I  
+ih ; n ; eh ; v ; r ; ih ; m ; ey ;   d   ; jh ; er ; k ;   k   ; l ; ow ; b ;   b   ; ah ; k ;   k   ;   l   ; iy ; f ; t  ; aa ;   r   ; f ; ih ; k ;   k   ; s ; ah ; m ;   p   ; t ; eh ; m ; z ; g ;   g   ; eh ; t ;   t   ;   s   ; b ; b  ;   eh  ; k ;   k   ; t ; t  ;   aw  ; p ;   p  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TEI_M07_S7_007.wav, %WER 66.67 [ 26 / 39, 14 ins, 0 del, 12 sub ]
+z ; ah ; ah ; n ; oy ; ih ; ng ; r ; <eps> ; <eps> ; <eps> ; <eps> ; ah ; k ; uw ; <eps> ; n ; z ; <eps> ; s ; r  ; iy ; p ; <eps> ; <eps> ; d ; ih ; <eps> ; iy ; n ; t ; uw ; <eps> ; f ; iy ; l  ; d ; <eps> ; <eps> ; g ; ah ; <eps> ; d ; ey ; <eps> ; n ; ey ; v ; r ; iy ; n ; ah ; t
+= ; =  ; S  ; = ; =  ; S  ; =  ; S ;   I   ;   I   ;   I   ;   I   ; =  ; = ; S  ;   I   ; = ; = ;   I   ; = ; S  ; =  ; = ;   I   ;   I   ; = ; S  ;   I   ; =  ; = ; = ; S  ;   I   ; = ; =  ; S  ; = ;   I   ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; = ; S  ; = ; = ; =  ; = ; S  ; =
+z ; ah ; ax ; n ; oy ; iy ; ng ; g ;   g   ;   uh  ;   t   ;   l   ; ah ; k ; k  ;   ux  ; n ; z ;   ix  ; s ; dx ; iy ; p ;   p   ;   ix  ; d ; d  ;   ux  ; iy ; n ; t ; th ;   ux  ; f ; iy ; dx ; d ;   d   ;   z   ; g ; g  ;   aa  ; d ; d  ;   eh  ; n ; eh ; v ; r ; iy ; n ; ay ; t
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TOH_F07_S7_007.wav, %WER 78.38 [ 29 / 37, 12 ins, 1 del, 16 sub ]
+z ; iy ; <eps> ; n ; ao ; ih ; ng ; w ; aa ; k ; th ; <eps> ; <eps> ; n ; t ; s ; r ; ih ; f ; <eps> ; t ; <eps> ; <eps> ; iy ; n ; t ; iy ; <eps> ; f ; ih ; f  ; <eps> ; <eps> ; s ; g ; ah ; d  ; ey ; <eps> ; <eps> ; m ; eh ; v ;   uw  ; iy ; n ; ah ; t ; <eps>
+= ; =  ;   I   ; = ; S  ; S  ; =  ; S ; S  ; = ; S  ;   I   ;   I   ; = ; S ; = ; = ; S  ; S ;   I   ; = ;   I   ;   I   ; =  ; = ; = ; S  ;   I   ; = ; S  ; S  ;   I   ;   I   ; = ; S ; S  ; S  ; S  ;   I   ;   I   ; = ; =  ; = ;   D   ; =  ; = ; S  ; = ;   I  
+z ; iy ;   ax  ; n ; oy ; ix ; ng ; l ; aw ; k ; k  ;   r   ;   ow  ; n ; z ; s ; r ; iy ; p ;   p   ; t ;   t   ;   ux  ; iy ; n ; t ; t  ;   uw  ; f ; l  ; ey ;   p   ;   p   ; s ; k ; k  ; aa ; l  ;   dx  ;   ih  ; m ; eh ; v ; <eps> ; iy ; n ; ay ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M07/wav/TOH_M07_S7_039.wav, %WER 69.44 [ 25 / 36, 10 ins, 1 del, 14 sub ]
+aa ; y ; ah ; m  ; m ; ah ; s ; s ; k ; ah ; <eps> ; m ; p ; <eps> ; er ; t ; ah ; <eps> ; k ; <eps> ; r ; ow ; <eps> ; th ; d  ;   ah  ; f ; iy ; r  ; t ; <eps> ; <eps> ; ae ; n ; d ; d ; ih ; <eps> ; s ; ah ; p ; <eps> ; ih ;  er ; t ; <eps>
+S  ; = ; =  ; S  ; = ; S  ; = ; = ; = ; S  ;   I   ; = ; = ;   I   ; =  ; S ; S  ;   I   ; = ;   I   ; = ; =  ;   I   ; =  ; S  ;   D   ; = ; S  ; S  ; S ;   I   ;   I   ; =  ; = ; = ; = ; S  ;   I   ; = ; S  ; = ;   I   ; =  ;  S  ; S ;   I  
+ay ; y ; ah ; ng ; m ; aw ; s ; s ; k ; k  ;   eh  ; m ; p ;   p   ; er ; d ; d  ;   ax  ; k ;   k   ; r ; ow ;   v   ; th ; eh ; <eps> ; f ; y  ; ux ; l ;   d   ;   d   ; ae ; n ; d ; d ; d  ;   ix  ; s ; ix ; p ;   p   ; ih ; axr ; d ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/RYU_F01_S1_049.wav, %WER 63.33 [ 19 / 30, 6 ins, 1 del, 12 sub ]
+aa ; t ; t ; <eps> ; <eps> ; w ; ah ; r  ; aa ; t ; ow ; n ; z ; ah ; t ; uw ; ey ;   ah  ; f ; s ; d ; <eps> ; ey ; <eps> ; w ; iy ; hh ; ah ; v ; <eps> ; <eps> ; sh ; aa ; v ; r ; iy
+S  ; = ; = ;   I   ;   I   ; = ; S  ; S  ; S  ; = ; S  ; = ; = ; =  ; = ; S  ; S  ;   D   ; = ; = ; S ;   I   ; =  ;   I   ; = ; =  ; =  ; S  ; S ;   I   ;   I   ; =  ; S  ; = ; S ; = 
+aw ; t ; t ;   t   ;   t   ; w ; er ; ay ; t  ; t ; aa ; n ; z ; ah ; t ; t  ; er ; <eps> ; f ; s ; t ;   t   ; ey ;   t   ; w ; iy ; hh ; aa ; b ;   b   ;   ax  ; sh ; eh ; v ; l ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/IWA_M06_S8_022.wav, %WER 60.47 [ 26 / 43, 11 ins, 0 del, 15 sub ]
+z ; ah ; r ; ih ; <eps> ; ch ; sh ; ih ; r  ; iy ; m  ; <eps> ; v ; eh ; s ; t ; <eps> ; <eps> ; ih ; m ; b ; <eps> ; r ; aa ; k ; <eps> ; z ; iy ; k ; ao ; ih ; s ; iy ; ih ; <eps> ; s ; t ; ey ; <eps> ; d ; ao ; <eps> ; v ; <eps> ; s ; t ; <eps> ; ay ; r  ; ih ; s ; sh ; uh ; s
+= ; S  ; S ; =  ;   I   ; =  ; =  ; S  ; S  ; S  ; S  ;   I   ; = ; =  ; = ; = ;   I   ;   I   ; =  ; S ; = ;   I   ; = ; =  ; = ;   I   ; = ; =  ; = ; S  ; S  ; S ; S  ; =  ;   I   ; = ; = ; S  ;   I   ; = ; S  ;   I   ; = ;   I   ; = ; = ;   I   ; =  ; S  ; =  ; = ; =  ; S  ; =
+z ; ax ; l ; ih ;   t   ; ch ; sh ; uh ; dx ; ih ; ih ;   n   ; v ; eh ; s ; t ;   t   ;   ix  ; ih ; n ; b ;   b   ; r ; aa ; k ;   k   ; z ; iy ; k ; k  ; aa ; n ; z  ; ih ;   n   ; s ; t ; t  ;   eh  ; d ; d  ;   ah  ; v ;   ax  ; s ; t ;   t   ; ay ; dx ; ih ; s ; sh ; uw ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOK_F01_S7_056.wav, %WER 55.00 [ 22 / 40, 7 ins, 1 del, 14 sub ]
+iy ; r  ; iy ; ng ; s ; p ; <eps> ; ih ; n ; iy ; ch ; <eps> ; n ; ae ; t ; <eps> ; r ; iy ; iy ; ng ; k ; r ; ih ; <eps> ; s ; ih ; z ; s ; t ; <eps> ; r ; ey ; ng ;   ih  ; s ; m ; r  ; ah ; k ; th ; r ; <eps> ; ah ; s ; <eps> ; l ; iy
+=  ; S  ; S  ; =  ; = ; = ;   I   ; =  ; = ; S  ; S  ;   I   ; = ; S  ; = ;   I   ; = ; =  ; =  ; =  ; S ; S ; S  ;   I   ; = ; S  ; = ; = ; = ;   I   ; = ; S  ; =  ;   D   ; = ; = ; S  ; S  ; = ; S  ; S ;   I   ; =  ; = ;   I   ; = ; = 
+iy ; dx ; ih ; ng ; s ; p ;   p   ; ih ; n ; ih ; d  ;   jh  ; n ; ay ; t ;   t   ; r ; iy ; iy ; ng ; g ; g ; l  ;   iy  ; s ; iy ; z ; s ; t ;   t   ; r ; ih ; ng ; <eps> ; s ; m ; iy ; er ; k ; k  ; y ;   ux  ; ah ; s ;   ax  ; l ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TUT_M06_S6_033.wav, %WER 53.85 [ 21 / 39, 6 ins, 1 del, 14 sub ]
+g ; ih ; r  ; ey ; g ; uw ;   r   ; iy ; ah ; n ; t ; ao ; <eps> ; m ; ch ; ow ; s ; t ; <eps> ; uw ; w ; ow ; <eps> ; ch ; k ; ah ; <eps> ; t ; ih ; n  ; n ; t ; ih ; n ; d ; ih ; ah ; <eps> ; f ; t ; <eps> ; ah ; n ; uw ; n
+= ; S  ; S  ; S  ; = ; S  ;   D   ; =  ; S  ; = ; = ; S  ;   I   ; = ; =  ; =  ; S ; = ;   I   ; =  ; = ; =  ;   I   ; =  ; = ; S  ;   I   ; = ; S  ; S  ; = ; S ; S  ; = ; = ; S  ; S  ;   I   ; = ; = ;   I   ; =  ; = ; =  ; =
+g ; l  ; ae ; g  ; g ; l  ; <eps> ; iy ; aa ; n ; t ; t  ;   aa  ; m ; ch ; ow ; z ; t ;   t   ; uw ; w ; ow ;   t   ; ch ; k ; aa ;   r   ; t ; t  ; ux ; n ; z ; ix ; n ; d ; d  ; iy ;   aa  ; f ; t ;   t   ; ah ; n ; uw ; n
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAK_F01_S3_005.wav, %WER 75.76 [ 25 / 33, 9 ins, 0 del, 16 sub ]
+ah ; s ; k ; <eps> ; r ; uw ; dh ; <eps> ; r ; ah ; v ; ah ; <eps> ; <eps> ; ih ; z ; m ; eh ; uw ; f ; r ; ow ; m ; b ; ao ; dh ; <eps> ; k ; <eps> ; ah ; aa ; n ; ao ; l ; ey ; zh ; zh ; uw ; <eps> ; <eps> ; <eps> ; s
+S  ; = ; = ;   I   ; = ; =  ; S  ;   I   ; = ; S  ; S ; S  ;   I   ;   I   ; =  ; = ; = ; S  ; S  ; = ; = ; S  ; = ; = ; S  ; S  ;   I   ; = ;   I   ; =  ; S  ; = ; S  ; = ; S  ; S  ; S  ; S  ;   I   ;   I   ;   I   ; =
+aa ; s ; k ;   k   ; r ; uw ; z  ;   ax  ; r ; ay ; b ; b  ;   aa  ;   t   ; ih ; z ; m ; ae ; dx ; f ; r ; aa ; m ; b ; aa ; l  ;   ax  ; k ;   k   ; ah ; ae ; n ; aa ; l ; ae ; n  ; jh ; ix ;   d   ;   jh  ;   ux  ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RYU_M06_S6_024.wav, %WER 89.29 [ 25 / 28, 11 ins, 0 del, 14 sub ]
+ah ; b ; <eps> ; ih ; g ; g ; ao ; t ; ah ; d ; l  ; <eps> ; <eps> ; iy ; ah ; m ; b ; uw ; l  ; d ; <eps> ; s ; r  ; ih ; z  ; ah ; <eps> ; <eps> ; <eps> ; <eps> ; f ; ah ; <eps> ; m ; y  ; ah ; <eps> ; t ; <eps>
+=  ; = ;   I   ; =  ; = ; = ; S  ; S ; S  ; = ; S  ;   I   ;   I   ; =  ; S  ; = ; = ; S  ; S  ; = ;   I   ; = ; S  ; S  ; S  ; S  ;   I   ;   I   ;   I   ;   I   ; = ; S  ;   I   ; = ; S  ; S  ;   I   ; = ;   I  
+ah ; b ;   b   ; ih ; g ; g ; ow ; l ; d  ; d ; ay ;   d   ;   d   ; iy ; aa ; m ; b ; b  ; uh ; d ;   d   ; s ; ix ; dh ; uw ; ix ;   d   ;   s   ;   eh  ;   l   ; f ; f  ;   aa  ; m ; iy ; l  ;   aa  ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAR_F01_S7_019.wav, %WER 81.48 [ 22 / 27, 6 ins, 0 del, 16 sub ]
+ah ; b ; ao ; n ; ih ; n  ; n ; ao ; b ; ey ; l  ; ih ; s  ; ah ; <eps> ; <eps> ; s ; p ; ah ; p  ; <eps> ; <eps> ; s ; l ; iy ; p ; <eps> ; ih ; m  ; p ; ih ; l ; <eps>
+S  ; = ; S  ; = ; S  ; S  ; = ; S  ; = ; S  ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ; S ; S  ; S  ;   I   ;   I   ; = ; = ; =  ; = ;   I   ; =  ; S  ; = ; S  ; S ;   I  
+aa ; b ; ay ; n ; iy ; ng ; n ; aa ; b ; b  ; eh ; r  ; ax ; iy ;   z   ;   aa  ; s ; b ; b  ; aa ;   b   ;   b   ; s ; l ; iy ; p ;   p   ; ih ; ng ; p ; p  ; y ;   uh 
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TKK_F01_S2_051.wav, %WER 67.74 [ 21 / 31, 11 ins, 0 del, 10 sub ]
+sh ; iy ; s ; l ; ih ; p ; ah ; ih ; <eps> ; s ; f ; <eps> ; l ; ey ; n ; d ; <eps> ; <eps> ; hh ; <eps> ; <eps> ; ah ; ng ; k ; ow ; ao ; <eps> ; n ; d ; ih ; <eps> ; s ; t ; <eps> ; iy ; f ; <eps> ; s ; w ; ow ; f ; <eps>
+=  ; =  ; = ; = ; S  ; = ; S  ; S  ;   I   ; = ; S ;   I   ; = ; =  ; = ; = ;   I   ;   I   ; =  ;   I   ;   I   ; =  ; =  ; = ; S  ; S  ;   I   ; = ; = ; S  ;   I   ; = ; = ;   I   ; =  ; S ;   I   ; = ; S ; =  ; S ;   I  
+sh ; iy ; s ; l ; iy ; p ; p  ; aa ;   n   ; s ; p ;   p   ; l ; ey ; n ; d ;   d   ;   ah  ; hh ;   er  ;   r   ; ah ; ng ; k ; k  ; l  ;   aa  ; n ; d ; d  ;   eh  ; s ; t ;   t   ; iy ; p ;   p   ; s ; l ; ow ; p ;   p  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TUT_M06_S6_029.wav, %WER 69.23 [ 36 / 52, 14 ins, 0 del, 22 sub ]
+z ; ah ; l ; ow ; k ; ah ; l  ; dh ; <eps> ; <eps> ; r ; ah ; k ; <eps> ; s ; t ; ao ; ah ; w ; ah ; <eps> ; t ; <eps> ; <eps> ; ch ; ah ; zh ; <eps> ; <eps> ; <eps> ; t ; <eps> ; w ; ih ; z  ; iy ; l ; ih ; g ; ah ; r ; iy ; d ; ih ; <eps> ; s ; p ; ey ; ih ; <eps> ; s ; ih ; ng ; t ; r ; ah ; ng ; k ; uw ; <eps> ; <eps> ; r ; ah ; z ; ah ; s
+S ; S  ; = ; =  ; = ; S  ; S  ; S  ;   I   ;   I   ; = ; =  ; S ;   I   ; = ; = ; S  ; S  ; = ; S  ;   I   ; = ;   I   ;   I   ; =  ; S  ; S  ;   I   ;   I   ;   I   ; = ;   I   ; = ; =  ; S  ; S  ; = ; S  ; = ; =  ; S ; =  ; = ; S  ;   I   ; = ; = ; S  ; S  ;   I   ; = ; S  ; =  ; = ; = ; S  ; =  ; = ; S  ;   I   ;   I   ; = ; S  ; = ; =  ; =
+s ; ow ; l ; ow ; k ; k  ; aa ; r  ;   d   ;   d   ; r ; ah ; g ;   g   ; s ; t ; t  ; aa ; w ; aa ;   l   ; t ;   s   ;   t   ; ch ; aa ; r  ;   d   ;   jh  ;   iy  ; t ;   t   ; w ; ih ; dh ; ih ; l ; iy ; g ; ah ; l ; iy ; d ; d  ;   ix  ; s ; p ; p  ; eh ;   n   ; s ; ix ; ng ; t ; r ; aa ; ng ; k ; k  ;   y   ;  axr  ; r ; ay ; z ; ah ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TKT_M06_S6_041.wav, %WER 44.44 [ 20 / 45, 9 ins, 0 del, 11 sub ]
+l ; ow ; f ; m ; ey ; t ; <eps> ; hh ; ah ; ng ; g ; ah ; <eps> ; r ; <eps> ; iy ; ah ; ng ; g ; ao ; <eps> ; r ; ah ; sh ; f ; th ; d ; iy ; ih ; ah ; ah ; <eps> ; n ; dh ; g ; uw ; s ; b ; <eps> ; eh ; r ; iy ; f ; ah ; <eps> ; f ; ao ; d ; ih ; <eps> ; z ; ah ; t ; <eps>
+= ; =  ; = ; = ; =  ; = ;   I   ; =  ; S  ; =  ; = ; S  ;   I   ; = ;   I   ; =  ; =  ; S  ; = ; S  ;   I   ; = ; =  ; =  ; = ; S  ; = ; S  ; =  ; S  ; =  ;   I   ; = ; S  ; = ; =  ; = ; = ;   I   ; =  ; = ; =  ; S ; S  ;   I   ; = ; S  ; = ; =  ;   I   ; = ; =  ; = ;   I  
+l ; ow ; f ; m ; ey ; t ;   t   ; hh ; aa ; ng ; g ; g  ;   aa  ; r ;   dx  ; iy ; ah ; n  ; g ; g  ;   aa  ; r ; ah ; sh ; f ; aa ; d ; d  ; ih ; n  ; ah ;   aa  ; n ; d  ; g ; uw ; s ; b ;   b   ; eh ; r ; iy ; p ; p  ;   ay  ; f ; aa ; d ; ih ;   d   ; z ; ah ; t ;   s  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAR_F01_S7_008.wav, %WER 60.00 [ 21 / 35, 7 ins, 0 del, 14 sub ]
+d ; ah ; k ; aa ; <eps> ; w ; ah ; n ; d ; <eps> ; ah ; t ; f ; r ; ah ; m ; z ; ah ; f  ; ah ; m ; l ; ah ; n ; t ; ah ; <eps> ; n ; d  ; <eps> ; b ; <eps> ; iy ; k ; <eps> ; ey ; m ; l ; ah ; s ; t ; <eps>
+= ; =  ; = ; S  ;   I   ; = ; S  ; = ; = ;   I   ; =  ; S ; S ; = ; S  ; = ; = ; =  ; S  ; =  ; = ; S ; S  ; = ; S ; S  ;   I   ; = ; S  ;   I   ; = ;   I   ; =  ; S ;   I   ; =  ; = ; S ; S  ; = ; = ;   I  
+d ; ah ; k ; k  ;   aw  ; w ; aa ; n ; d ;   d   ; ah ; d ; d ; r ; ow ; m ; z ; ah ; hh ; ah ; m ; r ; aa ; n ; d ; d  ;   aa  ; n ; dh ;   ax  ; b ;   b   ; iy ; g ;   g   ; ey ; m ; r ; ow ; s ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/TOK_F01_S7_024.wav, %WER 61.76 [ 21 / 34, 5 ins, 3 del, 13 sub ]
+ah ; z ; <eps> ; ah ; s ; s  ; th ; jh ; iy ; m ; n ; iy ; ah ; r  ; <eps> ; n ; n ;   y   ; uw ; ah ; k ; <eps> ; ih ; th ; r  ; th ; ch ; <eps> ; k ; <eps> ; ah ;   l   ; m ; y  ;   uw  ; z ; ih ; ah ; m
+S  ; S ;   I   ; =  ; = ; S  ; S  ; =  ; S  ; = ; = ; =  ; =  ; S  ;   I   ; = ; = ;   D   ; =  ; S  ; = ;   I   ; =  ; S  ; S  ; S  ; S  ;   I   ; = ;   I   ; =  ;   D   ; = ; S  ;   D   ; = ; S  ; =  ; =
+ay ; d ;   jh  ; ah ; s ; aa ; t  ; jh ; ih ; m ; n ; iy ; ah ; dh ;   ah  ; n ; n ; <eps> ; uw ; aa ; k ;   k   ; ih ; l  ; aa ; d  ; jh ;  ax-h ; k ;   k   ; ah ; <eps> ; m ; ih ; <eps> ; z ; iy ; ah ; m
+================================================================================
+/common/db/ERJ_annot_ver1.0/F07/wav/TOH_F07_S7_004.wav, %WER 59.52 [ 25 / 42, 10 ins, 1 del, 14 sub ]
+z ; ah ; s ; <eps> ; ih ; s ; t ; ey ; m  ; m ; ey ; b ; w ; <eps> ; ey ; k ; <eps> ; d ; ah ; ah ; <eps> ; s ; ah ; n ; s ; ow ; s ; ey ; v ; <eps> ; y ; uh ;   ah  ; f ; ah ; <eps> ; <eps> ; l ; s ; f ; w ; iy ; k ; uw ; ey ; <eps> ; <eps> ; n ; t ; <eps> ; r ; iy
+= ; =  ; = ;   I   ; =  ; = ; = ; S  ; S  ; = ; =  ; = ; S ;   I   ; =  ; = ;   I   ; = ; S  ; S  ;   I   ; = ; S  ; S ; = ; =  ; = ; =  ; = ;   I   ; = ; S  ;   D   ; = ; S  ;   I   ;   I   ; = ; S ; = ; S ; S  ; = ; S  ; S  ;   I   ;   I   ; = ; = ;   I   ; = ; = 
+z ; ah ; s ;   hh  ; ih ; s ; t ; t  ; eh ; m ; ey ; b ; b ;   l   ; ey ; k ;   k   ; d ; d  ; aa ;   m   ; s ; ux ; m ; s ; ow ; s ; ey ; v ;   iy  ; y ; aa ; <eps> ; f ; w  ;   ay  ;   ax  ; l ; z ; f ; l ; ey ; k ; k  ; y  ;   ux  ;   eh  ; n ; t ;   t   ; r ; iy
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/NAR_F01_S7_021.wav, %WER 88.57 [ 31 / 35, 12 ins, 0 del, 19 sub ]
+g ; r ; ao ; ih ; ng ; b ; eh ; l ; <eps> ; k ; ey ; <eps> ; p ; <eps> ; t ; g ; ah ; dh ; ey ; n ; t ; <eps> ; <eps> ; <eps> ; <eps> ; iy ; th ; b ; ey ; r ; iy ; t ; aa ; <eps> ; m ; <eps> ; k ; ow ; ih ; <eps> ; sh ; ah ; m ; ih ; ng ; <eps> ; <eps>
+S ; = ; S  ; =  ; =  ; S ; =  ; S ;   I   ; = ; S  ;   I   ; = ;   I   ; = ; S ; S  ; S  ; S  ; S ; S ;   I   ;   I   ;   I   ;   I   ; =  ; S  ; = ; S  ; S ; =  ; = ; S  ;   I   ; = ;   I   ; = ; S  ; S  ;   I   ; =  ; S  ; = ; S  ; =  ;   I   ;   I  
+k ; r ; aa ; ih ; ng ; w ; eh ; r ;   uh  ; k ; k  ;   eh  ; p ;   p   ; t ; t ; k  ; k  ; aa ; d ; d ;   ae  ;   m   ;   d   ;   d   ; iy ; z  ; b ; eh ; l ; iy ; t ; t  ;   ay  ; m ;   ax  ; k ; k  ; aa ;   n   ; sh ; uw ; m ; ix ; ng ;   g   ;   g  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RIT_M06_S8_007.wav, %WER 63.41 [ 26 / 41, 11 ins, 1 del, 14 sub ]
+sh ; iy ; m ; <eps> ; s ; t  ;   th  ; l ; eh ; s ; ih ; z ; aa ; t ; aa ; <eps> ; <eps> ; ch ; <eps> ; jh ; iy ; p ; <eps> ; <eps> ; s ; w ; ih ; <eps> ; z ; ah ; sh ; iy ; m ; b ; ah ; l  ; n ; iy ; d ; ao ; <eps> ; l ; ae ; n ; d ; <eps> ; <eps> ; th ; r ; ey ; t ; <eps>
+S  ; =  ; = ;   I   ; = ; S  ;   D   ; = ; S  ; = ; S  ; = ; S  ; = ; S  ;   I   ;   I   ; =  ;   I   ; =  ; S  ; = ;   I   ;   I   ; = ; S ; S  ;   I   ; = ; =  ; =  ; =  ; = ; = ; S  ; S  ; = ; =  ; = ; S  ;   I   ; = ; =  ; = ; = ;   I   ;   I   ; =  ; = ; S  ; S ;   I  
+s  ; iy ; m ;   ux  ; s ; aa ; <eps> ; l ; ih ; s ; iy ; z ; ah ; t ; t  ;   aw  ;   t   ; ch ;   t   ; jh ; ih ; p ;   p   ;  ax-h ; s ; t ; uw ;   iy  ; z ; ah ; sh ; iy ; m ; b ; b  ; aw ; n ; iy ; d ; d  ;   ow  ; l ; ae ; n ; d ;   d   ;   ow  ; th ; r ; eh ; d ;   d  
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/TEI_M06_S6_017.wav, %WER 53.19 [ 25 / 47, 5 ins, 2 del, 18 sub ]
+z ; th ; s ; ah ; ih ; s ; ah ; s ; w ; ah ; l ; v ; iy ; s ; t ; <eps> ; r ; ey ; t ; f ; th ; ah ; t  ; iy ; <eps> ; <eps> ; f ; y ; uw ; s  ; iy ; ng ; k ; <eps> ; z ; ey ; m ; s ; r ; uw ; k ; ey ;   ah  ; f ; uw ;   l   ; iy ; f ; ah ; s ; t ; <eps>
+= ; S  ; S ; S  ; S  ; = ; S  ; S ; = ; S  ; = ; = ; =  ; = ; = ;   I   ; = ; =  ; = ; S ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ; = ; S  ; S  ; =  ; =  ; = ;   I   ; = ; S  ; = ; = ; = ; S  ; = ; S  ;   D   ; = ; S  ;   D   ; =  ; = ; =  ; = ; = ;   I  
+z ; ow ; z ; aa ; n  ; s ; aa ; z ; w ; ih ; l ; v ; iy ; s ; t ;   t   ; r ; ey ; t ; t ; hh ; aa ; ax ; d  ;   d   ;   ih  ; f ; y ; ux ; th ; iy ; ng ; k ;   k   ; z ; eh ; m ; s ; r ; ux ; k ; ae ; <eps> ; f ; r  ; <eps> ; iy ; f ; ah ; s ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAK_F01_S3_004.wav, %WER 54.76 [ 23 / 42, 8 ins, 1 del, 14 sub ]
+ey ; ih ; s ; ah ; k ; <eps> ; l ; ow ; p ; ih ; <eps> ; dh ; ey ; ah ;   z   ; s ; eh ; r ; dh ; ah ; m ; p ; r ; ah ; <eps> ; z ; ah ; n ; <eps> ; eh ; n  ; <eps> ; k ; <eps> ; ow ; d  ; ow ; r ; t ; aa ; r ; <eps> ; eh ; v ; ih ; d ; ey ; ih ; <eps> ; s
+S  ; S  ; = ; S  ; = ;   I   ; = ; =  ; = ; S  ;   I   ; =  ; S  ; =  ;   D   ; = ; =  ; S ; =  ; =  ; = ; = ; = ; S  ;   I   ; = ; S  ; = ;   I   ; =  ; S  ;   I   ; = ;   I   ; =  ; S  ; S  ; = ; = ; =  ; = ;   I   ; =  ; = ; S  ; = ; S  ; S  ;   I   ; =
+eh ; n  ; s ; ay ; k ;   k   ; l ; ow ; p ; p  ;   iy  ; dh ; ih ; ah ; <eps> ; s ; eh ; l ; dh ; ah ; m ; p ; r ; l  ;   eh  ; z ; eh ; n ;   t   ; eh ; ng ;   eh  ; k ;   k   ; ow ; th ; aa ; r ; t ; aa ; r ;   t   ; eh ; v ; ix ; d ; d  ; eh ;   n   ; s
+================================================================================
+/common/db/ERJ_annot_ver1.0/M06/wav/RYU_M06_S6_016.wav, %WER 56.00 [ 28 / 50, 7 ins, 1 del, 20 sub ]
+m ; ah ; d ; <eps> ; ih ; z ; ah ; ah ; s ; ah ; s ; ih ; m ; p ; uw ; <eps> ; g ; ih ; uw ; m ; iy ; w ; ah ; ih ; iy ; uw ; <eps> ; f ; ow ; w ; ey ; t ; ih ; <eps> ; v ; p ; ah ; r  ;   ah  ; g ; r ; ah ; f ; th ; ih ; z ; <eps> ; t ; s ; ah ; b ; zh ; ey ; hh ; <eps> ; t ; <eps>
+= ; S  ; = ;   I   ; =  ; = ; S  ; =  ; S ; S  ; = ; =  ; = ; = ; S  ;   I   ; = ; =  ; S  ; = ; =  ; = ; =  ; S  ; S  ; S  ;   I   ; = ; S  ; S ; =  ; = ; S  ;   I   ; = ; = ; S  ; S  ;   D   ; = ; = ; S  ; = ; S  ; S  ; = ;   I   ; = ; = ; =  ; S ; =  ; S  ; S  ;   I   ; = ;   I  
+m ; ay ; d ;   d   ; ih ; z ; ay ; ah ; z ; aa ; s ; ih ; m ; p ; p  ;   l   ; g ; ih ; v  ; m ; iy ; w ; ah ; y  ; ix ; n  ;   hh  ; f ; l  ; m ; ey ; t ; t  ;   ix  ; v ; p ; ay ; ax ; <eps> ; g ; r ; ax ; f ; aa ; n  ; z ;   ax  ; t ; s ; ah ; v ; zh ; ix ; k  ;   k   ; t ;   t  
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/DOS_F01_S6_048.wav, %WER 60.98 [ 25 / 41, 13 ins, 0 del, 12 sub ]
+z ; ah ; hh ; r ; ah ; t ; ey ; <eps> ; n ; d ; <eps> ; <eps> ; <eps> ; ch ; ah ;  l  ; d  ; <eps> ; w ; ah ; z ; <eps> ; jh ; eh ; n ; t ; <eps> ; <eps> ; r ; iy ; s ; ey ; b ; d ; ey ; <eps> ; m ; b ; ah ; <eps> ; hh ; ih ; z ; b ; <eps> ; iy ; g ; <eps> ; b ; <eps> ; r ; ah ; z ; ah
+= ; =  ; =  ; S ; S  ; = ; S  ;   I   ; = ; = ;   I   ;   I   ;   I   ; =  ; S  ;  S  ; S  ;   I   ; = ; S  ; = ;   I   ; =  ; =  ; = ; = ;   I   ;   I   ; = ; =  ; = ; S  ; S ; = ; S  ;   I   ; = ; = ; S  ;   I   ; =  ; =  ; = ; = ;   I   ; =  ; = ;   I   ; = ;   I   ; = ; S  ; = ; = 
+z ; ah ; hh ; l ; ay ; t ; t  ;   ae  ; n ; d ;   d   ;   ix  ;   t   ; ch ; ay ; axr ; dh ;   ax  ; w ; aa ; z ;   t   ; jh ; eh ; n ; t ;   t   ;  axr  ; r ; iy ; s ; eh ; v ; d ; dh ;   eh  ; m ; b ; b  ;   ay  ; hh ; ih ; z ; b ;   b   ; iy ; g ;   g   ; b ;   b   ; r ; aa ; z ; ah
+================================================================================
+/common/db/ERJ_annot_ver1.0/F01/wav/WAK_F01_S3_052.wav, %WER 60.42 [ 29 / 48, 6 ins, 1 del, 22 sub ]
+d  ; ah ; m ; eh ; ah ; n ; n ; ey ;   ao  ; k ; l ; ah ; s ; ih ; s ; s ; k ; ow ; <eps> ; l ; ah ; d ; ih ; s ; ah ; p ; ih ; <eps> ; ah ; th ; f ; ah ; r ; s ; ah ; v  ; <eps> ; ah ; iy ; ng ; eh ; ih ; sh ; ey ; <eps> ; <eps> ; n ; t ; r ; <eps> ; uw ; ih ; ih ; s
+S  ; S  ; = ; S  ; S  ; = ; = ; S  ;   D   ; = ; = ; S  ; = ; =  ; = ; S ; = ; S  ;   I   ; = ; =  ; = ; =  ; = ; =  ; = ; S  ;   I   ; =  ; S  ; = ; S  ; S ; S ; S  ; S  ;   I   ; =  ; S  ; S  ; S  ; =  ; S  ; =  ;   I   ;   I   ; = ; = ; S ;   I   ; =  ; =  ; S  ; S
+dh ; ax ; m ; ay ; ih ; n ; n ; ow ; <eps> ; k ; l ; ae ; s ; ih ; s ; k ; k ; aa ;   r   ; l ; ah ; d ; ih ; s ; ah ; p ; p  ;   iy  ; ah ; z  ; f ; ay ; l ; d ; d  ; ix ;   s   ; ah ; b  ; b  ; ay ; ih ; ng ; ey ;   sh  ;   eh  ; n ; t ; t ;   l   ; uw ; ih ; n  ; z

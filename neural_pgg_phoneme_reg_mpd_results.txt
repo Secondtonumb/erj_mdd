@@ -1,0 +1,545 @@
+In original annotation: 
+Total Eq: 608, Total Sub: 865, Total Del: 0, Total Ins: 0
+Overall MPD results: 
+True Accept: 514, False Rejection: 478, False Accept: 571, True Rejection: 294, Corr Diag: 45, Err Diag: 249
+Percentages/Counts: TA%/TA: 51.81/514  FR%/FR: 48.19/478  FA%/FA: 66.01/571  TR%/TR: 33.99/294  Cor_diag%/Cor_diag: 15.31/45  Err_diag%/Err_diag: 84.69/249
+Precision: 0.38082901554404147, Recall: 0.3398843930635838, F1: 0.3591936469150886
+================================================================================
+/common/db/ERJ_annot_ver1.1/DOS_F02/wav/DOS_F02_S5_011.wav
+Human annotation: Canonical vs Perceived:
+hh ; aw ; ey ; n  ; sh ; ah ; n ; t ; ih ; z ; dh ; ih ; s ; s ; ah ; b ; w ; ey ; eh ; s ; k ; ah ; l ; ey ; t ; ah
+=  ; S  ; S  ; S  ; =  ; S  ; = ; = ; =  ; = ; S  ; =  ; = ; = ; =  ; = ; = ; =  ; S  ; = ; = ; =  ; = ; =  ; = ; = 
+hh ; ah ; eh ; ih ; sh ; ey ; n ; t ; ih ; z ; z  ; ih ; s ; s ; ah ; b ; w ; ey ; ey ; s ; k ; ah ; l ; ey ; t ; ah
+Model Prediction: Canonical vs Hypothesis:
+hh ; aw ; ey ; n  ; sh ; <eps> ; <eps> ; ah ; n ; t ; ih ; z ; dh ; ih ; s ;   s   ; ah ; b ; <eps> ; w ; ey ; eh ; s ; k ; ah ; <eps> ; l ; ey ; t  ; ah ; <eps> ; <eps>
+=  ; =  ; =  ; S  ; S  ;   I   ;   I   ; =  ; = ; S ; =  ; = ; =  ; S  ; = ;   D   ; =  ; S ;   I   ; = ; =  ; S  ; = ; = ; S  ;   I   ; = ; S  ; S  ; =  ;   I   ;   I  
+hh ; aw ; ey ; ih ; zh ;   ch  ;   zh  ; ah ; n ; d ; ih ; z ; dh ; ah ; s ; <eps> ; ah ; v ;   l   ; w ; ey ; ih ; s ; k ; aa ;   r   ; l ; ah ; iy ; ah ;   d   ;   ow 
+True Accept: 12, False Rejection: 14, False Accept: 4, True Reject: 2, Corr Diag: 1, Err Diag: 1
+================================================================================
+/common/db/ERJ_annot_ver1.1/DOS_F02/wav/DOS_F02_S5_017.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; g  ; ao ; r  ; jh ; ah ; s ; b  ; ah ; t  ; ah ; f ; l  ; ay ; ey ; t  ; ah ; l  ; aa ; t  ; ah ; v ; n  ; eh ; k ; t 
+S  ; =  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S ; S 
+z  ; ah ; zh ; th ; zh ; ah ; s  ; b ; ah ; t  ; ah ; f  ; l ; ah ; ey ; t  ; ah ; l  ; ah ; t  ; ah ; v  ; n ; ey ; k  ; t ; ah
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; g  ; ao ; r  ; jh ; ah ; <eps> ; <eps> ; s ; b ; ah ; <eps> ; t ; ah ; f ; l ; ay ; ey ; <eps> ; <eps> ; <eps> ; <eps> ; t ; ah ; l ; aa ; t  ; <eps> ; ah ; v ; n ; eh ; k ; t ; <eps> ; <eps>
+S  ; =  ; S  ; =  ; S  ; =  ; =  ;   I   ;   I   ; = ; S ; S  ;   I   ; = ; S  ; = ; = ; =  ; =  ;   I   ;   I   ;   I   ;   I   ; = ; =  ; = ; S  ; S  ;   I   ; =  ; = ; = ; =  ; = ; = ;   I   ;   I  
+s  ; ah ; jh ; ao ; ah ; jh ; ah ;   er  ;   ah  ; s ; p ; eh ;   ae  ; t ; er ; f ; l ; ay ; ey ;   ay  ;   ey  ;   ay  ;   ey  ; t ; ah ; l ; ao ; ah ;   d   ; ah ; v ; n ; eh ; k ; t ;   er  ;   er 
+True Accept: 1, False Rejection: 10, False Accept: 18, True Reject: 8, Corr Diag: 1, Err Diag: 7
+================================================================================
+/common/db/ERJ_annot_ver1.1/DOS_F02/wav/DOS_F02_S5_040.wav
+Human annotation: Canonical vs Perceived:
+s ; t ; iy ; v ; w ; ao ; r  ; ah ; b ; r ; ay ; t ; r ; eh ; d ; k ; ae ; sh ; m ; iy ; ah ; s ; w  ; eh ; t 
+= ; = ; =  ; = ; = ; =  ; S  ; =  ; = ; = ; S  ; = ; = ; S  ; = ; = ; S  ; =  ; = ; S  ; =  ; = ; S  ; S  ; S 
+s ; t ; iy ; v ; w ; ao ; ah ; ah ; b ; r ; ah ; t ; r ; ey ; d ; k ; eh ; sh ; m ; ih ; ah ; s ; ey ; t  ; ah
+Model Prediction: Canonical vs Hypothesis:
+s ; t ; iy ; v ;   w   ; ao ; r ; ah ; b ; r  ; ay ; t ; r  ; <eps> ; <eps> ; eh ; d ; <eps> ; <eps> ; k ; ae ; sh ; m ; iy ; ah ; s  ; w ; <eps> ; <eps> ; eh ; <eps> ; t ; <eps> ; <eps>
+= ; = ; =  ; = ;   D   ; =  ; = ; =  ; S ; S  ; S  ; = ; S  ;   I   ;   I   ; =  ; S ;   I   ;   I   ; = ; =  ; =  ; = ; =  ; =  ; S  ; S ;   I   ;   I   ; =  ;   I   ; = ;   I   ;   I  
+s ; t ; iy ; v ; <eps> ; ao ; r ; ah ; v ; er ; ae ; t ; ah ;   l   ;   ah  ; eh ; t ;   dh  ;   ah  ; k ; ae ; sh ; m ; iy ; ah ; aa ; r ;   er  ;   s   ; eh ;   ey  ; t ;   ow  ;   er 
+True Accept: 11, False Rejection: 15, False Accept: 6, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/DOS_F02/wav/DOS_F02_S5_043.wav
+Human annotation: Canonical vs Perceived:
+t ; uw ; f ; er ; dh ; ah ; hh ; ih ; z ; p ; r ; eh ; s ; t ; iy ; zh ; hh ; iy ; ah ; k ; ey ; zh ; ah ; n  ; ah ; l  ; iy ; r  ; iy ; d ; z  ; dh ; ah ; w ; ao ; l ; s ; t  ; r ; iy ; t  ; jh ; er ; n
+= ; =  ; = ; =  ; S  ; =  ; S  ; =  ; = ; S ; = ; S  ; = ; = ; =  ; =  ; S  ; =  ; S  ; = ; =  ; =  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; = ; S  ; S  ; =  ; S ; S  ; S ; S ; S  ; S ; S  ; S  ; S  ; S  ; S
+t ; uw ; f ; er ; z  ; ah ; k  ; ih ; z ; f ; r ; ih ; s ; t ; iy ; zh ; k  ; iy ; th ; k ; ey ; zh ; n  ; ah ; l  ; iy ; r  ; iy ; z  ; d ; ih ; b  ; ah ; l ; s  ; t ; r ; iy ; s ; zh ; ah ; n  ; ah ; l
+Model Prediction: Canonical vs Hypothesis:
+t ; uw ; f ; <eps> ; <eps> ; er ; dh ; ah ; <eps> ; hh ; ih ; z ; p ; r ; eh ; s ; t ; iy ; zh ; hh ; iy ; ah ; k ; ey ; zh ; ah ; n ; ah ; l ; iy ; r  ; <eps> ; iy ; d ; z  ; dh ; ah ;   w   ; ao ; l ; s ; t ; r ; iy ; t  ; jh ; er ; <eps> ; <eps> ; n ; <eps> ; <eps>
+= ; =  ; = ;   I   ;   I   ; =  ; =  ; =  ;   I   ; =  ; =  ; = ; S ; = ; =  ; = ; = ; =  ; S  ; =  ; =  ; =  ; = ; =  ; =  ; =  ; = ; =  ; = ; =  ; S  ;   I   ; =  ; S ; S  ; S  ; =  ;   D   ; =  ; = ; = ; = ; = ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ;   I   ;   I  
+t ; uw ; f ;   ao  ;   r   ; er ; dh ; ah ;   er  ; hh ; ih ; z ; b ; r ; eh ; s ; t ; iy ; s  ; hh ; iy ; ah ; k ; ey ; zh ; ah ; n ; ah ; l ; iy ; iy ;   hh  ; iy ; s ; ih ; v  ; ah ; <eps> ; ao ; l ; s ; t ; r ; hh ; ih ; z  ; ch ;   iy  ;   ae  ; n ;   ah  ;   ow 
+True Accept: 16, False Rejection: 10, False Accept: 17, True Reject: 9, Corr Diag: 2, Err Diag: 7
+================================================================================
+/common/db/ERJ_annot_ver1.1/IWA_M03/wav/IWA_M03_S3_003.wav
+Human annotation: Canonical vs Perceived:
+t ; r ; eh ; s ; p ; ae ; s ; ah ; ng ; ih ; z ; f ; ah ; b  ; ih ; d  ; ah ; n  ; ae ; n  ; d ; s ; ah ; b  ; jh ; ah ; k  ; t ; t ; uw ; p  ; eh ; n  ; ah ; l  ; t ; iy
+= ; = ; =  ; = ; S ; S  ; = ; S  ; S  ; S  ; S ; = ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S ; S  ; S  ; S  ; S  ; S  ; S ; = ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S 
+t ; r ; eh ; s ; f ; ah ; s ; ih ; n  ; iy ; s ; f ; ao ; ah ; b  ; iy ; d  ; ih ; n  ; ah ; n ; t ; s  ; ah ; b  ; jh ; ey ; k ; t ; t  ; uw ; p  ; eh ; n  ; ah ; r ; t 
+Model Prediction: Canonical vs Hypothesis:
+t  ; <eps> ; <eps> ; r ; eh ; s ; p ; ae ; s  ; ah ; ng ; ih ;   z   ; f ; ah ; <eps> ; b ; ih ; d ; ah ; n ; ae ; <eps> ; n ; d ; s ; ah ; b ; jh ; ah ; k ; t ; t ; uw ; <eps> ; p ; eh ; <eps> ; n ; <eps> ; <eps> ; <eps> ; ah ; l ; t ; iy
+S  ;   I   ;   I   ; = ; S  ; = ; = ; S  ; S  ; S  ; =  ; =  ;   D   ; = ; S  ;   I   ; = ; =  ; = ; =  ; = ; S  ;   I   ; = ; = ; = ; =  ; = ; =  ; S  ; = ; = ; = ; =  ;   I   ; = ; S  ;   I   ; = ;   I   ;   I   ;   I   ; =  ; = ; = ; = 
+dh ;   th  ;   dh  ; r ; ah ; s ; p ; ah ; th ; ih ; ng ; ih ; <eps> ; f ; ao ;   r   ; b ; ih ; d ; ah ; n ; d  ;   ah  ; n ; d ; s ; ah ; b ; jh ; ih ; k ; t ; t ; uw ;   ah  ; p ; p  ;   ah  ; n ;   aa  ;   ae  ;   aa  ; ah ; l ; t ; iy
+True Accept: 4, False Rejection: 12, False Accept: 23, True Reject: 7, Corr Diag: 4, Err Diag: 3
+================================================================================
+/common/db/ERJ_annot_ver1.1/IWA_M03/wav/IWA_M03_S3_015.wav
+Human annotation: Canonical vs Perceived:
+p ; iy ; t ; s ; ah ; iy ; ah ; z  ; aa ; r  ; k ; ah ; n  ; v ; iy ; n  ; y ; ah ; n ; t  ; f ; ao ; r ; ah ; k  ; w ; ih ; k  ; l ; ah
+= ; =  ; S ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S ; =  ; S  ; S ; S  ; S ; S  ; S ; S  ; S ; S  ; S  ; S ; S  ; S  ; S ; S 
+p ; iy ; z ; r ; ih ; ah ; s  ; ah ; k  ; ao ; m ; b  ; iy ; n ; iy ; ey ; n ; t  ; f ; ao ; r ; ah ; k ; uw ; iy ; k ; l  ; ah ; n ; ch
+Model Prediction: Canonical vs Hypothesis:
+p ; iy ; t ; s  ; ah ; iy ; ah ; z  ; aa ; r ; k ; ah ; n ; v ; <eps> ; iy ; <eps> ; n ; y ; ah ; n ; t ; f ; ao ; r ; ah ; k ; w ; ih ; <eps> ; k ; l ; ah ; <eps> ; <eps> ; <eps>
+= ; S  ; S ; S  ; S  ; =  ; =  ; S  ; =  ; = ; = ; =  ; S ; S ;   I   ; =  ;   I   ; = ; = ; =  ; = ; S ; = ; =  ; = ; =  ; = ; = ; S  ;   I   ; = ; S ; S  ;   I   ;   I   ;   I  
+p ; ih ; z ; aa ; l  ; iy ; ah ; th ; aa ; r ; k ; ah ; m ; b ;   ih  ; iy ;   ih  ; n ; y ; ah ; n ; d ; f ; ao ; r ; ah ; k ; w ; r  ;   iy  ; k ; r ; aw ;   n   ;   d   ;   z  
+True Accept: 2, False Rejection: 7, False Accept: 17, True Reject: 10, Corr Diag: 1, Err Diag: 9
+================================================================================
+/common/db/ERJ_annot_ver1.1/IWA_M03/wav/IWA_M03_S3_017.wav
+Human annotation: Canonical vs Perceived:
+t ; eh ; k ; n ; ah ; k ; ah ; l ; r ; ay ; t ; ah ; z ; k ; ae ; n ; ah ; b ; r ; iy ; v ; iy ; ey ; t ; ih ; n ; b ; ih ; b ; l ; iy ; aa ; g ; r ; ah ; f ; iy ; z
+= ; S  ; = ; = ; S  ; = ; =  ; = ; S ; S  ; = ; =  ; S ; = ; S  ; = ; =  ; = ; = ; =  ; S ; S  ; =  ; = ; S  ; = ; = ; S  ; = ; S ; =  ; S  ; = ; = ; =  ; = ; =  ; S
+t ; ey ; k ; n ; ih ; k ; ah ; l ; l ; ah ; t ; ah ; s ; k ; ah ; n ; ah ; b ; r ; iy ; b ; ih ; ey ; t ; iy ; n ; b ; iy ; b ; r ; iy ; th ; g ; r ; ah ; f ; iy ; s
+Model Prediction: Canonical vs Hypothesis:
+<eps> ; t ; eh ; k ; n ; ah ; <eps> ; k ; ah ;   l   ; r ; <eps> ; ay ; t ; <eps> ; ah ; <eps> ; <eps> ; z ; <eps> ; k ; <eps> ; ae ; <eps> ; n ; ah ; <eps> ; b ; r  ; <eps> ; iy ; v ; iy ; <eps> ; ey ; t  ; ih ; <eps> ; <eps> ; <eps> ; n ; <eps> ; b ; ih ; <eps> ; b ; l  ; <eps> ; iy ; <eps> ; aa ; g ; r ; <eps> ; ah ; f ; iy ; z
+  I   ; = ; S  ; = ; S ; =  ;   I   ; = ; S  ;   D   ; = ;   I   ; =  ; = ;   I   ; =  ;   I   ;   I   ; = ;   I   ; = ;   I   ; =  ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; =  ; S ; =  ;   I   ; =  ; S  ; S  ;   I   ;   I   ;   I   ; = ;   I   ; = ; S  ;   I   ; = ; S  ;   I   ; =  ;   I   ; =  ; = ; = ;   I   ; =  ; = ; =  ; =
+  dh  ; t ; ah ; k ; w ; ah ;   n   ; k ; ao ; <eps> ; r ;   l   ; ay ; t ;   dh  ; ah ;   ae  ;   ah  ; z ;   s   ; k ;   aw  ; ae ;   aw  ; n ; t  ;   ae  ; b ; er ;   d   ; iy ; b ; iy ;   ih  ; ey ; eh ; ey ;   d   ;   w   ;   l   ; n ;   m   ; b ; iy ;   ey  ; b ; er ;   d   ; iy ;   ao  ; aa ; g ; r ;   ae  ; ah ; f ; iy ; z
+True Accept: 19, False Rejection: 26, False Accept: 8, True Reject: 5, Corr Diag: 2, Err Diag: 3
+================================================================================
+/common/db/ERJ_annot_ver1.1/IWA_M03/wav/IWA_M03_S3_030.wav
+Human annotation: Canonical vs Perceived:
+m ; ow ; s ; t ; p ; r ; iy ; s  ; ih ; ng ; k ; t ; s  ; hh ; ae ; d  ; ah ; th ; er ; d  ; ah ; v ; dh ; ah ; v  ; ow ; t ; s ; k  ; aw ; n ; t  ; ah
+= ; =  ; = ; = ; = ; = ; S  ; S  ; =  ; =  ; = ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S ; S ; S  ; S  ; S ; S  ; S 
+m ; ow ; s ; t ; p ; r ; ih ; sh ; ih ; ng ; k ; s ; hh ; ae ; d  ; aa ; s  ; ah ; d  ; ow ; v  ; z ; ah ; b  ; ow ; t  ; s ; k ; ao ; n  ; t ; iy ; t 
+Model Prediction: Canonical vs Hypothesis:
+m ; ow ; s ; t ; p ; r ; iy ; <eps> ; s ; ih ; ng ; k ; t ; <eps> ; s ; <eps> ; hh ; ae ; d ; ah ; th ; er ; d ; ah ; v ; dh ; ah ; v ; ow ; t ;   s   ; k ; aw ; n ; t ; ah ; <eps> ; <eps>
+= ; =  ; = ; = ; = ; = ; S  ;   I   ; = ; =  ; =  ; = ; S ;   I   ; = ;   I   ; =  ; =  ; = ; =  ; =  ; =  ; = ; =  ; = ; =  ; =  ; S ; =  ; = ;   D   ; = ; =  ; = ; = ; S  ;   I   ;   I  
+m ; ow ; s ; t ; p ; r ; ih ;   z   ; s ; ih ; ng ; k ; s ;   th  ; s ;   th  ; hh ; ae ; d ; ah ; th ; er ; d ; ah ; v ; dh ; ah ; b ; ow ; t ; <eps> ; k ; aw ; n ; t ; iy ;   d   ;   t  
+True Accept: 9, False Rejection: 5, False Accept: 19, True Reject: 5, Corr Diag: 2, Err Diag: 3
+================================================================================
+/common/db/ERJ_annot_ver1.1/IWA_M03/wav/IWA_M03_S3_036.wav
+Human annotation: Canonical vs Perceived:
+ao ; r ; ah ; n ; jh ; jh ; uw ; s ; t ; ey ; s ; t ; s ; f ; ah ; n ; iy ; ae ; f ; t ; ah ; t ; uw ; th ; p ; ey ; s  ; t
+S  ; = ; S  ; = ; =  ; S  ; =  ; = ; = ; =  ; = ; = ; S ; = ; =  ; = ; =  ; S  ; = ; = ; =  ; = ; =  ; =  ; = ; =  ; S  ; =
+ow ; r ; ey ; n ; jh ; zh ; uw ; s ; t ; ey ; s ; t ; f ; f ; ah ; n ; iy ; ah ; f ; t ; ah ; t ; uw ; th ; p ; ey ; th ; t
+Model Prediction: Canonical vs Hypothesis:
+ao ; r ; ah ; n ; jh ; jh ; <eps> ; uw ; <eps> ; s ; t ; ey ; s ; t  ;   s   ; f ; ah ; n ; iy ; ae ; f ; t ; ah ; <eps> ; t ; uw ; th ; p ; ey ; s ; t
+=  ; = ; =  ; = ; =  ; S  ;   I   ; =  ;   I   ; = ; S ; S  ; S ; S  ;   D   ; = ; =  ; = ; =  ; =  ; = ; = ; S  ;   I   ; = ; =  ; S  ; = ; =  ; = ; =
+ao ; r ; ah ; n ; jh ; ah ;   ih  ; uw ;   z   ; s ; d ; eh ; f ; th ; <eps> ; f ; ah ; n ; iy ; ae ; f ; t ; dh ;   er  ; t ; uw ; s  ; p ; ey ; s ; t
+True Accept: 16, False Rejection: 9, False Accept: 4, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F01/wav/KYO_F01_S8_008.wav
+Human annotation: Canonical vs Perceived:
+dh ; ow ; z ; hh ; uw ; t ; iy ; ch ; v ; ae ; l ; y  ; uw ; z ; f  ; er ; s ; t  ; ah ; b  ; aa ; l  ; ih ; sh ; ch ; iy ; t  ; ah
+S  ; S  ; = ; S  ; =  ; = ; =  ; =  ; = ; S  ; = ; S  ; S  ; S ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S 
+d  ; th ; z ; f  ; uw ; t ; iy ; ch ; v ; ah ; l ; ih ; s  ; f ; ah ; s  ; t ; aa ; v  ; ao ; r  ; ih ; sh ; ch ; iy ; t  ; iy ; ng
+Model Prediction: Canonical vs Hypothesis:
+dh ; <eps> ; ow ; <eps> ; <eps> ; z ; <eps> ; hh ; <eps> ; uw ; t ; iy ; ch ; v ; ae ; l  ; y ; uw ; <eps> ; z ; f ; er ; <eps> ; <eps> ; s ; t ; ah ; b ; aa ; l  ; ih ; sh ; ch ; iy ; <eps> ; t ; ah ; <eps> ; <eps>
+=  ;   I   ; =  ;   I   ;   I   ; = ;   I   ; =  ;   I   ; =  ; = ; =  ; =  ; S ; S  ; S  ; S ; S  ;   I   ; = ; = ; S  ;   I   ;   I   ; = ; = ; =  ; S ; S  ; S  ; S  ; S  ; S  ; S  ;   I   ; = ; S  ;   I   ;   I  
+dh ;   eh  ; ow ;   w   ;   aa  ; z ;   f   ; hh ;   f   ; uw ; t ; iy ; ch ; t ; b  ; eh ; r ; iy ;   ah  ; z ; f ; ao ;   ae  ;   ah  ; s ; t ; ah ; v ; ao ; er ; r  ; ah ; s  ; t  ;   ih  ; t ; ih ;   ng  ;   k  
+True Accept: 5, False Rejection: 13, False Accept: 9, True Reject: 12, Corr Diag: 1, Err Diag: 11
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F01/wav/KYO_F01_S8_013.wav
+Human annotation: Canonical vs Perceived:
+ah ; m ; ao ; th ; z ; ih ; g  ; z ; ae ; g ; d ; ah ; l ; ao ; ng ; dh ; ah ; p ; ae ; th ; th ; r ; uw ; aa ; t ; ow ; z ; g ; aa ; r ; d  ; ah
+=  ; = ; S  ; S  ; S ; =  ; S  ; = ; S  ; = ; S ; =  ; = ; =  ; =  ; S  ; =  ; = ; S  ; =  ; S  ; = ; =  ; S  ; = ; S  ; = ; = ; =  ; S ; S  ; S 
+ah ; m ; aa ; s  ; d ; ih ; dh ; z ; ah ; g ; t ; ah ; l ; ao ; ng ; z  ; ah ; p ; ah ; th ; s  ; r ; uw ; ao ; t ; th ; z ; g ; aa ; d ; eh ; n 
+Model Prediction: Canonical vs Hypothesis:
+ah ; <eps> ; m ; ao ; th ; z  ; <eps> ; <eps> ; <eps> ; ih ; g ; <eps> ; z ; ae ; g  ; d ; <eps> ; <eps> ; ah ; l  ; ao ; ng ; dh ; ah ; p ; ae ; th ; <eps> ; th ; r ; uw ; aa ; t ; ow ; z ; g ; aa ; r ; d ; ah ; <eps> ; <eps>
+=  ;   I   ; = ; S  ; S  ; S  ;   I   ;   I   ;   I   ; =  ; S ;   I   ; = ; S  ; S  ; S ;   I   ;   I   ; =  ; S  ; S  ; S  ; =  ; =  ; = ; =  ; =  ;   I   ; =  ; = ; =  ; S  ; = ; S  ; = ; = ; =  ; = ; = ; =  ;   I   ;   I  
+ah ;   ah  ; m ; ae ; ah ; ae ;   er  ;   s   ;   d   ; ih ; v ;   s   ; z ; eh ; aw ; l ;   aw  ;   t   ; ah ; er ; aw ; n  ; dh ; ah ; p ; ae ; th ;   s   ; th ; r ; uw ; ao ; t ; er ; z ; g ; aa ; r ; d ; ah ;   n   ;   oy 
+True Accept: 14, False Rejection: 14, False Accept: 6, True Reject: 8, Corr Diag: 1, Err Diag: 7
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F01/wav/KYO_F01_S8_014.wav
+Human annotation: Canonical vs Perceived:
+eh ; v ; r ; iy ; k ; ae ; b ; n ; iy ; d ; z ; r  ; iy ; p  ; ey ; n ; t  ; ah ; ng ; ao ; f  ; ah
+=  ; = ; = ; S  ; = ; S  ; S ; = ; =  ; S ; S ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S 
+eh ; v ; r ; ih ; k ; aa ; f ; n ; iy ; s ; r ; uw ; p  ; ey ; n  ; t ; iy ; ng ; ao ; f  ; ih ; m 
+Model Prediction: Canonical vs Hypothesis:
+eh ; v ; r  ; iy ; k ; ae ; b ; <eps> ; n ; iy ; d ; <eps> ; z ; r ; iy ; p ; ey ; <eps> ; n ; <eps> ; <eps> ; t ; ah ; ng ; <eps> ; ao ; f ; ah ; <eps>
+=  ; = ; S  ; =  ; = ; =  ; S ;   I   ; = ; =  ; S ;   I   ; = ; = ; S  ; = ; =  ;   I   ; = ;   I   ;   I   ; = ; S  ; =  ;   I   ; =  ; = ; =  ;   I  
+eh ; v ; er ; iy ; k ; ae ; v ;   f   ; n ; iy ; z ;   s   ; z ; r ; ih ; p ; ey ;   ng  ; n ;   ng  ;   k   ; t ; ih ; ng ;   ow  ; ao ; f ; ah ;   n  
+True Accept: 5, False Rejection: 8, False Accept: 12, True Reject: 4, Corr Diag: 0, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F01/wav/KYO_F01_S8_016.wav
+Human annotation: Canonical vs Perceived:
+ah ; t ; uw ; th ; p ; ey ; s ; t ; t  ; y  ; uw ; b  ; sh ; uh ; d ; b  ; iy ; s ; k ; w  ; iy ; z ; d ; f ; r  ; aa ; m ; dh ; ah ; b  ; aa ; t  ; ah
+=  ; = ; =  ; S  ; = ; =  ; = ; = ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S ; S ; S  ; S  ; S ; S ; S ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S 
+ah ; t ; uw ; s  ; p ; ey ; s ; t ; ch ; uw ; f  ; sh ; uw ; d  ; b ; ih ; s  ; k ; w ; iy ; z  ; d ; f ; r ; ah ; m  ; d ; ah ; b  ; ao ; t  ; ah ; m 
+Model Prediction: Canonical vs Hypothesis:
+ah ; t ; uw ; th ; p ; ey ; s ; t ; <eps> ; t ;   y   ; uw ; b ; sh ; uh ; d ; b ; iy ; s ; k ; w ; iy ; z ; d ; <eps> ; f ; r ; aa ; m ; dh ; ah ; b ; aa ; t ; ah ; <eps>
+=  ; = ; S  ; S  ; = ; =  ; = ; = ;   I   ; = ;   D   ; =  ; = ; =  ; =  ; = ; = ; =  ; = ; = ; = ; =  ; = ; = ;   I   ; = ; = ; S  ; = ; =  ; =  ; = ; =  ; = ; =  ;   I  
+ah ; t ; er ; z  ; p ; ey ; s ; t ;   ah  ; t ; <eps> ; uw ; b ; sh ; uh ; d ; b ; iy ; s ; k ; w ; iy ; z ; d ;   ih  ; f ; r ; ah ; m ; dh ; ah ; b ; aa ; t ; ah ;   n  
+True Accept: 6, False Rejection: 4, False Accept: 23, True Reject: 3, Corr Diag: 0, Err Diag: 3
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F07/wav/KYO_F07_S6_023.wav
+Human annotation: Canonical vs Perceived:
+p ; l ; iy ; z ; d ; ih ; g  ; m ; ay ; p ; ah ; t ; ey ; t ; ow ; z ; ah ; p ; b ; ah ; f ; ao ; r ; dh ; ah ; f ; r ; ao ; s ; t
+= ; S ; =  ; = ; = ; =  ; S  ; = ; S  ; = ; S  ; = ; S  ; = ; S  ; = ; =  ; S ; = ; S  ; = ; =  ; = ; S  ; =  ; = ; = ; S  ; = ; =
+p ; r ; iy ; z ; d ; ih ; hh ; m ; ah ; p ; ao ; t ; ih ; t ; er ; z ; ah ; f ; b ; iy ; f ; ao ; r ; d  ; ah ; f ; r ; th ; s ; t
+Model Prediction: Canonical vs Hypothesis:
+p ; l ; iy ; z  ; d ; ih ; g  ; <eps> ; m ; ay ; p ; ah ; <eps> ; t ; ey ; <eps> ; <eps> ; t ; ow ; z ; <eps> ; ah ; p ; b ; ah ; f ; ao ; r ; dh ; ah ; f ; r ; ao ; s ; t
+= ; S ; =  ; S  ; S ; S  ; S  ;   I   ; = ; =  ; = ; S  ;   I   ; = ; =  ;   I   ;   I   ; = ; S  ; = ;   I   ; =  ; = ; = ; S  ; = ; =  ; = ; =  ; =  ; = ; = ; =  ; = ; =
+p ; r ; iy ; eh ; s ; t  ; ey ;   k   ; m ; ay ; p ; aa ;   r   ; t ; ey ;   ah  ;   ey  ; t ; er ; z ;   z   ; ah ; p ; b ; ih ; f ; ao ; r ; dh ; ah ; f ; r ; ao ; s ; t
+True Accept: 17, False Rejection: 8, False Accept: 5, True Reject: 5, Corr Diag: 2, Err Diag: 3
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F07/wav/KYO_F07_S6_025.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; n ; ih ; r  ; ah ; s ; t ; s ; ih ; n ; ah ; g ; ao ; g  ; m ; ey ; n ; aa ; t ; b ; iy ; w ; ih ; th ; ih ; n ; w ; ao ; k ; ah ; ng ; d ; ih ; s ; t ; ah ; n  ; s
+S  ; =  ; = ; S  ; S  ; =  ; = ; = ; = ; =  ; = ; =  ; = ; S  ; S  ; = ; =  ; = ; S  ; = ; = ; =  ; = ; =  ; S  ; =  ; S ; = ; S  ; = ; S  ; S  ; = ; =  ; = ; = ; =  ; S  ; =
+d  ; ah ; n ; iy ; er ; ah ; s ; t ; s ; ih ; n ; ah ; g ; ow ; hh ; m ; ey ; n ; ow ; t ; b ; iy ; w ; ih ; z  ; ih ; m ; w ; ow ; k ; iy ; n  ; d ; ih ; s ; t ; ah ; ih ; s
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; n ; ih ; r ; ah ; s ;   t   ;   s   ; ih ; n ; ah ; g ; ao ;   g   ; m ; ey ; n ; aa ; t ; b ; iy ; w ; ih ; th ;   ih  ;   n   ; w ; ao ; k ; ah ; ng ; d ; ih ; s ; t ; ah ; n ; s
+=  ; =  ; = ; =  ; = ; =  ; = ;   D   ;   D   ; =  ; = ; =  ; = ; S  ;   D   ; = ; =  ; = ; =  ; = ; = ; =  ; = ; =  ; S  ;   D   ;   D   ; = ; =  ; = ; S  ; =  ; = ; =  ; = ; = ; =  ; = ; =
+dh ; ah ; n ; ih ; r ; ah ; s ; <eps> ; <eps> ; ih ; n ; ah ; g ; ow ; <eps> ; m ; ey ; n ; aa ; t ; b ; iy ; w ; ih ; dh ; <eps> ; <eps> ; w ; ao ; k ; ih ; ng ; d ; ih ; s ; t ; ah ; n ; s
+True Accept: 24, False Rejection: 3, False Accept: 7, True Reject: 5, Corr Diag: 1, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F07/wav/KYO_F07_S6_031.wav
+Human annotation: Canonical vs Perceived:
+s ; t ; iy ; v ; k ; ah ; l ; eh ; k  ; t ; s ; r  ; eh ; r  ; ae ; n ; d  ; n ; aa ; v ; ah ; l  ; k ; oy
+= ; = ; =  ; = ; = ; S  ; S ; S  ; S  ; = ; S ; S  ; S  ; S  ; S  ; = ; S  ; S ; S  ; S ; S  ; S  ; S ; S 
+s ; t ; iy ; v ; k ; th ; r ; ey ; hh ; t ; r ; ey ; r  ; eh ; n  ; n ; ao ; v ; eh ; l ; k  ; oy ; n ; t 
+Model Prediction: Canonical vs Hypothesis:
+<eps> ; s ; t ; iy ; v ; k ; ah ; l  ; eh ; k ; t ; s ; r ; eh ; r ; ae ; n ; d ; n ; aa ; <eps> ; v ; ah ; l  ; k ; oy ; <eps> ; <eps>
+  I   ; = ; = ; =  ; = ; = ; S  ; S  ; =  ; = ; = ; = ; = ; =  ; = ; S  ; = ; = ; = ; =  ;   I   ; = ; =  ; S  ; = ; =  ;   I   ;   I  
+  dh  ; s ; t ; iy ; v ; k ; ao ; er ; eh ; k ; t ; s ; r ; eh ; r ; ah ; n ; d ; n ; aa ;   ah  ; v ; ah ; er ; k ; oy ;   n   ;   z  
+True Accept: 7, False Rejection: 4, False Accept: 13, True Reject: 4, Corr Diag: 0, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_F07/wav/KYO_F07_S6_053.wav
+Human annotation: Canonical vs Perceived:
+ay ; l ; hh ; ae ; v ; ah ; s ; k ; uw ; p ; ah ; v ; dh ; ae ; t ; ah ; g  ; z ; aa ; t ; ah ; k ; p ; er ; p ; ah ; l ; ae ; n ; d  ; t ; er ; k ; w  ; oy ; z  ; sh ; er ; b  ; ah
+S  ; = ; =  ; S  ; = ; S  ; = ; = ; =  ; S ; S  ; = ; S  ; S  ; = ; S  ; S  ; = ; S  ; = ; S  ; = ; = ; S  ; = ; S  ; = ; =  ; = ; S  ; = ; S  ; = ; S  ; S  ; S  ; S  ; S  ; S  ; S 
+ah ; l ; hh ; ah ; v ; ih ; s ; k ; uw ; f ; ow ; v ; z  ; ah ; t ; ey ; hh ; z ; ah ; t ; ih ; k ; p ; ah ; p ; ow ; l ; ae ; n ; ch ; t ; ah ; k ; ao ; z  ; sh ; ah ; b  ; ey ; t 
+Model Prediction: Canonical vs Hypothesis:
+ay ; l ; hh ; ae ; v ; <eps> ; ah ; s ; k ; uw ; p ; ah ; v ; dh ; ae ; t  ; ah ; <eps> ; <eps> ; g ; z ; aa ; <eps> ; <eps> ; t ; ah ; k ; p ; er ; p ; ah ; <eps> ; l ; ae ; <eps> ; <eps> ; n ; d ; t ; er ; k ; w ; oy ; z ; sh ; er ;   b   ; ah ; <eps> ; <eps> ; <eps>
+=  ; S ; =  ; =  ; = ;   I   ; =  ; = ; = ; =  ; S ; =  ; = ; S  ; S  ; S  ; S  ;   I   ;   I   ; = ; = ; S  ;   I   ;   I   ; = ; S  ; = ; = ; S  ; = ; =  ;   I   ; = ; S  ;   I   ;   I   ; = ; = ; = ; S  ; = ; = ; =  ; = ; S  ; =  ;   D   ; =  ;   I   ;   I   ;   I  
+ay ; r ; hh ; ae ; v ;   r   ; ah ; s ; k ; uw ; v ; ah ; v ; s  ; ah ; ch ; ih ;   ae  ;   ih  ; g ; z ; eh ;   ae  ;   eh  ; t ; ih ; k ; p ; aa ; p ; ah ;   ao  ; l ; er ;   l   ;   ah  ; n ; d ; t ; ae ; k ; w ; oy ; z ; s  ; er ; <eps> ; ah ;   v   ;   ih  ;   t  
+True Accept: 15, False Rejection: 14, False Accept: 12, True Reject: 10, Corr Diag: 2, Err Diag: 8
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_M02/wav/KYO_M02_S2_008.wav
+Human annotation: Canonical vs Perceived:
+ah ; p ; g ; r ; ey ; d  ; y ; uh ; r  ; s ; t ; ey ; t ; ah ; s ; t ; uw ; r ; ah ; f ; l ; eh ; k ; t  ; y ; uh ; r  ; w ; eh ; l ; th
+=  ; = ; = ; = ; =  ; S  ; = ; S  ; S  ; = ; = ; S  ; = ; =  ; = ; = ; =  ; = ; S  ; = ; = ; =  ; = ; S  ; = ; S  ; S  ; = ; =  ; = ; = 
+ah ; p ; g ; r ; ey ; zh ; y ; uw ; er ; s ; t ; eh ; t ; ah ; s ; t ; uw ; r ; ih ; f ; l ; eh ; k ; ch ; y ; er ; ah ; w ; eh ; l ; th
+Model Prediction: Canonical vs Hypothesis:
+ah ; p ; g ; r ; ey ; d ; y ; uh ; r ; <eps> ; s ; t ; ey ; t ; ah ; s ; t ; uw ; r ; <eps> ; ah ; f ; l ; eh ; k ; t ; y  ;   uh  ; r ; <eps> ; w ; eh ; l ; th
+=  ; = ; = ; = ; =  ; = ; = ; =  ; = ;   I   ; = ; = ; S  ; = ; =  ; = ; = ; =  ; = ;   I   ; =  ; = ; = ; =  ; = ; = ; S  ;   D   ; = ;   I   ; = ; =  ; = ; = 
+ah ; p ; g ; r ; ey ; d ; y ; uh ; r ;   ah  ; s ; t ; ae ; t ; ah ; s ; t ; uw ; r ;   ih  ; ah ; f ; l ; eh ; k ; t ; uw ; <eps> ; r ;   ah  ; w ; eh ; l ; th
+True Accept: 22, False Rejection: 4, False Accept: 6, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_M02/wav/KYO_M02_S2_026.wav
+Human annotation: Canonical vs Perceived:
+hh ; ah ; s ; p ; ae ; n ; ah ; k ; k ; aa ; s ; t  ; uw ; m ; z ; aa ; r  ; k ; w ; ay ; t ; k ; ah ; l ; ah ; f ; ah
+=  ; S  ; = ; = ; =  ; = ; S  ; = ; = ; =  ; = ; S  ; =  ; = ; S ; S  ; S  ; = ; = ; S  ; = ; = ; =  ; = ; S  ; = ; S 
+hh ; ih ; s ; p ; ae ; n ; iy ; k ; k ; aa ; s ; ch ; uw ; m ; s ; ah ; er ; k ; w ; ah ; t ; k ; ah ; l ; er ; f ; ow
+Model Prediction: Canonical vs Hypothesis:
+hh ; ah ; s ; p ; ae ; n ; ah ; k ; k  ; aa ; s ; t ; uw ; m ; z ; aa ; r ; k ; w ; ay ; t ; k ; ah ; l ; ah ; f ; ah ; <eps> ; <eps> ; <eps>
+=  ; S  ; S ; = ; =  ; = ; S  ; = ; S  ; =  ; = ; = ; =  ; = ; = ; =  ; = ; = ; = ; =  ; = ; = ; =  ; = ; S  ; = ; =  ;   I   ;   I   ;   I  
+hh ; ih ; z ; p ; ae ; n ; ih ; k ; ah ; aa ; s ; t ; uw ; m ; z ; aa ; r ; k ; w ; ay ; t ; k ; ah ; l ; er ; f ; ah ;   ao  ;   l   ;   r  
+True Accept: 16, False Rejection: 5, False Accept: 6, True Reject: 3, Corr Diag: 2, Err Diag: 1
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_M02/wav/KYO_M02_S2_030.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; th ; ih ; ng ; k ; ah ; ih ; z ; ah ; f ; ey ; m ; ah ; s ; s ; k ; ah ; l ; p ; ch ; ah
+=  ; =  ; =  ; S  ; =  ; = ; S  ; =  ; = ; =  ; = ; =  ; = ; =  ; = ; = ; = ; =  ; = ; = ; =  ; S 
+dh ; ah ; th ; iy ; ng ; k ; er ; ih ; z ; ah ; f ; ey ; m ; ah ; s ; s ; k ; ah ; l ; p ; ch ; er
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; th ; ih ; ng ; k ; ah ; ih ; <eps> ; z ; ah ; f ; ey ; m ; ah ; s ;   s   ; k ; ah ; l ; p ; ch ; ah
+=  ; =  ; =  ; =  ; =  ; = ; S  ; =  ;   I   ; = ; =  ; = ; =  ; = ; =  ; = ;   D   ; = ; =  ; = ; = ; =  ; S 
+dh ; ah ; th ; ih ; ng ; k ; er ; ih ;   ih  ; z ; ah ; f ; ey ; m ; ah ; s ; <eps> ; k ; ah ; l ; p ; ch ; er
+True Accept: 18, False Rejection: 2, False Accept: 1, True Reject: 2, Corr Diag: 2, Err Diag: 0
+================================================================================
+/common/db/ERJ_annot_ver1.1/KYO_M02/wav/KYO_M02_S2_050.wav
+Human annotation: Canonical vs Perceived:
+hh ; ih ; z ; s ; k ; ae ; l ; p ; w ; aa ; z ; b ; l ; ih ; s ; t ; ah ; d ; f ; r ; aa ; m ; t ; ah ; d ; ey ; z ; hh ; aa ; t ; s ; ah ; n 
+=  ; =  ; = ; = ; = ; S  ; = ; = ; = ; S  ; = ; = ; = ; =  ; = ; = ; S  ; = ; = ; = ; S  ; = ; = ; S  ; = ; =  ; S ; =  ; S  ; = ; = ; =  ; S 
+hh ; ih ; z ; s ; k ; ah ; l ; p ; w ; ah ; z ; b ; l ; ih ; s ; t ; er ; d ; f ; r ; ah ; m ; t ; ih ; d ; ey ; s ; hh ; ah ; t ; s ; ah ; ih
+Model Prediction: Canonical vs Hypothesis:
+hh ; ih ; z ; s ; k ; ae ; l ; p ; w ; aa ; z ; b ; l ; ih ; s ; t ; ah ; d ; f ; r ; aa ; m ; t ; ah ; d ; ey ; z ; hh ; aa ; <eps> ; t ; s ; ah ; n
+=  ; =  ; = ; = ; = ; =  ; = ; = ; = ; =  ; = ; = ; = ; =  ; = ; = ; S  ; = ; = ; = ; S  ; = ; = ; =  ; = ; =  ; = ; =  ; =  ;   I   ; = ; = ; =  ; =
+hh ; ih ; z ; s ; k ; ae ; l ; p ; w ; aa ; z ; b ; l ; ih ; s ; t ; er ; d ; f ; r ; ah ; m ; t ; ah ; d ; ey ; z ; hh ; aa ;   r   ; t ; s ; ah ; n
+True Accept: 25, False Rejection: 1, False Accept: 6, True Reject: 2, Corr Diag: 2, Err Diag: 0
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F02/wav/NAR_F02_S8_001.wav
+Human annotation: Canonical vs Perceived:
+ay ; r ; ih ; sh ; y ; ah ; ng ; s ; t ; ah ; z  ; iy ; t ; f ; r  ; eh ; sh ; k  ; ih ; p  ; ah ; z  ; f ; ao ; r  ; b ; r ; eh ; k ; f
+S  ; = ; =  ; =  ; = ; S  ; S  ; = ; = ; =  ; S  ; S  ; S ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S ; S ; S  ; S ; S
+ah ; r ; ih ; sh ; y ; aa ; ih ; s ; t ; ah ; iy ; t  ; f ; r ; ey ; sh ; k  ; iy ; p  ; aa ; f  ; ow ; b ; r  ; eh ; k ; f ; aa ; s ; t
+Model Prediction: Canonical vs Hypothesis:
+ay ;   r   ; ih ; sh ; y ; <eps> ; ah ; ng ; <eps> ; <eps> ; s ; t ; ah ; z ; iy ; t ;   f   ; r ; eh ; sh ; k ; ih ; p ; <eps> ; ah ; z  ; f  ; ao ; r ; b ; r ; eh ; <eps> ; k ; f ; <eps> ; <eps> ; <eps> ; <eps> ; <eps>
+=  ;   D   ; =  ; =  ; = ;   I   ; =  ; =  ;   I   ;   I   ; = ; = ; S  ; S ; =  ; = ;   D   ; = ; =  ; =  ; = ; S  ; = ;   I   ; =  ; S  ; S  ; =  ; = ; = ; = ; =  ;   I   ; = ; = ;   I   ;   I   ;   I   ;   I   ;   I  
+ay ; <eps> ; ih ; sh ; y ;   ae  ; ah ; ng ;   dh  ;   ah  ; s ; t ; aa ; t ; iy ; t ; <eps> ; r ; eh ; sh ; k ; iy ; p ;   b   ; ah ; hh ; ow ; ao ; r ; b ; r ; eh ;   d   ; k ; f ;   ae  ;   ah  ;   ae  ;   s   ;   t  
+True Accept: 5, False Rejection: 12, False Accept: 18, True Reject: 5, Corr Diag: 0, Err Diag: 5
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F02/wav/NAR_F02_S8_002.wav
+Human annotation: Canonical vs Perceived:
+m ; uw ; v ; dh ; ah ; g ; aa ; r ; b  ; ah ; jh ; n  ; ih ; r  ; ah ; t  ; uw ; dh ; ah ; l  ; aa ; r ; jh ; w ; ih ; n 
+= ; =  ; = ; S  ; =  ; = ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S ; S  ; S 
+m ; uw ; v ; z  ; ah ; g ; ah ; b ; ah ; ch ; n  ; iy ; r  ; ah ; t  ; uw ; z  ; ah ; l  ; ah ; zh ; w ; iy ; n ; d  ; ow
+Model Prediction: Canonical vs Hypothesis:
+m ; uw ; v ; <eps> ; dh ; <eps> ; ah ; <eps> ; <eps> ; <eps> ; <eps> ; g ; aa ; r  ; b ; ah ; jh ; n ; ih ;   r   ; ah ; t ; uw ; dh ; ah ; l  ; aa ; r  ; jh ; w ; ih ; n ; <eps> ; <eps>
+= ; =  ; = ;   I   ; =  ;   I   ; =  ;   I   ;   I   ;   I   ;   I   ; = ; =  ; S  ; = ; =  ; S  ; = ; S  ;   D   ; =  ; = ; =  ; =  ; =  ; S  ; =  ; S  ; S  ; S ; =  ; = ;   I   ;   I  
+m ; uw ; v ;   d   ; dh ;   ih  ; ah ;   s   ;   ay  ;   t   ;   k   ; g ; aa ; ah ; b ; ah ; t  ; n ; iy ; <eps> ; ah ; t ; uw ; dh ; ah ; ae ; aa ; ay ; z  ; r ; ih ; n ;   d   ;   ow 
+True Accept: 5, False Rejection: 8, False Accept: 13, True Reject: 8, Corr Diag: 0, Err Diag: 8
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F02/wav/NAR_F02_S8_009.wav
+Human annotation: Canonical vs Perceived:
+w ; ah ; n  ; s ; y ; uw ; f ; ih ; n ; ah ; sh ; g ; r  ; iy ; s  ; ah ; ng ; y  ; uh ; r ; ch ; ey ; n  ; b  ; iy ; sh ; uh ; r  ; t  ; uw ; w ; aa ; sh ; th ; er ; ow ; l  ; iy
+= ; S  ; S  ; = ; = ; =  ; = ; S  ; = ; S  ; =  ; = ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S 
+w ; aa ; ah ; s ; y ; uw ; f ; iy ; n ; iy ; sh ; g ; uw ; r  ; iy ; zh ; iy ; ng ; uw ; y ; ow ; ah ; ch ; ey ; ih ; b  ; iy ; sh ; uh ; ah ; t ; uw ; w  ; ah ; sh ; s  ; ey ; r 
+Model Prediction: Canonical vs Hypothesis:
+w ; ah ; n ; s ; y ; uw ; f  ; ih ; <eps> ; n ; ah ; sh ; <eps> ; g ; r ; iy ; s ; ah ; ng ; <eps> ; <eps> ; y ; uh ; <eps> ; r ; ch ; ey ; n ; b ; iy ; sh ; uh ; r  ; <eps> ; t ; uw ; w ; aa ; sh ; th ; er ; <eps> ; <eps> ; ow ; l ; iy ; <eps> ; <eps>
+= ; S  ; S ; = ; = ; =  ; S  ; S  ;   I   ; = ; S  ; =  ;   I   ; = ; = ; =  ; S ; S  ; =  ;   I   ;   I   ; = ; S  ;   I   ; = ; =  ; =  ; = ; = ; =  ; =  ; S  ; S  ;   I   ; = ; =  ; = ; =  ; S  ; S  ; S  ;   I   ;   I   ; =  ; = ; S  ;   I   ;   I  
+w ; ay ; l ; s ; y ; uw ; hh ; r  ;   iy  ; n ; ih ; sh ;   t   ; g ; r ; iy ; z ; ih ; ng ;   r   ;   uw  ; y ; uw ;   aa  ; r ; ch ; ey ; n ; b ; iy ; sh ; ah ; aa ;   uh  ; t ; uw ; w ; aa ; z  ; s  ; ah ;   ao  ;   r   ; ow ; l ; d  ;   ih  ;   ng 
+True Accept: 7, False Rejection: 11, False Accept: 17, True Reject: 13, Corr Diag: 1, Err Diag: 12
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F02/wav/NAR_F02_S8_012.wav
+Human annotation: Canonical vs Perceived:
+m ; uw ; v ; iy ; z ; n ; eh ; v ; ah ; hh ; ae ; v ; ah ; n ; ah ; f ; v ; ih ; l ; ah ; n
+= ; =  ; S ; =  ; = ; = ; S  ; S ; =  ; =  ; S  ; = ; S  ; = ; =  ; = ; S ; S  ; S ; S  ; =
+m ; uw ; b ; iy ; z ; n ; ey ; b ; ah ; hh ; ah ; v ; ih ; n ; ah ; f ; b ; iy ; r ; aa ; n
+Model Prediction: Canonical vs Hypothesis:
+m ; uw ; v ; iy ; z ; n ; <eps> ; eh ; v ; <eps> ; ah ; <eps> ; hh ; ae ; v ; ah ; <eps> ; n ; ah ; <eps> ; f ; v  ; ih ; l  ; <eps> ; ah ; n 
+= ; =  ; S ; =  ; = ; = ;   I   ; =  ; S ;   I   ; =  ;   I   ; =  ; S  ; S ; =  ;   I   ; = ; =  ;   I   ; = ; S  ; S  ; S  ;   I   ; =  ; S 
+m ; uw ; b ; iy ; z ; n ;   iy  ; eh ; b ;   er  ; ah ;   er  ; hh ; aa ; b ; ah ;   er  ; n ; ah ;   aw  ; f ; aw ; b  ; iy ;   d   ; ah ; ng
+True Accept: 10, False Rejection: 8, False Accept: 3, True Reject: 6, Corr Diag: 2, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F05/wav/NAR_F05_S3_021.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; b ; ah ; ng ; g ; ah ; l ; ow ; w ; aa ; z ; p ; l ; eh ; z ; ah ; n ; t  ; l ; iy ; s ; ih ; ch ; uw ; ey ; t ; ah ; d ; n ; ih ; r  ; dh ; ah ; sh ; ao ; r 
+S  ; =  ; = ; S  ; =  ; = ; =  ; = ; =  ; = ; S  ; S ; = ; = ; S  ; = ; S  ; = ; S  ; = ; =  ; = ; S  ; =  ; =  ; =  ; S ; S  ; = ; = ; S  ; S  ; =  ; =  ; =  ; S  ; S 
+d  ; ah ; b ; ae ; ng ; g ; ah ; l ; ow ; w ; ah ; s ; p ; l ; ah ; z ; ey ; n ; dh ; l ; iy ; s ; iy ; ch ; uw ; ey ; r ; iy ; d ; n ; iy ; er ; dh ; ah ; sh ; ow ; er
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; b ; ah ; <eps> ; ng ; g ; ah ; l ; ow ; w ; aa ; z ; p ; l ; <eps> ; <eps> ; eh ; z ; ah ; n ; <eps> ; t ; l ; iy ; <eps> ; <eps> ; s ; ih ; ch ; uw ; ey ; t ; ah ; d ; n ; ih ; r ; dh ; ah ; <eps> ; <eps> ; <eps> ; <eps> ; sh ; <eps> ; ao ; r
+=  ; =  ; = ; S  ;   I   ; =  ; = ; =  ; = ; =  ; = ; =  ; = ; = ; = ;   I   ;   I   ; =  ; = ; =  ; = ;   I   ; = ; = ; =  ;   I   ;   I   ; = ; =  ; =  ; =  ; =  ; = ; S  ; = ; = ; =  ; = ; =  ; =  ;   I   ;   I   ;   I   ;   I   ; =  ;   I   ; =  ; =
+dh ; ah ; b ; b  ;   ae  ; ng ; g ; ah ; l ; ow ; w ; aa ; z ; p ; l ;   aa  ;   oy  ; eh ; z ; ah ; n ;   p   ; t ; l ; iy ;   d   ;   z   ; s ; ih ; ch ; uw ; ey ; t ; ih ; d ; n ; ih ; r ; dh ; ah ;   dh  ;   ah  ;   ae  ;   ah  ; sh ;   uh  ; ao ; r
+True Accept: 23, False Rejection: 11, False Accept: 12, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F05/wav/NAR_F05_S3_034.wav
+Human annotation: Canonical vs Perceived:
+m ; ah ; s ; k ; iy ; t ; ow ; z ; ah ; g ; z ; ih ; s ; t ; ih ; n  ; w ; ao ; r  ; m ; hh ; y  ; uw ; m  ; ah ; d ; k ; l  ; ay ; m  ; ah ; t
+= ; =  ; = ; = ; =  ; = ; S  ; S ; S  ; = ; = ; S  ; = ; = ; =  ; S  ; = ; =  ; S  ; = ; S  ; S  ; S  ; S  ; S  ; S ; S ; S  ; S  ; S  ; S  ; S
+m ; ah ; s ; k ; iy ; t ; ao ; s ; ey ; g ; z ; ey ; s ; t ; ih ; uw ; w ; ao ; er ; m ; k  ; iy ; m  ; ih ; t  ; k ; l ; ah ; m  ; eh ; t  ; s
+Model Prediction: Canonical vs Hypothesis:
+m ; ah ; s ; k ; iy ; t ; ow ; z ; ah ; g ; z ; ih ; s ; t ; ih ; n  ; <eps> ; w ; ao ; r ; m ; hh ; y ; uw ; m ; ah ; d ; k ; l ; ay ; m ; ah ; t ; <eps>
+= ; S  ; = ; = ; =  ; S ; =  ; = ; S  ; S ; = ; S  ; = ; = ; =  ; S  ;   I   ; = ; =  ; = ; = ; =  ; = ; =  ; = ; S  ; = ; = ; = ; =  ; = ; =  ; = ;   I  
+m ; ow ; s ; k ; iy ; k ; ow ; z ; ih ; k ; z ; ah ; s ; t ; ih ; ng ;   m   ; w ; ao ; r ; m ; hh ; y ; uw ; m ; ey ; d ; k ; l ; ay ; m ; ah ; t ;   s  
+True Accept: 11, False Rejection: 5, False Accept: 14, True Reject: 4, Corr Diag: 0, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F05/wav/NAR_F05_S3_041.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; g ; ah ; v ; ah ; m ; ah ; n ; t ; s ; ao ; t ; ao ; th ; ah ; ah ; z ; ey ; sh ; ah ; n ; ah ; v ; hh ; ih ; z ; s ; ih ; t ; ah ; z ; ah ; n ; sh ; ih ; p
+S  ; =  ; = ; =  ; = ; S  ; = ; S  ; = ; = ; = ; S  ; = ; =  ; =  ; S  ; S  ; = ; =  ; =  ; =  ; = ; S  ; = ; =  ; =  ; = ; = ; =  ; S ; S  ; = ; S  ; = ; S  ; =  ; =
+d  ; ah ; g ; ah ; v ; er ; m ; ey ; n ; t ; s ; aa ; t ; ao ; th ; l  ; iy ; z ; ey ; sh ; ah ; n ; ao ; v ; hh ; ih ; z ; s ; ih ; r ; ih ; z ; ih ; n ; s  ; ih ; p
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; g ; ah ; v ; ah ; m ; ah ; n ; t ; s ; ao ; t ; ao ; <eps> ; <eps> ; th ; ah ; <eps> ; ah ; z ; ey ; sh ; ah ; n ; <eps> ; <eps> ; ah ; v ; hh ; ih ; z ; s ; ih ; t ; <eps> ; ah ; z ; ah ; n ; <eps> ; sh ; ih ; p
+=  ; =  ; = ; =  ; = ; S  ; = ; =  ; = ; = ; = ; =  ; = ; S  ;   I   ;   I   ; =  ; S  ;   I   ; =  ; = ; =  ; =  ; =  ; = ;   I   ;   I   ; =  ; = ; =  ; =  ; = ; = ; =  ; = ;   I   ; =  ; S ; S  ; = ;   I   ; =  ; =  ; =
+dh ; ah ; g ; ah ; v ; er ; m ; ah ; n ; t ; s ; ao ; t ; d  ;   aa  ;   r   ; th ; aa ;   l   ; ah ; z ; ey ; sh ; ah ; n ;   d   ;   n   ; ah ; v ; hh ; ih ; z ; s ; ih ; t ;   ih  ; ah ; d ; ih ; n ;   s   ; sh ; ih ; p
+True Accept: 24, False Rejection: 9, False Accept: 8, True Reject: 3, Corr Diag: 2, Err Diag: 1
+================================================================================
+/common/db/ERJ_annot_ver1.1/NAR_F05/wav/NAR_F05_S3_051.wav
+Human annotation: Canonical vs Perceived:
+hh ; aw ; w ; uh ; d  ; y  ; uw ; iy ; v ; ae ; l ; y ; uw ; ey ; t ; dh ; ih ; s ; ae ; l ; jh ; ah ; b ; r ; ey ; ah ; k  ; ah ; k ; s ; p ; r  ; eh ; sh ; ah
+=  ; S  ; = ; S  ; S  ; S  ; =  ; =  ; S ; =  ; = ; = ; =  ; =  ; = ; S  ; =  ; = ; S  ; = ; =  ; S  ; = ; = ; =  ; S  ; S  ; S  ; S ; S ; S ; S  ; S  ; S  ; S 
+hh ; aa ; w ; ih ; zh ; zh ; uw ; iy ; b ; ae ; l ; y ; uw ; ey ; t ; d  ; ih ; s ; ah ; l ; jh ; ih ; b ; r ; ey ; k  ; ey ; k  ; s ; p ; r ; ey ; sh ; ah ; n 
+Model Prediction: Canonical vs Hypothesis:
+hh ; aw ; w ; uh ; <eps> ; d ; y ; uw ; iy ; v ; ae ; l ; y  ; uw ; ey ; t ; dh ; ih ; s ; ae ; l ; jh ; ah ; b ; r ; ey ;   ah  ; k ; ah ; k ; s ; p ; r ; eh ; sh ; ah ; <eps>
+=  ; =  ; = ; =  ;   I   ; = ; = ; =  ; =  ; = ; =  ; = ; S  ; S  ; =  ; = ; =  ; =  ; = ; =  ; = ; =  ; =  ; = ; = ; =  ;   D   ; = ; S  ; = ; = ; = ; = ; =  ; =  ; =  ;   I  
+hh ; aw ; w ; uh ;   ih  ; d ; y ; uw ; iy ; v ; ae ; l ; iy ; w  ; ey ; t ; dh ; ih ; s ; ae ; l ; jh ; ah ; b ; r ; ey ; <eps> ; k ; ih ; k ; s ; p ; r ; eh ; sh ; ah ;   n  
+True Accept: 15, False Rejection: 4, False Accept: 16, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/RYU_M01/wav/RYU_M01_S1_018.wav
+Human annotation: Canonical vs Perceived:
+ae ; l ; ah ; m ; ow ; n ; iy ; hh ; aa ; r ; m ; z  ; ah ; d  ; ah ; v  ; ao ; r ; s ; t  ; m ; ae ; n ; z  ; w ; eh
+S  ; S ; S  ; = ; =  ; = ; =  ; =  ; S  ; S ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S ; S  ; S ; S  ; S ; S  ; S ; S 
+ah ; r ; ih ; m ; ow ; n ; iy ; hh ; ah ; b ; z ; ah ; d  ; ah ; v  ; th ; s  ; t ; m ; ah ; n ; z  ; w ; ah ; l ; s 
+Model Prediction: Canonical vs Hypothesis:
+ae ; l ;   ah  ; m ; ow ; <eps> ; n ; iy ; <eps> ; hh ; aa ; r  ; m ; z ; <eps> ; <eps> ; <eps> ; <eps> ; ah ; d ; ah ; v ; ao ;   r   ; s ; t ; <eps> ; m ; ae ; n ; <eps> ; z ; <eps> ; w ; eh ; <eps> ; <eps>
+S  ; S ;   D   ; = ; S  ;   I   ; = ; S  ;   I   ; =  ; S  ; S  ; = ; = ;   I   ;   I   ;   I   ;   I   ; =  ; = ; S  ; = ; S  ;   D   ; = ; = ;   I   ; = ; =  ; = ;   I   ; = ;   I   ; = ; =  ;   I   ;   I  
+ay ; d ; <eps> ; m ; w  ;   l   ; n ; y  ;   uw  ; hh ; er ; ow ; m ; z ;   s   ;   dh  ;   eh  ;   er  ; ah ; d ; ay ; v ; er ; <eps> ; s ; t ;   uw  ; m ; ae ; n ;   d   ; z ;   ah  ; w ; eh ;   l   ;   z  
+True Accept: 3, False Rejection: 13, False Accept: 13, True Reject: 8, Corr Diag: 0, Err Diag: 8
+================================================================================
+/common/db/ERJ_annot_ver1.1/RYU_M01/wav/RYU_M01_S1_022.wav
+Human annotation: Canonical vs Perceived:
+w ; eh ; n  ; ao ; l ; eh ; l ; s ; f ; ey ; l  ; z ; y ; uw ; z  ; f ; ao ; r  ; s 
+= ; S  ; S  ; =  ; = ; =  ; = ; = ; = ; =  ; S  ; S ; S ; S  ; S  ; S ; S  ; S  ; S 
+w ; ey ; ah ; ao ; l ; eh ; l ; s ; f ; ey ; ih ; w ; s ; y  ; uw ; s ; f  ; ao ; ow
+Model Prediction: Canonical vs Hypothesis:
+w ; eh ;   n   ;   ao  ; l ; eh ; l ; s ; f ; ey ; l ; z ; y ; uw ; z ; f ; ao ; r ; s
+= ; =  ;   D   ;   D   ; = ; =  ; = ; S ; = ; =  ; = ; = ; = ; =  ; = ; = ; =  ; S ; =
+w ; eh ; <eps> ; <eps> ; l ; eh ; l ; z ; f ; ey ; l ; z ; y ; uw ; z ; f ; ao ; l ; s
+True Accept: 6, False Rejection: 2, False Accept: 9, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/RYU_M01/wav/RYU_M01_S1_029.wav
+Human annotation: Canonical vs Perceived:
+hh ; eh ; l  ; p ; g ; r ; eh ; g ; t ; uw ; p ; ih ; k ; ah ; p ; eh ; k ; ah ; v ; p ; ah ; t ; ey ; t ; ow ; z
+=  ; =  ; S  ; S ; = ; = ; S  ; S ; = ; =  ; = ; S  ; = ; =  ; = ; =  ; = ; S  ; S ; = ; S  ; = ; S  ; = ; S  ; S
+hh ; eh ; uw ; f ; g ; r ; ey ; k ; t ; uw ; p ; iy ; k ; ah ; p ; eh ; k ; ow ; b ; p ; th ; t ; t  ; t ; th ; s
+Model Prediction: Canonical vs Hypothesis:
+hh ; eh ; l ;   p   ; g ; r ; eh ; g ; <eps> ; <eps> ; <eps> ; t ; uw ; p ; ih ; k ; ah ; <eps> ; <eps> ; p ; eh ; k ; ah ; v ; p ; ah ; t ; ey ; t ; ow ; z
+=  ; =  ; S ;   D   ; = ; = ; =  ; = ;   I   ;   I   ;   I   ; = ; =  ; = ; S  ; = ; =  ;   I   ;   I   ; = ; =  ; = ; S  ; S ; = ; =  ; = ; =  ; = ; =  ; =
+hh ; eh ; v ; <eps> ; g ; r ; eh ; g ;   d   ;   g   ;   d   ; t ; uw ; p ; iy ; k ; ah ;   er  ;   ah  ; p ; eh ; k ; ao ; r ; p ; ah ; t ; ey ; t ; ow ; z
+True Accept: 15, False Rejection: 5, False Accept: 6, True Reject: 5, Corr Diag: 1, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/RYU_M01/wav/RYU_M01_S1_040.wav
+Human annotation: Canonical vs Perceived:
+s ; t ; ih ; m ; y  ; ah ; l  ; ey ; t  ; ah ; ng ; d  ; ih ; s ; k  ; ah ; sh ; ah ; n ; z ; k  ; iy ; p ; s  ; t  ; uw ; d  ; ah ; n ; t  ; s ; ah ; t  ; eh ; n  ; sh
+= ; = ; S  ; = ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S ; S ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S ; S  ; S  ; S  ; S  ; S 
+s ; t ; iy ; m ; ih ; l  ; ah ; t  ; iy ; ng ; d  ; ih ; s  ; k ; uw ; sh ; ah ; n  ; s ; k ; iy ; f  ; s ; ch ; uw ; d  ; ey ; n  ; s ; ah ; t ; ey ; iy ; sh ; ah ; n 
+Model Prediction: Canonical vs Hypothesis:
+s ; t ; ih ; m ; y ;   ah  ;   l   ; ey ; t ; ah ; ng ; <eps> ; d ; ih ; s ; k ; ah ; sh ; ah ; n ; z ; k ; iy ; p ; s ; t ; uw ; d ; ah ; n ; t ; s ; ah ; t ; eh ; n ; sh ; <eps> ; <eps>
+= ; = ; S  ; = ; S ;   D   ;   D   ; =  ; = ; S  ; =  ;   I   ; = ; =  ; = ; = ; =  ; =  ; =  ; = ; = ; = ; =  ; = ; = ; = ; =  ; = ; =  ; = ; = ; = ; =  ; = ; =  ; = ; =  ;   I   ;   I  
+s ; t ; iy ; m ; r ; <eps> ; <eps> ; ey ; t ; ih ; ng ;   ah  ; d ; ih ; s ; k ; ah ; sh ; ah ; n ; z ; k ; iy ; p ; s ; t ; uw ; d ; ah ; n ; t ; s ; ah ; t ; eh ; n ; sh ;   ah  ;   n  
+True Accept: 3, False Rejection: 3, False Accept: 28, True Reject: 5, Corr Diag: 1, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/RYU_M01/wav/RYU_M01_S1_046.wav
+Human annotation: Canonical vs Perceived:
+dh ; ae ; t ; p ; ih ; k  ; p ; aa ; k ; ah ; t ; w ; aa ; z ; k ; ao ; t ; r ; eh ; d  ; hh ; ae ; n ; d ; ah ; d
+S  ; S  ; = ; = ; S  ; S  ; S ; S  ; = ; S  ; = ; = ; S  ; = ; = ; S  ; = ; S ; S  ; S  ; =  ; S  ; = ; = ; S  ; S
+d  ; ah ; t ; p ; iy ; hh ; f ; ow ; k ; ih ; t ; w ; ih ; z ; k ; ow ; t ; l ; ey ; dh ; hh ; ah ; n ; d ; ih ; t
+Model Prediction: Canonical vs Hypothesis:
+dh ; ae ; t ; p ; ih ; k ; p ; aa ; k ; ah ; t ; w ; aa ; <eps> ; z ; k ; ao ; t ; r ; eh ; d ; hh ; ae ; n ; d ; <eps> ; ah ; d
+=  ; =  ; = ; = ; =  ; = ; = ; =  ; = ; =  ; = ; = ; S  ;   I   ; = ; = ; S  ; = ; S ; =  ; = ; =  ; =  ; = ; = ;   I   ; =  ; =
+dh ; ae ; t ; p ; ih ; k ; p ; aa ; k ; ah ; t ; w ; uh ;   d   ; z ; k ; ow ; t ; l ; eh ; d ; hh ; ae ; n ; d ;   ih  ; ah ; d
+True Accept: 11, False Rejection: 2, False Accept: 12, True Reject: 3, Corr Diag: 2, Err Diag: 1
+================================================================================
+/common/db/ERJ_annot_ver1.1/SIZ_M04/wav/SIZ_M04_S4_016.wav
+Human annotation: Canonical vs Perceived:
+s ; t  ; r ; ao ; hh ; ae ; t ; s  ; aa ; r ; aw ; t ; ah ; v  ; f  ; ae ; sh ; ah ; n  ; dh ; ih ; s 
+= ; S  ; = ; S  ; =  ; S  ; S ; S  ; S  ; S ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S 
+s ; th ; r ; ow ; hh ; ah ; s ; ah ; ah ; t ; ow ; v ; f  ; ah ; sh ; th ; n  ; d  ; ih ; s  ; iy ; ah
+Model Prediction: Canonical vs Hypothesis:
+s ; t  ; r ; ao ; hh ; ae ; <eps> ; t ; s ; aa ; r ; <eps> ; aw ; <eps> ; <eps> ; t ; ah ; v ; f ; ae ; sh ; ah ; <eps> ; <eps> ; <eps> ; <eps> ; n ; <eps> ; dh ; ih ; s ; <eps> ; <eps> ; <eps>
+= ; S  ; = ; S  ; =  ; S  ;   I   ; = ; = ; =  ; = ;   I   ; =  ;   I   ;   I   ; = ; =  ; = ; S ; S  ; S  ; S  ;   I   ;   I   ;   I   ;   I   ; = ;   I   ; =  ; =  ; = ;   I   ;   I   ;   I  
+s ; ih ; r ; ow ; hh ; aa ;   r   ; t ; s ; aa ; r ;   aa  ; aw ;   aa  ;   r   ; t ; ah ; v ; w ; eh ; aa ; eh ;   s   ;   t   ;   er  ;   aa  ; n ;   d   ; dh ; ih ; s ;   iy  ;   ih  ;   r  
+True Accept: 3, False Rejection: 12, False Accept: 12, True Reject: 7, Corr Diag: 1, Err Diag: 6
+================================================================================
+/common/db/ERJ_annot_ver1.1/SIZ_M04/wav/SIZ_M04_S4_019.wav
+Human annotation: Canonical vs Perceived:
+w  ; uh ; d  ; y  ; uw ; ah ; l  ; aw ; ae ; k ; t  ; s ; ah ; v  ; v  ; ay ; ah ; l
+S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S
+uw ; d  ; zh ; uw ; ah ; r  ; ao ; ah ; k  ; t ; ow ; w ; v  ; ah ; ah ; r  ; ey ; s
+Model Prediction: Canonical vs Hypothesis:
+w  ; uh ; <eps> ; d ;   y   ; uw ; <eps> ; ah ; l ; aw ; ae ; <eps> ; k ; t ; s  ; ah ; v ;   v   ; ay ; <eps> ; ah ; l
+S  ; S  ;   I   ; = ;   D   ; =  ;   I   ; =  ; S ; S  ; S  ;   I   ; = ; = ; S  ; S  ; = ;   D   ; =  ;   I   ; =  ; S
+hh ; y  ;   uw  ; d ; <eps> ; uw ;   aa  ; ah ; t ; ah ; ow ;   aa  ; k ; t ; ao ; r  ; v ; <eps> ; ay ;   r   ; ah ; s
+True Accept: 0, False Rejection: 4, False Accept: 8, True Reject: 10, Corr Diag: 2, Err Diag: 8
+================================================================================
+/common/db/ERJ_annot_ver1.1/SIZ_M04/wav/SIZ_M04_S4_027.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; k ; aa ; z ; w ; ey ; eh ; n  ; d ; ah ; d  ; ah ; b ; r ; ah ; p ; t ; l ; iy ; ae ; t ; dh ; ah ; sh ; ao ; r 
+S  ; =  ; = ; S  ; = ; = ; S  ; S  ; S  ; = ; S  ; S  ; =  ; = ; = ; =  ; S ; = ; S ; =  ; S  ; S ; S  ; S  ; =  ; S  ; S 
+z  ; ah ; k ; ao ; z ; w ; eh ; ey ; ey ; d ; iy ; th ; ah ; b ; r ; ah ; f ; t ; r ; iy ; ah ; s ; z  ; ih ; sh ; th ; ah
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; <eps> ; k ; aa ; z ; w  ; ey ; eh ; n ; d  ; <eps> ; <eps> ; <eps> ; ah ; d  ; ah ; <eps> ; <eps> ; b ; r ; ah ; p ; <eps> ; t ;   l   ; iy ; <eps> ; ae ; <eps> ; t ;   dh  ; ah ; sh ;   ao  ;   r  
+S  ; =  ;   I   ; = ; S  ; = ; S  ; S  ; =  ; = ; S  ;   I   ;   I   ;   I   ; =  ; S  ; =  ;   I   ;   I   ; = ; = ; S  ; = ;   I   ; = ;   D   ; =  ;   I   ; =  ;   I   ; = ;   D   ; =  ; =  ;   D   ;   D  
+d  ; ah ;   aa  ; k ; ow ; z ; eh ; er ; eh ; n ; iy ;   ih  ;   t   ;   iy  ; ah ; ae ; ah ;   ae  ;   ah  ; b ; r ; aa ; p ;   p   ; t ; <eps> ; iy ;   aa  ; ae ;   r   ; t ; <eps> ; ah ; sh ; <eps> ; <eps>
+True Accept: 9, False Rejection: 12, False Accept: 7, True Reject: 8, Corr Diag: 0, Err Diag: 8
+================================================================================
+/common/db/ERJ_annot_ver1.1/TOH_F04/wav/TOH_F04_S4_016.wav
+Human annotation: Canonical vs Perceived:
+s ; t ; r ; ao ; hh ; ae ; t ; s ; aa ; r  ; aw ; t  ; ah ; v ; f  ; ae ; sh ; ah ; n ; dh ; ih ; s  ; y 
+= ; = ; = ; S  ; =  ; S  ; = ; = ; =  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S 
+s ; t ; r ; ow ; hh ; aa ; t ; s ; aa ; ah ; t  ; ow ; v  ; f ; ah ; sh ; th ; n  ; d ; iy ; s  ; iy ; ah
+Model Prediction: Canonical vs Hypothesis:
+s ; t ; <eps> ; r ; ao ; hh ; ae ; t ; s ; aa ; r ; aw ; <eps> ; t ; ah ; v ; f ; ae ; <eps> ; <eps> ; sh ; ah ; n ; <eps> ; dh ; ih ; s ; y ; <eps> ; <eps> ; <eps> ; <eps> ; <eps>
+= ; = ;   I   ; = ; S  ; =  ; S  ; = ; = ; =  ; = ; =  ;   I   ; = ; =  ; = ; = ; S  ;   I   ;   I   ; =  ; =  ; = ;   I   ; =  ; =  ; = ; S ;   I   ;   I   ;   I   ;   I   ;   I  
+s ; t ;   ow  ; r ; ow ; hh ; ah ; t ; s ; aa ; r ; aw ;   l   ; t ; ah ; v ; f ; aa ;   ey  ;   ch  ; sh ; ah ; n ;   d   ; dh ; ih ; s ; z ;   iy  ;   r   ;   er  ;   r   ;   er 
+True Accept: 7, False Rejection: 10, False Accept: 12, True Reject: 4, Corr Diag: 1, Err Diag: 3
+================================================================================
+/common/db/ERJ_annot_ver1.1/TOH_F04/wav/TOH_F04_S4_019.wav
+Human annotation: Canonical vs Perceived:
+w  ; uh ; d  ; y  ; uw ; ah ; l  ; aw ; ae ; k ; t  ; s ; ah ; v  ; v  ; ay ; ah ; l
+S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S
+uw ; d  ; zh ; uw ; ah ; l  ; ao ; ah ; k  ; t ; ow ; v ; w  ; ah ; th ; l  ; ey ; s
+Model Prediction: Canonical vs Hypothesis:
+w  ;   uh  ; d ;   y   ; uw ; ah ; <eps> ; <eps> ; l ; aw ; <eps> ; ae ; k ; t ; s  ; ah ; v ;   v   ; ay ; ah ; l ; <eps>
+S  ;   D   ; = ;   D   ; =  ; S  ;   I   ;   I   ; = ; S  ;   I   ; =  ; = ; = ; S  ; S  ; S ;   D   ; =  ; S  ; S ;   I  
+uw ; <eps> ; d ; <eps> ; uw ; aa ;   ae  ;   r   ; l ; ah ;   l   ; ae ; k ; t ; ao ; ow ; b ; <eps> ; ay ; ow ; n ;   z  
+True Accept: 0, False Rejection: 4, False Accept: 7, True Reject: 11, Corr Diag: 2, Err Diag: 9
+================================================================================
+/common/db/ERJ_annot_ver1.1/TOH_F04/wav/TOH_F04_S4_029.wav
+Human annotation: Canonical vs Perceived:
+m  ; ih ; l  ; ah ; t  ; eh ; r  ; iy ; p  ; er ; s  ; ah ; n ; eh ; l ; aa ; r  ; ah ; k ; s ; p  ; eh ; k ; t  ; ah ; d ; t  ; uw ; ow ; b  ; ey ; g  ; ah ; v  ; ah ; m  ; ah ; n ; t  ; ao ; r  ; d
+S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; = ; S  ; = ; S  ; S  ; S  ; S ; S ; S  ; S  ; S ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S
+ow ; m  ; iy ; l  ; iy ; t  ; ah ; r  ; iy ; p  ; ah ; s  ; n ; ey ; l ; ah ; ih ; hh ; s ; p ; ey ; k  ; t ; iy ; dh ; t ; uw ; ow ; b  ; ey ; g  ; ah ; v  ; ah ; m  ; ey ; n  ; t ; ow ; d  ; ah ; s
+Model Prediction: Canonical vs Hypothesis:
+m ; ih ; l ; ah ; t ; eh ; <eps> ; r ; iy ; p ; er ; <eps> ; s ; ah ; n ; eh ; l ; aa ; r ; ah ; k ; s ; p ; eh ; k ; t ; ah ;   d   ; t ; uw ; ow ; <eps> ; b ; <eps> ; ey ; <eps> ; <eps> ; g ; <eps> ; <eps> ; ah ; v  ; ah ; m ; ah ; n ; <eps> ; t ; <eps> ; ao ; r ; d ; <eps> ; <eps>
+= ; =  ; S ; S  ; S ; =  ;   I   ; = ; =  ; = ; S  ;   I   ; = ; =  ; = ; S  ; S ; =  ; = ; S  ; = ; = ; = ; =  ; = ; = ; S  ;   D   ; = ; =  ; S  ;   I   ; = ;   I   ; =  ;   I   ;   I   ; = ;   I   ;   I   ; =  ; S  ; =  ; = ; =  ; = ;   I   ; = ;   I   ; =  ; = ; = ;   I   ;   I  
+m ; ih ; n ; ih ; d ; eh ;   iy  ; r ; iy ; p ; aa ;   ae  ; s ; ah ; n ; ah ; n ; aa ; r ; ih ; k ; s ; p ; eh ; k ; t ; ih ; <eps> ; t ; uw ; ao ;   r   ; b ;   w   ; ey ;   iy  ;   ey  ; g ;   aa  ;   b   ; ah ; er ; ah ; m ; ah ; n ;   d   ; t ;   d   ; ao ; r ; d ;   ah  ;   z  
+True Accept: 1, False Rejection: 13, False Accept: 30, True Reject: 10, Corr Diag: 0, Err Diag: 10
+================================================================================
+/common/db/ERJ_annot_ver1.1/TOH_F04/wav/TOH_F04_S4_050.wav
+Human annotation: Canonical vs Perceived:
+s ; t ; eh ; f ; k ; uh ; d ; b ; eh ; r  ; l ; iy ; hh ; ae ; n ; d ; ah ; l ; dh ; ah ; s ; ay ; k ; ah ; l ; aa ; jh ; ah ; k  ; ah ; l ; t ; r  ; ao ; m 
+= ; = ; S  ; = ; = ; S  ; = ; = ; S  ; S  ; S ; =  ; =  ; S  ; = ; = ; S  ; = ; S  ; =  ; = ; S  ; = ; S  ; = ; S  ; S  ; S  ; S  ; S  ; S ; S ; S  ; S  ; S 
+s ; t ; ey ; f ; k ; uw ; d ; b ; ey ; ah ; r ; iy ; hh ; ah ; n ; d ; th ; l ; z  ; ah ; s ; ah ; k ; uw ; l ; ow ; ch ; k  ; ah ; l  ; t ; r ; ow ; m  ; ah
+Model Prediction: Canonical vs Hypothesis:
+s ; t ; eh ; <eps> ; f ; k ; <eps> ; <eps> ; <eps> ; uh ; d ; b ; eh ; r ;   l   ; iy ; hh ; <eps> ; ae ; <eps> ; n ; d ; ah ; l ; dh ;   ah  ; s ; ay ; k ; ah ; l  ; aa ; <eps> ; jh ; ah ; <eps> ; k ; ah ; l ; <eps> ; t ; r ; ao ; m ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps>
+= ; = ; =  ;   I   ; = ; S ;   I   ;   I   ;   I   ; =  ; = ; = ; =  ; = ;   D   ; =  ; =  ;   I   ; =  ;   I   ; = ; = ; S  ; S ; S  ;   D   ; = ; =  ; S ; S  ; S  ; S  ;   I   ; =  ; S  ;   I   ; = ; S  ; = ;   I   ; = ; S ; S  ; = ;   I   ;   I   ;   I   ;   I   ;   I   ;   I  
+s ; t ; eh ;   v   ; f ; v ;   f   ;   g   ;   g   ; uh ; d ; b ; eh ; r ; <eps> ; iy ; hh ;   aa  ; ae ;   aa  ; n ; d ; ow ; z ; er ; <eps> ; s ; ay ; g ; r  ; ow ; jh ;   k   ; jh ; ch ;   g   ; k ; aw ; l ;   r   ; t ; l ; ow ; m ;   ow  ;   aw  ;   n   ;   ow  ;   n   ;   ah 
+True Accept: 10, False Rejection: 20, False Accept: 11, True Reject: 9, Corr Diag: 0, Err Diag: 9
+================================================================================
+/common/db/ERJ_annot_ver1.1/TUT_F04/wav/TUT_F04_S3_001.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; m ; ih ; s ; k ; w ; ow ; t ; w ; aa ; z ; r ; iy ; t ; r ; ae ; k ; t ; ah ; d ; w ; ih ; dh ; ae ; n  ; ah ; p  ; aa ; l  ; ah ; jh ; iy
+S  ; =  ; = ; S  ; S ; = ; = ; S  ; = ; = ; S  ; S ; = ; =  ; = ; = ; S  ; = ; = ; S  ; S ; = ; S  ; S  ; S  ; S  ; =  ; S  ; S  ; S  ; S  ; S  ; S 
+z  ; ah ; m ; iy ; k ; k ; w ; th ; t ; w ; ah ; s ; r ; iy ; t ; r ; ah ; k ; t ; iy ; t ; w ; iy ; z  ; hh ; ah ; ah ; ah ; f  ; ow ; r  ; ow ; zh
+Model Prediction: Canonical vs Hypothesis:
+dh ; <eps> ; ah ; m ; ih ; <eps> ; s ; k ; w ; ow ; <eps> ; <eps> ; t ; w ; aa ; z ; r ; iy ; t ; r ; <eps> ; ae ; k ; t ;   ah  ; d ; w  ; <eps> ; <eps> ; <eps> ; <eps> ; ih ; dh ; ae ; <eps> ; <eps> ; n ; ah ; p ; aa ; l ; <eps> ; ah ; jh ; iy ; <eps>
+=  ;   I   ; =  ; = ; S  ;   I   ; = ; = ; S ; S  ;   I   ;   I   ; = ; = ; =  ; = ; S ; S  ; = ; = ;   I   ; =  ; = ; = ;   D   ; = ; S  ;   I   ;   I   ;   I   ;   I   ; =  ; =  ; S  ;   I   ;   I   ; = ; =  ; = ; =  ; = ;   I   ; =  ; =  ; =  ;   I  
+dh ;   s   ; ah ; m ; n  ;   iy  ; s ; k ; p ; ao ;   aa  ;   r   ; t ; w ; aa ; z ; l ; ih ; t ; r ;   er  ; ae ; k ; t ; <eps> ; d ; ih ;   k   ;   t   ;   k   ;   t   ; ih ; dh ; s  ;   z   ;   ah  ; n ; ah ; p ; aa ; l ;   aa  ; ah ; jh ; iy ;   iy 
+True Accept: 10, False Rejection: 17, False Accept: 15, True Reject: 4, Corr Diag: 0, Err Diag: 4
+================================================================================
+/common/db/ERJ_annot_ver1.1/TUT_F04/wav/TUT_F04_S3_002.wav
+Human annotation: Canonical vs Perceived:
+dh ; ah ; k ; ay ; ow ; t ; iy ; b ; aa ; b ; k ; ae ; t ; ae ; n ; d ; hh ; ay ; iy ; n ; ah ; aa ; r ; w  ; ay ; l ; d  ; ae ; n  ; ah ; m  ; ah ; l
+S  ; =  ; = ; S  ; S  ; = ; S  ; = ; S  ; = ; = ; =  ; = ; S  ; = ; = ; =  ; S  ; S  ; = ; =  ; S  ; S ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S
+z  ; ah ; k ; ah ; th ; t ; ey ; b ; th ; b ; k ; ae ; t ; ah ; n ; d ; hh ; ah ; ey ; n ; ah ; ah ; w ; ah ; l  ; d ; ah ; n  ; iy ; m  ; ah ; r  ; s
+Model Prediction: Canonical vs Hypothesis:
+dh ; ah ; k ; <eps> ; <eps> ; <eps> ; ay ; ow ; <eps> ; <eps> ; t ; iy ; b  ; aa ; b ; <eps> ; <eps> ; <eps> ; k ; ae ; t ; ae ; n ; d ; <eps> ; hh ; ay ; iy ; n ; ah ; aa ; r  ; w  ; ay ; l  ; <eps> ; d ; ae ; n ; ah ; m ; ah ; l ; <eps>
+S  ; S  ; = ;   I   ;   I   ;   I   ; =  ; S  ;   I   ;   I   ; = ; S  ; S  ; S  ; = ;   I   ;   I   ;   I   ; = ; S  ; = ; S  ; = ; = ;   I   ; =  ; =  ; S  ; = ; =  ; =  ; S  ; S  ; S  ; S  ;   I   ; = ; =  ; = ; S  ; = ; S  ; S ;   I  
+s  ; aa ; k ;   k   ;   ey  ;   y   ; ay ; uw ;   ah  ;   uw  ; t ; d  ; ah ; d  ; b ;   ow  ;   v   ;   er  ; k ; ah ; t ; ah ; n ; d ;   ah  ; hh ; ay ; ih ; n ; ah ; aa ; aw ; er ; aw ; er ;   t   ; d ; ae ; n ; iy ; m ; ae ; s ;   t  
+True Accept: 10, False Rejection: 14, False Accept: 7, True Reject: 13, Corr Diag: 2, Err Diag: 11
+================================================================================
+/common/db/ERJ_annot_ver1.1/TUT_F04/wav/TUT_F04_S3_009.wav
+Human annotation: Canonical vs Perceived:
+dh ; ih ; eh ; m ; p ; ah ; ah ; hh ; ae ; d ; ah ; m ; iy ; n ; t ; eh ; m ; p ; ah
+S  ; S  ; S  ; = ; = ; S  ; =  ; =  ; S  ; = ; =  ; = ; =  ; = ; = ; S  ; = ; = ; = 
+d  ; iy ; ey ; m ; p ; r  ; ah ; hh ; ah ; d ; ah ; m ; iy ; n ; t ; ey ; m ; p ; ah
+Model Prediction: Canonical vs Hypothesis:
+dh ; ih ; eh ; m ; <eps> ; <eps> ; <eps> ; p ; <eps> ; ah ; <eps> ; ah ; hh ; ae ; d ; <eps> ; ah ; <eps> ; <eps> ; m ; <eps> ; iy ; <eps> ; n ; t ; eh ; m ; p ;   ah 
+=  ; S  ; S  ; S ;   I   ;   I   ;   I   ; = ;   I   ; =  ;   I   ; =  ; =  ; =  ; = ;   I   ; =  ;   I   ;   I   ; = ;   I   ; =  ;   I   ; = ; S ; =  ; = ; = ;   D  
+dh ; t  ; dh ; t ;   dh  ;   ah  ;   eh  ; p ;   iy  ; ah ;   ae  ; ah ; hh ; ae ; d ;   ae  ; ah ;   p   ;   n   ; m ;   n   ; iy ;   ih  ; n ; k ; eh ; m ; p ; <eps>
+True Accept: 10, False Rejection: 13, False Accept: 4, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/TUT_F04/wav/TUT_F04_S3_031.wav
+Human annotation: Canonical vs Perceived:
+w  ; ay ; l ; w ; ey ; t ; ah ; ng ; f ; ao ; r ; ch ; ih ; p  ; ah ; sh ; iy ; k ; r  ; ih ; s ; k ; r  ; ao ; s ; t ; dh ; ah ; s ; k  ; w  ; eh ; r ; m  ; eh ; n  ; iy ; t  ; ay ; m
+S  ; S  ; S ; = ; =  ; = ; S  ; S  ; = ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S ; S ; S  ; S  ; S ; S ; S  ; S  ; S ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S
+hh ; ah ; r ; w ; ey ; t ; iy ; n  ; f ; ow ; k ; iy ; p  ; ah ; sh ; iy ; k  ; r ; iy ; s  ; k ; r ; th ; s  ; t ; z ; ah ; s  ; k ; ih ; ey ; ah ; m ; ey ; n  ; iy ; t  ; ah ; m  ; s
+Model Prediction: Canonical vs Hypothesis:
+<eps> ; w ; ay ; l  ; w ; ey ; t ; ah ; <eps> ; <eps> ; ng ; f ; ao ; r ; ch ; ih ; p ; <eps> ; <eps> ; ah ; sh ; <eps> ; iy ; k ; r  ; ih ; s ; k ; r ; ao ; <eps> ; <eps> ; s ; t ;   dh  ; ah ; <eps> ; <eps> ; s ; k ;   w   ; eh ; r ; m ; eh ; n ; iy ; t ; ay ; m ; <eps>
+  I   ; = ; =  ; S  ; S ; =  ; = ; S  ;   I   ;   I   ; =  ; = ; S  ; S ; S  ; S  ; = ;   I   ;   I   ; =  ; S  ;   I   ; =  ; = ; S  ; S  ; = ; = ; = ; S  ;   I   ;   I   ; = ; = ;   D   ; =  ;   I   ;   I   ; = ; = ;   D   ; =  ; = ; = ; =  ; = ; =  ; = ; =  ; = ;   I  
+  ay  ; w ; ay ; ey ; t ; ey ; t ; ng ;   f   ;   ih  ; ng ; f ; b  ; p ; b  ; f  ; p ;   ao  ;   aa  ; ah ; k  ;   ah  ; iy ; k ; iy ; ah ; s ; k ; r ; ow ;   aa  ;   ow  ; s ; t ; <eps> ; ah ;   l   ;   t   ; s ; k ; <eps> ; eh ; r ; m ; eh ; n ; iy ; t ; ay ; m ;   z  
+True Accept: 3, False Rejection: 12, False Accept: 24, True Reject: 12, Corr Diag: 1, Err Diag: 11
+================================================================================
+/common/db/ERJ_annot_ver1.1/WAK_M04/wav/WAK_M04_S8_015.wav
+Human annotation: Canonical vs Perceived:
+ah ; k ; r ; ae ; b ; ch ; ae ; l ; ah ; n ; jh ; d ; m ; iy ; b ; ah ; t ; ah ; k ; w  ; ih ; k ; s  ; t ; ae ; b ; v  ; ae ; ng ; k  ; w  ; ah ; sh ; t  ; hh ; ih ; m 
+=  ; = ; = ; S  ; S ; =  ; S  ; = ; S  ; = ; S  ; S ; = ; =  ; = ; =  ; S ; =  ; S ; S  ; S  ; S ; S  ; S ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S 
+ah ; k ; r ; ah ; f ; ch ; ah ; l ; eh ; n ; ch ; t ; m ; iy ; b ; ah ; b ; ah ; t ; ah ; k  ; w ; ih ; k ; s  ; t ; ah ; b  ; b  ; ah ; ng ; k  ; ih ; sh ; t  ; k  ; ih
+Model Prediction: Canonical vs Hypothesis:
+ah ; <eps> ; <eps> ; k ; r ; ae ; b ; <eps> ; <eps> ; <eps> ; ch ; ae ; <eps> ; l ; ah ; n ; jh ; <eps> ; d ; <eps> ; m ; iy ; b ; ah ; t ; <eps> ; ah ; <eps> ; <eps> ; <eps> ; k ; w ; ih ; k ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; s ; t ; ae ; <eps> ; <eps> ; b ; v ; <eps> ; <eps> ; ae ; ng ; k ; w  ; ah ;   sh  ; t ; hh ; ih ; m
+=  ;   I   ;   I   ; = ; = ; S  ; = ;   I   ;   I   ;   I   ; =  ; S  ;   I   ; = ; =  ; = ; S  ;   I   ; = ;   I   ; = ; =  ; = ; =  ; = ;   I   ; =  ;   I   ;   I   ;   I   ; = ; S ; =  ; = ;   I   ;   I   ;   I   ;   I   ;   I   ; = ; = ; S  ;   I   ;   I   ; = ; S ;   I   ;   I   ; =  ; =  ; = ; S  ; S  ;   D   ; = ; =  ; =  ; =
+ah ;   aa  ;   r   ; k ; r ; ay ; b ;   v   ;   v   ;   t   ; ch ; t  ;   eh  ; l ; ah ; n ; s  ;   t   ; d ;   t   ; m ; iy ; b ; ah ; t ;   b   ; ah ;   t   ;   aa  ;   ah  ; k ; r ; ih ; k ;   ih  ;   k   ;   g   ;   k   ;   aa  ; s ; t ; p  ;   aa  ;   p   ; b ; k ;   b   ;   er  ; ae ; ng ; k ; ih ; s  ; <eps> ; t ; hh ; ih ; m
+True Accept: 11, False Rejection: 21, False Accept: 17, True Reject: 9, Corr Diag: 0, Err Diag: 9
+================================================================================
+/common/db/ERJ_annot_ver1.1/WAK_M04/wav/WAK_M04_S8_023.wav
+Human annotation: Canonical vs Perceived:
+p ; l ; iy ; z ; s ; ih ; ng ; jh ; ah ; s ; t ; dh ; ah ; k ; l ; ah ; b ; th ; iy ; m
+= ; = ; =  ; = ; = ; =  ; =  ; =  ; =  ; = ; = ; S  ; =  ; = ; = ; =  ; S ; S  ; =  ; =
+p ; l ; iy ; z ; s ; ih ; ng ; jh ; ah ; s ; t ; z  ; ah ; k ; l ; ah ; f ; t  ; iy ; m
+Model Prediction: Canonical vs Hypothesis:
+p ; l ; iy ;   z   ; s ; ih ; ng ; jh ; ah ; s ; t ; dh ; <eps> ; <eps> ; ah ; <eps> ; k ; l ; <eps> ; ah ; <eps> ; b ; th ; <eps> ; <eps> ; iy ; m
+= ; S ; =  ;   D   ; = ; =  ; =  ; =  ; =  ; = ; = ; S  ;   I   ;   I   ; =  ;   I   ; = ; S ;   I   ; =  ;   I   ; = ; S  ;   I   ;   I   ; =  ; =
+p ; r ; iy ; <eps> ; s ; ih ; ng ; jh ; ah ; s ; t ; s  ;   t   ;   s   ; ah ;   r   ; k ; r ;   aa  ; ah ;   aa  ; b ; p  ;   t   ;   t   ; iy ; m
+True Accept: 14, False Rejection: 10, False Accept: 1, True Reject: 2, Corr Diag: 0, Err Diag: 2
+================================================================================
+/common/db/ERJ_annot_ver1.1/WAK_M04/wav/WAK_M04_S8_028.wav
+Human annotation: Canonical vs Perceived:
+d ; ow ; n ; t ; l ; uh ; k ; f ; ao ; r  ; ch ; iy ; p ; v  ; ae ; l  ; y  ; ah ; b  ; ah ; l ; z  ; ih ; n  ; ah ; b  ; ae ; ng ; k ; v  ; ao ; l
+= ; S  ; = ; = ; S ; S  ; = ; = ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S  ; S  ; S  ; S  ; S  ; S ; S  ; S  ; S
+d ; ao ; n ; t ; r ; uw ; k ; f ; ow ; ch ; iy ; f  ; v ; ah ; r  ; ih ; ah ; b  ; uw ; l  ; s ; iy ; n  ; ah ; b  ; aa ; ng ; k  ; b ; ah ; l  ; t
+Model Prediction: Canonical vs Hypothesis:
+d ; <eps> ; ow ; <eps> ; n ; t ; l ; <eps> ; uh ; k ; f ; ao ; r ; ch ; <eps> ; iy ; p ; v ; ae ; l ; y  ; ah ; b ; ah ; l ;   z   ; ih ; n ; <eps> ; ah ; b ; <eps> ; ae ; ng ; k ; v ; ao ; <eps> ; <eps> ; <eps> ; <eps> ; l ; <eps> ; <eps>
+= ;   I   ; =  ;   I   ; = ; = ; S ;   I   ; =  ; = ; = ; =  ; = ; S  ;   I   ; =  ; S ; = ; S  ; S ; S  ; =  ; = ; S  ; S ;   D   ; =  ; = ;   I   ; =  ; S ;   I   ; =  ; =  ; = ; S ; S  ;   I   ;   I   ;   I   ;   I   ; = ;   I   ;   I  
+d ;   ae  ; ow ;   ae  ; n ; t ; g ;   r   ; uh ; k ; f ; ao ; r ; t  ;   t   ; iy ; f ; v ; aa ; r ; iy ; ah ; b ; uw ; s ; <eps> ; ih ; n ;   ae  ; ah ; p ;   p   ; ae ; ng ; k ; f ; f  ;   f   ;   p   ;   aa  ;   er  ; l ;   d   ;   t  
+True Accept: 5, False Rejection: 12, False Accept: 15, True Reject: 12, Corr Diag: 1, Err Diag: 11
+================================================================================
+/common/db/ERJ_annot_ver1.1/WAK_M04/wav/WAK_M04_S8_029.wav
+Human annotation: Canonical vs Perceived:
+s ; ah ; b ; er ; b ; ah ; n ; hh ; aw ; s ; w ; ay ; v ; z ; ao ; f ; ah ; n  ; s ; ah ; f ; ah ; f ; r ; aa ; m ; dh ; ah ; g ; ae ; b ; hh ; ae ; b ; ah ; t
+= ; =  ; = ; S  ; = ; =  ; = ; =  ; S  ; = ; = ; S  ; S ; S ; S  ; = ; S  ; S  ; = ; =  ; = ; S  ; = ; = ; S  ; = ; S  ; =  ; = ; S  ; S ; =  ; S  ; = ; S  ; =
+s ; ah ; b ; ah ; b ; ah ; n ; hh ; ah ; s ; w ; ah ; f ; s ; aa ; f ; uw ; uw ; s ; ah ; f ; f  ; f ; r ; ao ; m ; z  ; ah ; g ; ah ; f ; hh ; aa ; b ; iy ; t
+Model Prediction: Canonical vs Hypothesis:
+s ; ah ; b ; er ; <eps> ; b ; <eps> ; ah ; <eps> ; <eps> ; n ; hh ; aw ; s ; w ; ay ; v ; <eps> ; z ; ao ; f ; ah ; n ; s ; ah ; f  ; ah ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; <eps> ; f ; r ; aa ; m ; dh ; <eps> ; ah ; g ; ae ; <eps> ; b ; <eps> ; <eps> ; hh ; <eps> ; ae ; b ; ah ; <eps> ; t
+= ; =  ; = ; =  ;   I   ; = ;   I   ; =  ;   I   ;   I   ; = ; =  ; =  ; = ; = ; =  ; S ;   I   ; = ; =  ; = ; =  ; = ; = ; =  ; S  ; S  ;   I   ;   I   ;   I   ;   I   ;   I   ;   I   ;   I   ;   I   ;   I   ;   I   ; = ; = ; S  ; = ; S  ;   I   ; =  ; = ; S  ;   I   ; = ;   I   ;   I   ; =  ;   I   ; =  ; S ; =  ;   I   ; =
+s ; ah ; b ; er ;   ah  ; b ;   l   ; ah ;   ae  ;   ng  ; n ; hh ; aw ; s ; w ; ay ; p ;   f   ; z ; ao ; f ; ah ; n ; s ; ah ; ao ; aa ;   p   ;   b   ;   p   ;   p   ;   b   ;   aa  ;   ao  ;   r   ;   ao  ;   r   ; f ; r ; ah ; m ; n  ;   s   ; ah ; g ; aa ;   r   ; b ;   v   ;   v   ; hh ;   aa  ; ae ; v ; ah ;   ih  ; t
+True Accept: 19, False Rejection: 23, False Accept: 10, True Reject: 5, Corr Diag: 0, Err Diag: 5

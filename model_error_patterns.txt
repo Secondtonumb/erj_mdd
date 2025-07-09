@@ -1,0 +1,7 @@
+Model Prediction Error Patterns
+========================================
+
+S → S (S): 7
+S → = (S): 6
+S → D (S): 3
+S → = (D): 1

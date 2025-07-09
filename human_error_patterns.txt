@@ -1,0 +1,9 @@
+Human Annotation Error Patterns
+========================================
+
+S → = (S): 13
+S → S (S): 7
+D → = (S): 2
+I → = (S): 1
+S → D (S): 1
+D → S (S): 1

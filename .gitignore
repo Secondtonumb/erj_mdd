@@ -1,0 +1,10 @@
+data/
+CTC-Attention-Mispronunciation/
+__pycache__/
+results/
+
+speechLM/
+wandb/
+checkpoints/
+Clean/
+speechbrain/
