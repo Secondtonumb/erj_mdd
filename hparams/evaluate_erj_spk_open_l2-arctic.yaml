@@ -2,8 +2,8 @@
 seed: 1234
 __set_seed: !apply:torch.manual_seed [!ref <seed>]
 output_folder: !ref results/wav2vec2-base_ctc/
-wer_file: !ref <output_folder>/wer.txt
-mpd_file: !ref <output_folder>/mpd.txt
+wer_file: !ref <output_folder>/wer_erj_on_l2-arctic_nosil.txt
+mpd_file: !ref <output_folder>/mpd_erj_on_l2-arctic_nosil.txt
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
 
@@ -12,8 +12,8 @@ wav2vec2_hub: "facebook/wav2vec2-base"  # wav2vec2-base, pre-trained only on LS 
 
 # Data files
 data_folder_save: "./data"
-inference_annotation: !ref <data_folder_save>/test.json
-inference_annotation_saved: !ref <data_folder_save>/test.pred.json 
+# prepared l2arctic data
+test_annotation: !ref <data_folder_save>/test_erj_spk_open_test.json
 
 # Training parameters
 sample_rate: 16000
@@ -24,21 +24,17 @@ dnn_layers: 2
 dnn_neurons: 384 
 freeze_wav2vec: False
 freeze_wav2vec_feature_extractor: True  # freeze the CNN extractor in wav2vec
-wav2vec2_specaug: False
+wav2vec2_specaug: True
 
 # Outputs
-output_neurons: 42 # TIMIT: 39phs(sil)+blank=40; l2arctic: 40phns(sil)+err+blank=42
+output_neurons: 42 # l2arctic: 40phns(sil)+err+blank=42
 blank_index: 0
 
-inference_dataloader_opts:
+# Dataloader options
+test_dataloader_opts:
     batch_size: 1
     num_workers: 1
 
-augmentation: !new:speechbrain.lobes.augment.TimeDomainSpecAugment
-    sample_rate: !ref <sample_rate>
-    speeds: [95, 100, 105]
-
-# 1024 for wav2vec2-large, 768 for wav2vec2-base
 enc: !new:speechbrain.lobes.models.VanillaNN.VanillaNN
     input_shape: [null, null, 768]
     activation: !ref <activation>
@@ -52,7 +48,6 @@ wav2vec2: !new:speechbrain.lobes.models.huggingface_wav2vec.HuggingFaceWav2Vec2
     freeze_feature_extractor: !ref <freeze_wav2vec_feature_extractor>
     save_path: !ref <save_folder>/wav2vec2_checkpoint
 
-
 ctc_lin: !new:speechbrain.nnet.linear.Linear
     input_size: !ref <dnn_neurons>
     n_neurons: !ref <output_neurons>  # 39 phonemes + 1 blank
@@ -65,6 +60,7 @@ ctc_cost: !name:speechbrain.nnet.losses.ctc_loss
 
 model: !new:torch.nn.ModuleList
     - [!ref <enc>, !ref <ctc_lin>]
+
 
 modules:
     wav2vec2: !ref <wav2vec2>

@@ -2,8 +2,8 @@
 seed: 1234
 __set_seed: !apply:torch.manual_seed [!ref <seed>]
 output_folder: !ref results/wav2vec2-base_ctc/
-wer_file: !ref <output_folder>/wer.txt
-mpd_file: !ref <output_folder>/mpd.txt
+wer_file: !ref <output_folder>/wer_erj.txt
+mpd_file: !ref <output_folder>/mpd_erj.txt
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
 
@@ -12,8 +12,8 @@ wav2vec2_hub: "facebook/wav2vec2-base"  # wav2vec2-base, pre-trained only on LS 
 
 # Data files
 data_folder_save: "./data"
-inference_annotation: !ref <data_folder_save>/test.json
-inference_annotation_saved: !ref <data_folder_save>/test.pred.json 
+inference_annotation: !ref <data_folder_save>/test_erj.json
+inference_annotation_saved: !ref <data_folder_save>/test_erj.pred.json 
 
 # Training parameters
 sample_rate: 16000
