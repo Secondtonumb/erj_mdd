@@ -1,0 +1,1 @@
+export PYTHONPATH=$PYTHONPATH:/home/kevingenghaopeng/MDD/mpl-mdd/speechbrain
