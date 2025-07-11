@@ -1,7 +1,7 @@
 # Seed needs to be set at top of yaml, before objects with parameters are made
 seed: 1234
 __set_seed: !apply:torch.manual_seed [!ref <seed>]
-output_folder: !ref results/erj_spk_open/
+output_folder: !ref results_dual_expert/erj_spk_open_1.1_spk
 wer_file: !ref <output_folder>/wer.txt
 mpd_file: !ref <output_folder>/mpd.txt
 save_folder: !ref <output_folder>/save
@@ -9,23 +9,24 @@ train_log: !ref <output_folder>/erj_spk_open.txt
 
 # URL for the wav2vec2 model.
 wav2vec2_hub: "facebook/wav2vec2-base"  # wav2vec2-base, pre-trained only on LS 960h
+hubert_hub: "facebook/hubert-base-ls960"  # hubert-base, pre-trained on LibriSpeech 960h
 
 # Data files
 data_folder_save: "./data"
 # prepared l2arctic data
-train_annotation: !ref <data_folder_save>/train_erj_spk_open_train-train.json
-valid_annotation: !ref <data_folder_save>/train_erj_spk_open_train-dev.json
-test_annotation: !ref <data_folder_save>/test_erj_spk_open_test.json
+train_annotation: !ref <data_folder_save>/train_erj_spk_open_train-train_1.1_spk_cross.json
+valid_annotation: !ref <data_folder_save>/train_erj_spk_open_train-dev_1.1_spk_cross.json
+test_annotation: !ref <data_folder_save>/test_erj_spk_open_test_1.1.json
 
 # Training parameters
-number_of_epochs: 50
-batch_size: 2
+number_of_epochs: 10
+batch_size: 16
 lr: 0.0003
 lr_wav2vec: 0.00001
 sorting: ascending
 auto_mix_prec: False
 sample_rate: 16000
-gradient_accumulation: 2
+gradient_accumulation: 1
 
 # Model parameters
 activation: !name:torch.nn.LeakyReLU
@@ -60,7 +61,14 @@ epoch_counter: !new:speechbrain.utils.epoch_loop.EpochCounter
     limit: !ref <number_of_epochs>
 
 # 1024 for wav2vec2-large, 768 for wav2vec2-base
-enc: !new:speechbrain.lobes.models.VanillaNN.VanillaNN
+enc1: !new:speechbrain.lobes.models.VanillaNN.VanillaNN
+    input_shape: [null, null, 768]
+    activation: !ref <activation>
+    dnn_blocks: !ref <dnn_layers>
+    dnn_neurons: !ref <dnn_neurons>
+
+# 1024 for wav2vec2-large, 768 for wav2vec2-base
+enc2: !new:speechbrain.lobes.models.VanillaNN.VanillaNN
     input_shape: [null, null, 768]
     activation: !ref <activation>
     dnn_blocks: !ref <dnn_layers>
@@ -73,10 +81,20 @@ wav2vec2: !new:speechbrain.lobes.models.huggingface_wav2vec.HuggingFaceWav2Vec2
     freeze_feature_extractor: !ref <freeze_wav2vec_feature_extractor>
     save_path: !ref <save_folder>/wav2vec2_checkpoint
 
-ctc_lin: !new:speechbrain.nnet.linear.Linear
+hubert: !new:speechbrain.lobes.models.huggingface_wav2vec.HuggingFaceWav2Vec2
+    source: !ref <hubert_hub>
+    output_norm: True
+    freeze: !ref <freeze_wav2vec>
+    freeze_feature_extractor: !ref <freeze_wav2vec_feature_extractor>
+    save_path: !ref <save_folder>/hubert_checkpoint
+
+ctc_lin1: !new:speechbrain.nnet.linear.Linear
     input_size: !ref <dnn_neurons>
     n_neurons: !ref <output_neurons>  # 39 phonemes + 1 blank
 
+ctc_lin2: !new:speechbrain.nnet.linear.Linear
+    input_size: !ref <dnn_neurons>
+    n_neurons: !ref <output_neurons>  # 39 phonemes + 1 blank
 
 log_softmax: !new:speechbrain.nnet.activations.Softmax
     apply_log: True
@@ -86,7 +104,7 @@ ctc_cost: !name:speechbrain.nnet.losses.ctc_loss
 
 
 model: !new:torch.nn.ModuleList
-    - [!ref <enc>, !ref <ctc_lin>]
+    - [!ref <enc1>, !ref <enc2>,  !ref <ctc_lin1>, !ref <ctc_lin2>]
 
 adam_opt_class: !name:torch.optim.Adam
     lr: !ref <lr>
@@ -95,9 +113,14 @@ wav2vec_opt_class: !name:torch.optim.Adam
     lr: !ref <lr_wav2vec>
 
 modules:
-    wav2vec2: !ref <wav2vec2>
-    enc: !ref <enc>
-    ctc_lin: !ref <ctc_lin>
+    hubert: !ref <hubert> # hubert for canonicalization
+    wav2vec2: !ref <wav2vec2> # wav2vec2 for CTC
+    enc1: !ref <enc1>
+    enc2: !ref <enc2>
+    ctc_lin1: !ref <ctc_lin1>
+    ctc_lin2: !ref <ctc_lin2>
+
+alpha: 0.5  # weight for the two CTC losses
 
 checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
     checkpoints_dir: !ref <save_folder>
@@ -109,9 +132,17 @@ checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
 train_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
     save_file: !ref <train_log>
 
-ctc_stats: !name:speechbrain.utils.metric_stats.MetricStats
+ctc_stats_can: !name:speechbrain.utils.metric_stats.MetricStats
     metric: !name:speechbrain.nnet.losses.ctc_loss
         blank_index: !ref <blank_index>
         reduction: batch
 
-per_stats: !name:speechbrain.utils.metric_stats.ErrorRateStats
+per_stats_can: !name:speechbrain.utils.metric_stats.ErrorRateStats
+
+
+ctc_stats_per: !name:speechbrain.utils.metric_stats.MetricStats
+    metric: !name:speechbrain.nnet.losses.ctc_loss
+        blank_index: !ref <blank_index>
+        reduction: batch
+
+per_stats_per: !name:speechbrain.utils.metric_stats.ErrorRateStats

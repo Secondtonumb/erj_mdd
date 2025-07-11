@@ -9,6 +9,7 @@ import librosa
 import json
 import wandb
 import time
+import torchaudio
 
 logger = logging.getLogger(__name__)
 
@@ -29,6 +30,7 @@ class ASR(sb.Brain):
     def on_evaluate_start(self, max_key=None, min_key=None):
         """Gets called at the beginning of evaluation."""
         pass
+    
     def compute_forward(self, batch, stage):
         "Given an input batch it computes the phoneme probabilities."
         batch = batch.to(self.device)
@@ -37,14 +39,21 @@ class ASR(sb.Brain):
 
         if stage == sb.Stage.TRAIN:
             if hasattr(self.hparams, "augmentation"):
-                wavs = self.hparams.augmentation(wavs, wav_lens)
+                wavs = self.hparams.augmentation(wavs)
 
         # some wav2vec models (e.g. large-lv60) needs attention_mask
         if self.modules.wav2vec2.feature_extractor.return_attention_mask:
             attn_mask = make_attn_mask(wavs, wav_lens)
         else:
             attn_mask = None
-        feats = self.modules.wav2vec2(wavs, attention_mask=attn_mask)
+            
+        if self.hparams.use_wav2vec:
+            feats = self.modules.wav2vec2(wavs, attention_mask=attn_mask)
+        elif self.hparams.use_whisper:
+            feats = self.modules.whisper(wavs)
+        else:
+            raise ValueError("No encoder selected")
+        
         x = self.modules.enc(feats)
 
         # output layer for ctc log-probabilities
@@ -108,9 +117,11 @@ class ASR(sb.Brain):
         self.ctc_metrics = self.hparams.ctc_stats()
         if self.hparams.wav2vec2_specaug:
             self.modules.wav2vec2.model.config.apply_spec_augment = True
+            
 
         if stage != sb.Stage.TRAIN:
             self.modules.wav2vec2.model.config.apply_spec_augment = False
+            self.modules.whisper.model.config.apply_spec_augment = False
             self.per_metrics = self.hparams.per_stats()
             self.mpd_metrics = MpdStats()
 
@@ -127,8 +138,8 @@ class ASR(sb.Brain):
             self.hparams.train_logger.log_stats(
                 stats_meta={
                     "epoch": epoch,
-                    "lr_adam": self.adam_optimizer.param_groups[0]["lr"],
-                    "lr_wav2vec": self.wav2vec_optimizer.param_groups[0]["lr"],
+                    "lr_adam": self.model_optimizer.param_groups[0]["lr"],
+                    "lr_pretrained": self.pretrained_opt_class.param_groups[0]["lr"],
                 },
                 train_stats={"loss": self.train_loss},
                 valid_stats={
@@ -146,8 +157,8 @@ class ASR(sb.Brain):
                 "ctc_loss": self.ctc_metrics.summarize("average"),
                 "PER": per,
                 "mpd_f1": mpd_f1,
-                "lr_adam": self.adam_optimizer.param_groups[0]["lr"],
-                "lr_wav2vec": self.wav2vec_optimizer.param_groups[0]["lr"],
+                "lr_adam": self.model_optimizer.param_groups[0]["lr"],
+                "lr_pretrained": self.pretrained_opt_class.param_groups[0]["lr"],
             }, step=epoch)
             
             # Log best models to wandb
@@ -174,12 +185,12 @@ class ASR(sb.Brain):
                 meta={"PER": per, "mpd_f1": mpd_f1}, min_keys=["PER"]
             )
             
-            # Save best model based on MPD-F1 (higher is better)
-            # We'll use a separate checkpoint name to avoid conflicts
-            self.checkpointer.save_checkpoint(
-                meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
-                name="best_mpd_f1_{}.ckpt".format(epoch),
-            )
+            # # Save best model based on MPD-F1 (higher is better)
+            # # We'll use a separate checkpoint name to avoid conflicts
+            # self.checkpointer.save_checkpoint(
+            #     meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
+            #     name="best_mpd_f1_{}.ckpt".format(epoch),
+            # )
 
         if stage == sb.Stage.TEST:
             self.hparams.train_logger.log_stats(
@@ -225,57 +236,55 @@ class ASR(sb.Brain):
         -------
         detached loss
         """
-        # Managing automatic mixed precision
-        if self.auto_mix_prec:
 
-            self.wav2vec_optimizer.zero_grad()
-            self.adam_optimizer.zero_grad()
+        outputs = self.compute_forward(batch, sb.Stage.TRAIN)
+        loss = self.compute_objectives(outputs, batch, sb.Stage.TRAIN)
+        loss.backward()
 
-            with torch.cuda.amp.autocast():
-                outputs = self.compute_forward(batch, sb.Stage.TRAIN)
-                loss = self.compute_objectives(outputs, batch, sb.Stage.TRAIN)
 
-            self.scaler.scale(loss).backward()
-            self.scaler.unscale_(self.wav2vec_optimizer)
-            self.scaler.unscale_(self.adam_optimizer)
+        if hasattr(self, 'pretrained_opt_class'):
+            self.pretrained_opt_class.step()
+        self.model_optimizer.step()
 
-            if self.check_gradients(loss):
-                self.scaler.step(self.wav2vec_optimizer)
-                self.scaler.step(self.adam_optimizer)
-
-            self.scaler.update()
-        else:
-            outputs = self.compute_forward(batch, sb.Stage.TRAIN)
-
-            loss = self.compute_objectives(outputs, batch, sb.Stage.TRAIN)
-            # normalize the loss by gradient_accumulation step
-            (loss / self.hparams.gradient_accumulation).backward()
-
-            if self.step % self.hparams.gradient_accumulation == 0:
-                # gradient clipping & early stop if loss is not fini
-                if self.check_gradients(loss):
-                    self.wav2vec_optimizer.step()
-                    self.adam_optimizer.step()
-
-                self.wav2vec_optimizer.zero_grad()
-                self.adam_optimizer.zero_grad()
+        if hasattr(self, 'pretrained_opt_class'):
+            self.pretrained_opt_class.zero_grad()
+        self.model_optimizer.zero_grad()
 
         return loss.detach().cpu()
 
     def init_optimizers(self):
-        "Initializes the wav2vec2 optimizer and model optimizer"
-        self.wav2vec_optimizer = self.hparams.wav2vec_opt_class(
-            self.modules.wav2vec2.model.parameters()
+        self.model_optimizer = self.hparams.adam_opt_class(
+            self.hparams.model.parameters(), lr=self.hparams.lr
         )
-        self.adam_optimizer = self.hparams.adam_opt_class(
-            self.hparams.model.parameters()
-        )
-
-        if self.checkpointer is not None:
-            self.checkpointer.add_recoverable(
-                "wav2vec_opt", self.wav2vec_optimizer
+        # Optimizers for pretrained encoder(s), if they are being fine-tuned
+        if self.hparams.use_wav2vec and not self.hparams.freeze_wav2vec:
+            self.pretrained_opt_class = self.hparams.pretrained_opt_class(
+                self.modules.wav2vec2.parameters(), lr=self.hparams.lr_pretrained
             )
-            self.checkpointer.add_recoverable("adam_opt", self.adam_optimizer)
+        if self.hparams.use_whisper and not self.hparams.freeze_whisper:
+            self.pretrained_opt_class = self.hparams.pretrained_opt_class(
+                self.modules.whisper.parameters(), lr=self.hparams.lr_pretrained
+            )
+        # a dummy optimizer for the case that no pretrained encoder is used
+        else:
+            self.pretrained_opt_class = self.hparams.pretrained_opt_class(
+                self.modules.wav2vec2.parameters(), lr=self.hparams.lr_pretrained
+            )
+        
+        if self.checkpointer is not None:
+            if self.hparams.use_wav2vec and not self.hparams.freeze_wav2vec:
+                self.checkpointer.add_recoverable(  
+                    "pretrained_opt", self.pretrained_opt_class
+                )
+            if self.hparams.use_whisper and not self.hparams.freeze_whisper:
+                self.checkpointer.add_recoverable(
+                    "pretrained_opt", self.pretrained_opt_class
+                )
+            self.checkpointer.add_recoverable(
+                    "pretrained_opt", self.pretrained_opt_class
+                )
+            self.checkpointer.add_recoverable("adam_opt", self.model_optimizer)
+    
     def on_fit_start(self):
         """Gets called at the beginning of ``fit()``, on multiple processes
         if ``distributed_count > 0`` and backend is ddp.
@@ -285,7 +294,7 @@ class ASR(sb.Brain):
         """
         # Run this *after* starting all processes since jit modules cannot be
         # pickled.
-        self._compile_jit()
+        self._compile()
 
         # Wrap modules with parallel backend after jit
         self._wrap_distributed()
@@ -298,9 +307,9 @@ class ASR(sb.Brain):
         ## so we set the `min_key` argument
         if self.checkpointer is not None:
             self.checkpointer.recover_if_possible(
-                device=torch.device(self.device),
                 min_key="PER"
             )
+
 
 def dataio_prep(hparams):
     """This function prepares the datasets to be used in the brain class.
@@ -355,10 +364,26 @@ def dataio_prep(hparams):
         # # sample rate change to 16000, e,g, using librosa
         # sig = torch.Tensor(librosa.core.load(wav, hparams["sample_rate"])[0])
         # Use wav2vec processor to do normalization
+        
+        # Load waveform and resample if needed
+        waveform, sr = torchaudio.load(wav)  # waveform: [1, T]
+
+        # Optional: resample to match model sample rate
+        target_sr = hparams["sample_rate"]
+        if sr != target_sr:
+            resampler = torchaudio.transforms.Resample(orig_freq=sr, new_freq=target_sr)
+            waveform = resampler(waveform)
+
+        # Convert to mono if stereo
+        if waveform.shape[0] > 1:
+            waveform = waveform.mean(dim=0, keepdim=True)
+
+        # Apply feature extractor (expecting 1D numpy array)
         sig = hparams["wav2vec2"].feature_extractor(
-            librosa.core.load(wav, hparams["sample_rate"])[0],
-            sampling_rate=hparams["sample_rate"],
+            waveform.squeeze(0).numpy(),  # convert to 1D numpy
+            sampling_rate=target_sr
         ).input_values[0]
+
         sig = torch.Tensor(sig)
         return sig
 
@@ -440,6 +465,7 @@ def dataio_prep(hparams):
     )
 
     return train_data, valid_data, test_data, label_encoder
+
 
 def dataio_prep_for_llm(hparams):
     """This function prepares the datasets to be used in the brain class.
@@ -620,6 +646,7 @@ if __name__ == "__main__":
     # Dataset IO prep: creating Dataset objects and proper encodings for phones
     train_data, valid_data, test_data, label_encoder = dataio_prep(hparams)
     
+    
     # Trainer initialization
     asr_brain = ASR(
         modules=hparams["modules"],
@@ -630,7 +657,10 @@ if __name__ == "__main__":
     asr_brain.label_encoder = label_encoder
     # Initialize wandb, 
     # get run_id with time and hparams's name
-    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + hparams_file.split("/")[-1].split(".")[0]
+    from pathlib import Path
+    stem = Path(hparams_file).stem
+    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + stem
+    
     run_name = hparams.get("run_name", f"{run_id}")
     
     wandb.init(

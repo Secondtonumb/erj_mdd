@@ -9,6 +9,8 @@ import librosa
 import json
 import wandb
 import time
+import ppgs
+from ppgs_for_pr import process_utterance_with_ppg
 
 logger = logging.getLogger(__name__)
 
@@ -25,16 +27,17 @@ def make_attn_mask(wavs, wav_lens):
     return attn_mask
 
 # Define training procedure
-class ASR(sb.Brain):
+class ASR_neural_ppgs(sb.Brain):
     def on_evaluate_start(self, max_key=None, min_key=None):
         """Gets called at the beginning of evaluation."""
         pass
+    
     def compute_forward(self, batch, stage):
         "Given an input batch it computes the phoneme probabilities."
         batch = batch.to(self.device)
         wavs, wav_lens = batch.sig
         # phns_bos, _ = batch.phn_encoded_bos
-
+        
         if stage == sb.Stage.TRAIN:
             if hasattr(self.hparams, "augmentation"):
                 wavs = self.hparams.augmentation(wavs, wav_lens)
@@ -174,12 +177,12 @@ class ASR(sb.Brain):
                 meta={"PER": per, "mpd_f1": mpd_f1}, min_keys=["PER"]
             )
             
-            # Save best model based on MPD-F1 (higher is better)
-            # We'll use a separate checkpoint name to avoid conflicts
-            self.checkpointer.save_checkpoint(
-                meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
-                name="best_mpd_f1_{}.ckpt".format(epoch),
-            )
+            # # Save best model based on MPD-F1 (higher is better)
+            # # We'll use a separate checkpoint name to avoid conflicts
+            # self.checkpointer.save_checkpoint(
+            #     meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
+            #     name="best_mpd_f1_{}.ckpt".format(epoch),
+            # )
 
         if stage == sb.Stage.TEST:
             self.hparams.train_logger.log_stats(
@@ -301,6 +304,7 @@ class ASR(sb.Brain):
                 device=torch.device(self.device),
                 min_key="PER"
             )
+
 
 def dataio_prep(hparams):
     """This function prepares the datasets to be used in the brain class.
@@ -440,6 +444,7 @@ def dataio_prep(hparams):
     )
 
     return train_data, valid_data, test_data, label_encoder
+
 
 def dataio_prep_for_llm(hparams):
     """This function prepares the datasets to be used in the brain class.
@@ -620,6 +625,7 @@ if __name__ == "__main__":
     # Dataset IO prep: creating Dataset objects and proper encodings for phones
     train_data, valid_data, test_data, label_encoder = dataio_prep(hparams)
     
+    
     # Trainer initialization
     asr_brain = ASR(
         modules=hparams["modules"],
@@ -630,7 +636,10 @@ if __name__ == "__main__":
     asr_brain.label_encoder = label_encoder
     # Initialize wandb, 
     # get run_id with time and hparams's name
-    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + hparams_file.split("/")[-1].split(".")[0]
+    from pathlib import Path
+    stem = Path(hparams_file).stem
+    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + stem
+    
     run_name = hparams.get("run_name", f"{run_id}")
     
     wandb.init(

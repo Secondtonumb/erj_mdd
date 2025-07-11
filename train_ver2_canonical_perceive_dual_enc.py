@@ -9,6 +9,7 @@ import librosa
 import json
 import wandb
 import time
+import torchaudio
 
 logger = logging.getLogger(__name__)
 
@@ -25,10 +26,11 @@ def make_attn_mask(wavs, wav_lens):
     return attn_mask
 
 # Define training procedure
-class ASR(sb.Brain):
+class ASR_dual_loss(sb.Brain):
     def on_evaluate_start(self, max_key=None, min_key=None):
         """Gets called at the beginning of evaluation."""
         pass
+    
     def compute_forward(self, batch, stage):
         "Given an input batch it computes the phoneme probabilities."
         batch = batch.to(self.device)
@@ -44,49 +46,80 @@ class ASR(sb.Brain):
             attn_mask = make_attn_mask(wavs, wav_lens)
         else:
             attn_mask = None
-        feats = self.modules.wav2vec2(wavs, attention_mask=attn_mask)
-        x = self.modules.enc(feats)
+        feats_can = self.modules.hubert(wavs, attention_mask=attn_mask)
+        feats_per = self.modules.wav2vec2(wavs, attention_mask=attn_mask)
+        x_can = self.modules.enc1(feats_can)
+        x_per = self.modules.enc2(feats_per)
 
         # output layer for ctc log-probabilities
-        logits = self.modules.ctc_lin(x)
-        p_ctc = self.hparams.log_softmax(logits)
+        logits_can = self.modules.ctc_lin1(x_can)
+        logits_per = self.modules.ctc_lin2(x_per)
+        
+        p_ctc_can = self.hparams.log_softmax(logits_can)
+        p_ctc_per = self.hparams.log_softmax(logits_per)
+        
+        # 这里也可以改一下
+        p_ctc = self.hparams.alpha * p_ctc_can + (1 - self.hparams.alpha) * p_ctc_per
 
-        return p_ctc, wav_lens
+        return p_ctc, p_ctc_can, p_ctc_per, wav_lens
 
     def compute_objectives(self, predictions, batch, stage):
         "Given the network predictions and targets computed the NLL loss."
 
-        p_ctc, wav_lens = predictions
+        p_ctc, p_ctc_can, p_ctc_per, wav_lens = predictions
 
         ids = batch.id
         targets, target_lens = batch.phn_encoded_target
+        canonicals, canonical_lens = batch.phn_encoded_canonical
+        
         if stage != sb.Stage.TRAIN:
-            canonicals, canonical_lens = batch.phn_encoded_canonical
             perceiveds, perceived_lens = batch.phn_encoded_perceived
+        #     canonicals, canonical_lens = batch.phn_encoded_canonical
 
-        loss_ctc = self.hparams.ctc_cost(p_ctc, targets, wav_lens, target_lens)
-        loss = loss_ctc
+        # loss_ctc = self.hparams.ctc_cost(p_ctc, targets, wav_lens, target_lens)
+        loss_ctc1 = self.hparams.ctc_cost(p_ctc_can, canonicals, wav_lens, canonical_lens)
+        loss_ctc2 = self.hparams.ctc_cost(p_ctc_per, targets, wav_lens, target_lens)
+        loss = self.hparams.alpha * loss_ctc1 + (1 - self.hparams.alpha) * loss_ctc2
+        # Log both CTC losses to wandb
+        if stage == sb.Stage.TRAIN:
+            wandb.log({
+                "loss_ctc1": loss_ctc1.detach().item(),
+                "loss_ctc2": loss_ctc2.detach().item()
+            })
 
         # Record losses for posterity
         if stage != sb.Stage.TRAIN:
             # Note: sb.decoders.ctc_greedy_decode will also remove padded tokens
             # that is, it return a list of list with different lengths
-            sequence = sb.decoders.ctc_greedy_decode(
-                p_ctc, wav_lens, blank_id=self.hparams.blank_index
+            sequence_per = sb.decoders.ctc_greedy_decode(
+                p_ctc_per, wav_lens, blank_id=self.hparams.blank_index
             )
-            self.ctc_metrics.append(ids, p_ctc, targets, wav_lens, target_lens)
+            sequence_can = sb.decoders.ctc_greedy_decode(
+                p_ctc_can, canonical_lens, blank_id=self.hparams.blank_index
+            )
+            # self.ctc_metrics.append(ids, p_ctc, targets, wav_lens, target_lens)
+            self.ctc_metrics_can.append(ids, p_ctc_can, canonicals, wav_lens, canonical_lens)
+            self.ctc_metrics_per.append(ids, p_ctc_per, targets, wav_lens, target_lens)
 
-            self.per_metrics.append(
+            self.per_metrics_per.append(
                 ids=ids,
-                predict=sequence,
+                predict=sequence_per,
                 target=targets,
                 predict_len=None,
                 target_len=target_lens,
                 ind2lab=self.label_encoder.decode_ndim,
             )
+            self.per_metrics_can.append(
+                ids=ids,
+                predict=sequence_can,
+                target=canonicals,
+                predict_len=None,
+                target_len=canonical_lens,
+                ind2lab=self.label_encoder.decode_ndim,
+            )
             self.mpd_metrics.append(
                 ids=ids,
-                predict=sequence,
+                predict=sequence_per,
                 canonical=canonicals,
                 perceived=perceiveds,
                 predict_len=None,
@@ -105,21 +138,27 @@ class ASR(sb.Brain):
 
     def on_stage_start(self, stage, epoch):
         "Gets called when a stage (either training, validation, test) starts."
-        self.ctc_metrics = self.hparams.ctc_stats()
+        self.ctc_metrics_can = self.hparams.ctc_stats_can()
+        self.ctc_metrics_per = self.hparams.ctc_stats_per()
+        
         if self.hparams.wav2vec2_specaug:
             self.modules.wav2vec2.model.config.apply_spec_augment = True
 
         if stage != sb.Stage.TRAIN:
             self.modules.wav2vec2.model.config.apply_spec_augment = False
-            self.per_metrics = self.hparams.per_stats()
+            self.per_metrics_can = self.hparams.per_stats_can()
+            self.per_metrics_per = self.hparams.per_stats_per()
             self.mpd_metrics = MpdStats()
 
     def on_stage_end(self, stage, stage_loss, epoch):
         """Gets called at the end of a epoch."""
         if stage == sb.Stage.TRAIN:
             self.train_loss = stage_loss
+            
         else:
-            per = self.per_metrics.summarize("error_rate")
+            per_can = self.per_metrics_can.summarize("error_rate")
+            per_per = self.per_metrics_per.summarize("error_rate")
+            
             mpd_f1 = self.mpd_metrics.summarize("mpd_f1")
 
         if stage == sb.Stage.VALID:
@@ -133,8 +172,10 @@ class ASR(sb.Brain):
                 train_stats={"loss": self.train_loss},
                 valid_stats={
                     "loss": stage_loss,
-                    "ctc_loss": self.ctc_metrics.summarize("average"),
-                    "PER": per,
+                    "ctc_loss_can": self.ctc_metrics_can.summarize("average"),
+                    "ctc_loss_per": self.ctc_metrics_per.summarize("average"),
+                    "PER_can": per_can,
+                    "PER_per": per_per,
                     "mpd_f1": mpd_f1
                 },
             )
@@ -143,8 +184,11 @@ class ASR(sb.Brain):
                 "epoch": epoch,
                 "train_loss": self.train_loss,
                 "valid_loss": stage_loss,
-                "ctc_loss": self.ctc_metrics.summarize("average"),
-                "PER": per,
+                # "ctc_loss": self.ctc_metrics.summarize("average"),
+                "ctc_loss_can": self.ctc_metrics_can.summarize("average"),
+                "ctc_loss_per": self.ctc_metrics_per.summarize("average"),
+                "PER_can": per_can,
+                "PER_per": per_per,
                 "mpd_f1": mpd_f1,
                 "lr_adam": self.adam_optimizer.param_groups[0]["lr"],
                 "lr_wav2vec": self.wav2vec_optimizer.param_groups[0]["lr"],
@@ -152,13 +196,13 @@ class ASR(sb.Brain):
             
             # Log best models to wandb
             if wandb.run is not None:
-                if hasattr(self, 'best_per') and per < self.best_per:
-                    self.best_per = per
-                    wandb.run.summary["best_per"] = per
+                if hasattr(self, 'best_per') and per_per < self.best_per:
+                    self.best_per = per_per
+                    wandb.run.summary["best_per"] = per_per
                     wandb.run.summary["best_per_epoch"] = epoch
                 elif not hasattr(self, 'best_per'):
-                    self.best_per = per
-                    wandb.run.summary["best_per"] = per
+                    self.best_per = per_per
+                    wandb.run.summary["best_per"] = per_per
                     wandb.run.summary["best_per_epoch"] = epoch
                     
                 if hasattr(self, 'best_mpd_f1') and mpd_f1 > self.best_mpd_f1:
@@ -171,26 +215,34 @@ class ASR(sb.Brain):
                     wandb.run.summary["best_mpd_f1_epoch"] = epoch
             # Save best model based on PER (lower is better)
             self.checkpointer.save_and_keep_only(
-                meta={"PER": per, "mpd_f1": mpd_f1}, min_keys=["PER"]
+                meta={"PER": per_per, "mpd_f1": mpd_f1}, min_keys=["PER"]
             )
             
-            # Save best model based on MPD-F1 (higher is better)
-            # We'll use a separate checkpoint name to avoid conflicts
-            self.checkpointer.save_checkpoint(
-                meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
-                name="best_mpd_f1_{}.ckpt".format(epoch),
-            )
+            # # Save best model based on MPD-F1 (higher is better)
+            # # We'll use a separate checkpoint name to avoid conflicts
+            # self.checkpointer.save_checkpoint(
+            #     meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
+            #     name="best_mpd_f1_{}.ckpt".format(epoch),
+            # )
 
         if stage == sb.Stage.TEST:
             self.hparams.train_logger.log_stats(
                 stats_meta={"Epoch loaded": self.hparams.epoch_counter.current},
-                test_stats={"loss": stage_loss, "PER": per, "mpd_f1": mpd_f1},
+                test_stats={"loss": stage_loss, "PER": per_per, "mpd_f1": mpd_f1},
             )
             with open(self.hparams.wer_file, "w") as w:
                 w.write("CTC loss stats:\n")
-                self.ctc_metrics.write_stats(w)
+                
+                self.ctc_metrics_can.write_stats(w)
+                self.ctc_metrics_per.write_stats(w)
                 w.write("\nPER stats:\n")
-                self.per_metrics.write_stats(w)
+                # self.per_metrics.write_stats(w)
+                # print(
+                #     "CTC and PER stats written to file",
+                #     self.hparams.wer_file,
+                # )
+                self.per_metrics_can.write_stats(w)
+                self.per_metrics_per.write_stats(w)
                 print(
                     "CTC and PER stats written to file",
                     self.hparams.wer_file,
@@ -302,6 +354,7 @@ class ASR(sb.Brain):
                 min_key="PER"
             )
 
+
 def dataio_prep(hparams):
     """This function prepares the datasets to be used in the brain class.
     It also defines the data processing pipeline through user-defined functions."""
@@ -348,17 +401,31 @@ def dataio_prep(hparams):
     label_encoder = sb.dataio.encoder.CTCTextEncoder()
     
     # 2. Define audio pipeline:
-    @sb.utils.data_pipeline.takes("wav")
-    @sb.utils.data_pipeline.provides("sig")
     def audio_pipeline(wav):
         # sig = sb.dataio.dataio.read_audio(wav)
         # # sample rate change to 16000, e,g, using librosa
         # sig = torch.Tensor(librosa.core.load(wav, hparams["sample_rate"])[0])
         # Use wav2vec processor to do normalization
+        
+        # Load waveform and resample if needed
+        waveform, sr = torchaudio.load(wav)  # waveform: [1, T]
+
+        # Optional: resample to match model sample rate
+        target_sr = hparams["sample_rate"]
+        if sr != target_sr:
+            resampler = torchaudio.transforms.Resample(orig_freq=sr, new_freq=target_sr)
+            waveform = resampler(waveform)
+
+        # Convert to mono if stereo
+        if waveform.shape[0] > 1:
+            waveform = waveform.mean(dim=0, keepdim=True)
+
+        # Apply feature extractor (expecting 1D numpy array)
         sig = hparams["wav2vec2"].feature_extractor(
-            librosa.core.load(wav, hparams["sample_rate"])[0],
-            sampling_rate=hparams["sample_rate"],
+            waveform.squeeze(0).numpy(),  # convert to 1D numpy
+            sampling_rate=target_sr
         ).input_values[0]
+
         sig = torch.Tensor(sig)
         return sig
 
@@ -429,6 +496,7 @@ def dataio_prep(hparams):
         sequence_input=True,
     )
 
+    import pdb; pdb.set_trace()
     # 4. Set output:
     sb.dataio.dataset.set_output_keys(
         [train_data],
@@ -440,6 +508,7 @@ def dataio_prep(hparams):
     )
 
     return train_data, valid_data, test_data, label_encoder
+
 
 def dataio_prep_for_llm(hparams):
     """This function prepares the datasets to be used in the brain class.
@@ -494,10 +563,26 @@ def dataio_prep_for_llm(hparams):
         # # sample rate change to 16000, e,g, using librosa
         # sig = torch.Tensor(librosa.core.load(wav, hparams["sample_rate"])[0])
         # Use wav2vec processor to do normalization
+        
+        # Load waveform and resample if needed
+        waveform, sr = torchaudio.load(wav)  # waveform: [1, T]
+
+        # Optional: resample to match model sample rate
+        target_sr = hparams["sample_rate"]
+        if sr != target_sr:
+            resampler = torchaudio.transforms.Resample(orig_freq=sr, new_freq=target_sr)
+            waveform = resampler(waveform)
+
+        # Convert to mono if stereo
+        if waveform.shape[0] > 1:
+            waveform = waveform.mean(dim=0, keepdim=True)
+
+        # Apply feature extractor (expecting 1D numpy array)
         sig = hparams["wav2vec2"].feature_extractor(
-            librosa.core.load(wav, hparams["sample_rate"])[0],
-            sampling_rate=hparams["sample_rate"],
+            waveform.squeeze(0).numpy(),  # convert to 1D numpy
+            sampling_rate=target_sr
         ).input_values[0]
+
         sig = torch.Tensor(sig)
         return sig
 
@@ -618,10 +703,10 @@ if __name__ == "__main__":
     )
 
     # Dataset IO prep: creating Dataset objects and proper encodings for phones
-    train_data, valid_data, test_data, label_encoder = dataio_prep(hparams)
+    train_data, valid_data, test_data, label_encoder = dataio_prep_for_llm(hparams)
     
     # Trainer initialization
-    asr_brain = ASR(
+    asr_brain = ASR_dual_loss(
         modules=hparams["modules"],
         hparams=hparams,
         run_opts=run_opts,
@@ -630,7 +715,10 @@ if __name__ == "__main__":
     asr_brain.label_encoder = label_encoder
     # Initialize wandb, 
     # get run_id with time and hparams's name
-    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + hparams_file.split("/")[-1].split(".")[0]
+    from pathlib import Path
+    stem = Path(hparams_file).stem
+    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + stem
+    
     run_name = hparams.get("run_name", f"{run_id}")
     
     wandb.init(

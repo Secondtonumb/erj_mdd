@@ -10,6 +10,8 @@ import json
 import wandb
 import time
 
+import torchaudio
+
 logger = logging.getLogger(__name__)
 
 def make_attn_mask(wavs, wav_lens):
@@ -25,10 +27,11 @@ def make_attn_mask(wavs, wav_lens):
     return attn_mask
 
 # Define training procedure
-class ASR(sb.Brain):
+class ASR_conformer(sb.Brain):
     def on_evaluate_start(self, max_key=None, min_key=None):
         """Gets called at the beginning of evaluation."""
         pass
+    
     def compute_forward(self, batch, stage):
         "Given an input batch it computes the phoneme probabilities."
         batch = batch.to(self.device)
@@ -45,7 +48,11 @@ class ASR(sb.Brain):
         else:
             attn_mask = None
         feats = self.modules.wav2vec2(wavs, attention_mask=attn_mask)
-        x = self.modules.enc(feats)
+        # import pdb; pdb.set_trace()
+            # for RelPosMHAXL, feats is a list of tensors, each tensor is a layer's output
+            # we need to concatenate them along the feature dimension
+        feats_conformer, _ = self.modules.conformer(feats)
+        x = self.modules.enc(feats_conformer)
 
         # output layer for ctc log-probabilities
         logits = self.modules.ctc_lin(x)
@@ -174,12 +181,12 @@ class ASR(sb.Brain):
                 meta={"PER": per, "mpd_f1": mpd_f1}, min_keys=["PER"]
             )
             
-            # Save best model based on MPD-F1 (higher is better)
-            # We'll use a separate checkpoint name to avoid conflicts
-            self.checkpointer.save_checkpoint(
-                meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
-                name="best_mpd_f1_{}.ckpt".format(epoch),
-            )
+            # # Save best model based on MPD-F1 (higher is better)
+            # # We'll use a separate checkpoint name to avoid conflicts
+            # self.checkpointer.save_checkpoint(
+            #     meta={"PER": per, "mpd_f1": mpd_f1, "epoch": epoch},
+            #     name="best_mpd_f1_{}.ckpt".format(epoch),
+            # )
 
         if stage == sb.Stage.TEST:
             self.hparams.train_logger.log_stats(
@@ -302,6 +309,8 @@ class ASR(sb.Brain):
                 min_key="PER"
             )
 
+
+
 def dataio_prep(hparams):
     """This function prepares the datasets to be used in the brain class.
     It also defines the data processing pipeline through user-defined functions."""
@@ -355,10 +364,26 @@ def dataio_prep(hparams):
         # # sample rate change to 16000, e,g, using librosa
         # sig = torch.Tensor(librosa.core.load(wav, hparams["sample_rate"])[0])
         # Use wav2vec processor to do normalization
+        
+        # Load waveform and resample if needed
+        waveform, sr = torchaudio.load(wav)  # waveform: [1, T]
+
+        # Optional: resample to match model sample rate
+        target_sr = hparams["sample_rate"]
+        if sr != target_sr:
+            resampler = torchaudio.transforms.Resample(orig_freq=sr, new_freq=target_sr)
+            waveform = resampler(waveform)
+
+        # Convert to mono if stereo
+        if waveform.shape[0] > 1:
+            waveform = waveform.mean(dim=0, keepdim=True)
+
+        # Apply feature extractor (expecting 1D numpy array)
         sig = hparams["wav2vec2"].feature_extractor(
-            librosa.core.load(wav, hparams["sample_rate"])[0],
-            sampling_rate=hparams["sample_rate"],
+            waveform.squeeze(0).numpy(),  # convert to 1D numpy
+            sampling_rate=target_sr
         ).input_values[0]
+
         sig = torch.Tensor(sig)
         return sig
 
@@ -440,6 +465,7 @@ def dataio_prep(hparams):
     )
 
     return train_data, valid_data, test_data, label_encoder
+
 
 def dataio_prep_for_llm(hparams):
     """This function prepares the datasets to be used in the brain class.
@@ -620,8 +646,9 @@ if __name__ == "__main__":
     # Dataset IO prep: creating Dataset objects and proper encodings for phones
     train_data, valid_data, test_data, label_encoder = dataio_prep(hparams)
     
+    
     # Trainer initialization
-    asr_brain = ASR(
+    asr_brain = ASR_conformer(
         modules=hparams["modules"],
         hparams=hparams,
         run_opts=run_opts,
@@ -630,7 +657,10 @@ if __name__ == "__main__":
     asr_brain.label_encoder = label_encoder
     # Initialize wandb, 
     # get run_id with time and hparams's name
-    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + hparams_file.split("/")[-1].split(".")[0]
+    from pathlib import Path
+    stem = Path(hparams_file).stem
+    run_id = time.strftime("%Y%m%d-%H%M%S") + "_" + stem
+    
     run_name = hparams.get("run_name", f"{run_id}")
     
     wandb.init(

@@ -29,6 +29,7 @@ class ASR(sb.Brain):
     def on_evaluate_start(self, max_key=None, min_key=None):
         """Gets called at the beginning of evaluation."""
         pass
+    
     def compute_forward(self, batch, stage):
         "Given an input batch it computes the phoneme probabilities."
         batch = batch.to(self.device)
@@ -301,7 +302,6 @@ class ASR(sb.Brain):
                 device=torch.device(self.device),
                 min_key="PER"
             )
-
 
 
 def dataio_prep(hparams):

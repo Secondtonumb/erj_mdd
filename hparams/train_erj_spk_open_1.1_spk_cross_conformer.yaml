@@ -1,10 +1,12 @@
+train_id: !ref realpos
+
 # Seed needs to be set at top of yaml, before objects with parameters are made
 seed: 1234
 __set_seed: !apply:torch.manual_seed [!ref <seed>]
-output_folder: !ref results/erj_spk_open_1.1_spk_cross/
-wer_file: !ref <output_folder>/wer.txt
-mpd_file: !ref <output_folder>/mpd.txt
-save_folder: !ref <output_folder>/save
+output_folder: !ref results_conformer/erj_spk_open_1.1_spk_cross/
+wer_file: !ref <output_folder>/<train_id>/wer.txt
+mpd_file: !ref <output_folder>/<train_id>/wer.txt
+save_folder: !ref <output_folder>/save<train_id>
 train_log: !ref <output_folder>/erj_spk_open.txt
 
 # URL for the wav2vec2 model.
@@ -73,10 +75,18 @@ wav2vec2: !new:speechbrain.lobes.models.huggingface_wav2vec.HuggingFaceWav2Vec2
     freeze_feature_extractor: !ref <freeze_wav2vec_feature_extractor>
     save_path: !ref <save_folder>/wav2vec2_checkpoint
 
+conformer: !new:speechbrain.lobes.models.transformer.Conformer.ConformerEncoder
+    num_layers: 6
+    nhead: 8
+    d_ffn: 1024
+    d_model: 768
+    dropout: 0.1
+    attention_type: "regularMHA"
+    
+
 ctc_lin: !new:speechbrain.nnet.linear.Linear
     input_size: !ref <dnn_neurons>
     n_neurons: !ref <output_neurons>  # 39 phonemes + 1 blank
-
 
 log_softmax: !new:speechbrain.nnet.activations.Softmax
     apply_log: True
@@ -84,9 +94,8 @@ log_softmax: !new:speechbrain.nnet.activations.Softmax
 ctc_cost: !name:speechbrain.nnet.losses.ctc_loss
     blank_index: !ref <blank_index>
 
-
 model: !new:torch.nn.ModuleList
-    - [!ref <enc>, !ref <ctc_lin>]
+    - [!ref <enc>, !ref <conformer>, !ref <ctc_lin>]
 
 adam_opt_class: !name:torch.optim.Adam
     lr: !ref <lr>
@@ -97,6 +106,7 @@ wav2vec_opt_class: !name:torch.optim.Adam
 modules:
     wav2vec2: !ref <wav2vec2>
     enc: !ref <enc>
+    conformer: !ref <conformer>
     ctc_lin: !ref <ctc_lin>
 
 checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
