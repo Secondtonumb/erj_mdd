@@ -1,6 +1,6 @@
 # Hyperparameters toggles
-use_wav2vec: false             # Whether to use wav2vec2
-use_whisper: true            # Whether to use Whisper encoder
+use_wav2vec: true             # Whether to use wav2vec2
+use_whisper: False            # Whether to use Whisper encoder
 feature_fusion: "none"      # Options: "none", "concat", "add", "blend"
 blend_alpha: 0.5              # If using "blend" fusion
 
@@ -33,7 +33,7 @@ pretrained_model: !ref pretrained_models/
 
 # (For Whisper, freeze_encoder can also be set to freeze just the encoder)
 
-ENCODER_DIM: 1024
+ENCODER_DIM: 768  # Dimension of the encoder output
 # 1024 for wav2vec2-large, 768 for wav2vec2-base, whisper-large-v3-turbo: 1280, whisper-medium: 1024
 
 # Modules (SpeechBrain lobes)

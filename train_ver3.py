@@ -48,7 +48,7 @@ class ASR(sb.Brain):
             attn_mask = None
             
         if self.hparams.use_wav2vec:
-            feats = self.modules.wav2vec2(wavs, attention_mask=attn_mask)
+            feats = self.modules.wav2vec2(wavs)
         elif self.hparams.use_whisper:
             feats = self.modules.whisper(wavs)
         else:
@@ -213,7 +213,6 @@ class ASR(sb.Brain):
                     "MPD results and stats written to file",
                     self.hparams.mpd_file,
                 )
-
 
     def fit_batch(self, batch):
         """Fit one batch, override to do multiple updates.
@@ -645,7 +644,6 @@ if __name__ == "__main__":
 
     # Dataset IO prep: creating Dataset objects and proper encodings for phones
     train_data, valid_data, test_data, label_encoder = dataio_prep(hparams)
-    
     
     # Trainer initialization
     asr_brain = ASR(
